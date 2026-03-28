@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voto y Verdura | Alimenta tu barrio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#410007",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#edeeef",
+              "on-secondary-fixed-variant": "#004a7a",
+              "surface-container-highest": "#e1e3e4",
+              "secondary-container": "#84c0ff",
+              "secondary-fixed": "#d0e4ff",
+              "on-surface-variant": "#404752",
+              "surface-bright": "#f8f9fa",
+              "surface-dim": "#d9dadb",
+              "outline-variant": "#c0c7d3",
+              "on-primary-container": "#fdfcff",
+              "primary": "#005f9e",
+              "surface-container-low": "#f3f4f5",
+              "surface": "#f8f9fa",
+              "on-error": "#ffffff",
+              "surface-container-high": "#e7e8e9",
+              "primary-container": "#0078c7",
+              "primary-fixed-dim": "#9dcaff",
+              "tertiary-container": "#e51a38",
+              "background": "#f8f9fa",
+              "on-primary-fixed": "#001d35",
+              "error-container": "#ffdad6",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#9bcbff",
+              "on-primary": "#ffffff",
+              "primary-fixed": "#d1e4ff",
+              "on-secondary-fixed": "#001d34",
+              "on-surface": "#191c1d",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#19629a",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#9dcaff",
+              "tertiary-fixed-dim": "#ffb3b1",
+              "surface-variant": "#e1e3e4",
+              "inverse-on-surface": "#f0f1f2",
+              "tertiary-fixed": "#ffdad8",
+              "on-secondary-container": "#004e81",
+              "error": "#ba1a1a",
+              "on-background": "#191c1d",
+              "inverse-surface": "#2e3132",
+              "surface-tint": "#0061a2",
+              "on-tertiary-container": "#fffbff",
+              "tertiary": "#bb0027",
+              "on-tertiary-fixed-variant": "#92001d",
+              "on-primary-fixed-variant": "#00497c",
+              "outline": "#707883"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+      .text-scoreboard { font-family: 'Manrope', sans-serif; font-weight: 800; letter-spacing: -0.02em; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Urgent Alert Banner -->
+<div class="bg-tertiary text-on-tertiary px-6 py-3 flex items-center justify-between sticky top-0 z-[60]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+<p class="text-[12px] font-bold tracking-widest uppercase font-label">Alerta Urgente: Donaciones Críticas</p>
+</div>
+<button class="bg-white/20 px-3 py-1 text-[11px] font-bold uppercase tracking-tighter active:scale-95 transition-transform">DONAR</button>
+</div>
+<!-- TopAppBar -->
+<header class="bg-[#005f9e] dark:bg-[#003d66] shadow-[0_0_0_4px_rgba(0,95,158,0.1)] flex justify-between items-center w-full px-6 py-4 z-50">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-surface-container-lowest rounded-full overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="professional headshot of a community organizer with a friendly expression in a bright modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuVaEloSGXNOTlZiTYKprgJPqWInAcg90TxqySCawML5VuMEUb8fuu94YlpDi2W2LGce4WAQZ-PADKwJtfJIEwwGIPJn1RGyKRFesJI-7bIg33j3ypAGloQ5xQt40Owm2f_TAiaXStokN1sEXSU2sbbTGefrFaqo9lmYVDk-Mx-cSfbOyQIs-ZMOmEhpC8VZsuxHp34dVYVqw54RSUZZER3naRawqhCR7WZFOpOKmI8bevUUBg0vhxqCCSv0ZbrsZqOJUH6fWu3cg"/>
+</div>
+<span class="text-xl font-extrabold text-white uppercase tracking-tighter font-['Manrope']">StreetCart KC</span>
+</div>
+<button class="text-white font-['Manrope'] font-bold tracking-tight hover:bg-white/10 transition-colors px-2 py-1 rounded">ES</button>
+</header>
+<main class="pb-24">
+<!-- Hero Section -->
+<section class="relative h-[707px] flex flex-col justify-end p-6 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Fresh Produce" class="w-full h-full object-cover" data-alt="vibrant overhead shot of fresh organic vegetables including peppers, kale, and tomatoes on a rustic wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdw99M8aZTEdaXEIe1nEhLHrQLWKGv_cd_V-PqYrRsJnitsW84aVrh1BT2W2C5zn-PZ21_MXZZOKH5QJhJOHAYfmISU3-chz-LAifjzLR8Qi-6Cehuc04AbqmEm3ahnoVdg8lKnV5SQvXgGsVtRrF3UQsa6-cwQp3DQuCDey0B-QDY5Hk58InGcldHMxzXK8_6wIThrRCgUKbCRUqifGEeE2jtxBEE6eCIdcthxevlzA6CMCCJjNICbk44Xb7Yr3Q_HfkaoWMsNw8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-6">
+<h1 class="text-[48px] leading-[0.9] font-extrabold text-white tracking-tighter">Voto y Verdura:<br/>Alimenta tu barrio.</h1>
+<button class="w-full bg-white text-primary py-5 text-sm font-extrabold tracking-[0.2em] uppercase active:scale-95 transition-transform">PARTICIPA AHORA</button>
+</div>
+</section>
+<!-- Voto Comunitario -->
+<section class="bg-surface-container-low p-6 py-12">
+<div class="bg-surface-container-lowest p-8 shadow-[0_0_0_4px_rgba(0,95,158,0.05)] space-y-8">
+<div class="space-y-2">
+<span class="text-[11px] font-bold text-primary tracking-widest uppercase">Propuesta de Ciudad</span>
+<h2 class="text-3xl font-extrabold tracking-tight">Voto Comunitario</h2>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Necesitamos el apoyo del concejo para asegurar fondos de infraestructura alimentaria en los códigos postales <span class="font-bold text-on-surface">66101</span> y <span class="font-bold text-on-surface">66105</span>.</p>
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<span class="text-[28px] text-scoreboard leading-none">82%</span>
+<span class="text-[11px] font-bold text-outline uppercase tracking-widest">Objetivo: 5,000 Firmas</span>
+</div>
+<div class="h-3 bg-surface-container-highest w-full overflow-hidden">
+<div class="h-full bg-primary w-[82%]"></div>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-4 text-sm font-extrabold tracking-[0.1em] uppercase active:translate-y-0.5 transition-all">FIRMAR MI APOYO</button>
+</div>
+</section>
+<!-- El Marcador en Vivo -->
+<section class="bg-surface p-6 py-12 space-y-8">
+<div class="border-l-4 border-primary pl-4">
+<h2 class="text-2xl font-extrabold tracking-tight">El Marcador en Vivo</h2>
+<p class="text-xs text-outline uppercase tracking-widest mt-1">Entregas de Alimentos por Alianza</p>
+</div>
+<div class="space-y-4">
+<!-- Chiefs Card -->
+<div class="bg-inverse-surface p-4 flex justify-between items-center border-l-[6px] border-tertiary">
+<div>
+<p class="text-inverse-on-surface/60 text-[10px] font-bold uppercase tracking-widest">Team KC</p>
+<h3 class="text-inverse-on-surface font-bold text-lg">Chiefs Kingdom</h3>
+</div>
+<div class="text-right">
+<span class="text-inverse-on-surface text-scoreboard text-2xl">12,450</span>
+<p class="text-inverse-on-surface/40 text-[9px] uppercase">Raciones</p>
+</div>
+</div>
+<!-- Royals Card -->
+<div class="bg-inverse-surface p-4 flex justify-between items-center border-l-[6px] border-primary-container">
+<div>
+<p class="text-inverse-on-surface/60 text-[10px] font-bold uppercase tracking-widest">Team KC</p>
+<h3 class="text-inverse-on-surface font-bold text-lg">Royals Blue</h3>
+</div>
+<div class="text-right">
+<span class="text-inverse-on-surface text-scoreboard text-2xl">9,820</span>
+<p class="text-inverse-on-surface/40 text-[9px] uppercase">Raciones</p>
+</div>
+</div>
+<!-- Sporting KC Card -->
+<div class="bg-inverse-surface p-4 flex justify-between items-center border-l-[6px] border-[#00d4cc]">
+<div>
+<p class="text-inverse-on-surface/60 text-[10px] font-bold uppercase tracking-widest">Team KC</p>
+<h3 class="text-inverse-on-surface font-bold text-lg">Sporting KC</h3>
+</div>
+<div class="text-right">
+<span class="text-inverse-on-surface text-scoreboard text-2xl">11,105</span>
+<p class="text-inverse-on-surface/40 text-[9px] uppercase">Raciones</p>
+</div>
+</div>
+<!-- KC Current Card -->
+<div class="bg-inverse-surface p-4 flex justify-between items-center border-l-[6px] border-[#92001d]">
+<div>
+<p class="text-inverse-on-surface/60 text-[10px] font-bold uppercase tracking-widest">Team KC</p>
+<h3 class="text-inverse-on-surface font-bold text-lg">KC Current</h3>
+</div>
+<div class="text-right">
+<span class="text-inverse-on-surface text-scoreboard text-2xl">14,200</span>
+<p class="text-inverse-on-surface/40 text-[9px] uppercase">Raciones</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Red de Despensas -->
+<section class="bg-surface-container-low p-6 py-12">
+<div class="mb-8">
+<h2 class="text-2xl font-extrabold tracking-tight">Red de Despensas</h2>
+<div class="h-1 w-12 bg-primary mt-2"></div>
+</div>
+<div class="space-y-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold">Crosslines Community</h3>
+<span class="text-[10px] font-bold bg-primary/10 text-primary px-2 py-1">0.8 MI</span>
+</div>
+<div class="flex gap-4">
+<div class="space-y-1">
+<p class="text-[10px] text-outline uppercase font-bold tracking-widest">Zip Code</p>
+<p class="text-sm font-bold">66101</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] text-outline uppercase font-bold tracking-widest">Idiomas</p>
+<p class="text-sm font-bold">ES / EN</p>
+</div>
+</div>
+<button class="w-full text-primary border-2 border-primary py-3 text-[11px] font-bold tracking-widest uppercase">VER RUTA</button>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold">El Centro</h3>
+<span class="text-[10px] font-bold bg-primary/10 text-primary px-2 py-1">1.4 MI</span>
+</div>
+<div class="flex gap-4">
+<div class="space-y-1">
+<p class="text-[10px] text-outline uppercase font-bold tracking-widest">Zip Code</p>
+<p class="text-sm font-bold">66105</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] text-outline uppercase font-bold tracking-widest">Idiomas</p>
+<p class="text-sm font-bold">ES</p>
+</div>
+</div>
+<button class="w-full text-primary border-2 border-primary py-3 text-[11px] font-bold tracking-widest uppercase">VER RUTA</button>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold">Harvesters Network</h3>
+<span class="text-[10px] font-bold bg-primary/10 text-primary px-2 py-1">3.2 MI</span>
+</div>
+<div class="flex gap-4">
+<div class="space-y-1">
+<p class="text-[10px] text-outline uppercase font-bold tracking-widest">Zip Code</p>
+<p class="text-sm font-bold">66102</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] text-outline uppercase font-bold tracking-widest">Idiomas</p>
+<p class="text-sm font-bold">EN / AR</p>
+</div>
+</div>
+<button class="w-full text-primary border-2 border-primary py-3 text-[11px] font-bold tracking-widest uppercase">VER RUTA</button>
+</div>
+</div>
+</section>
+<!-- Footer Section -->
+<footer class="bg-inverse-surface p-12 text-center space-y-8">
+<p class="text-inverse-on-surface font-headline font-extrabold text-2xl tracking-tighter leading-tight italic">
+                Infraestructura civil con oficio obsesivo.
+            </p>
+<button class="w-full bg-tertiary text-on-tertiary py-5 text-sm font-extrabold tracking-[0.2em] uppercase active:scale-95 transition-transform">ÚNETE AL EQUIPO</button>
+<div class="pt-8 border-t border-white/10 flex flex-col items-center gap-4">
+<span class="text-[10px] text-inverse-on-surface/40 uppercase tracking-widest">Kansas City Streetcar Authority © 2024</span>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-inverse-on-surface/60">public</span>
+<span class="material-symbols-outlined text-inverse-on-surface/60">mail</span>
+<span class="material-symbols-outlined text-inverse-on-surface/60">share</span>
+</div>
+</div>
+</footer>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 bg-[#005f9e] dark:bg-[#003d66] shadow-[0_0_0_4px_rgba(0,95,158,0.1)]">
+<div class="flex flex-col items-center justify-center text-white border-t-4 border-white pt-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-widest mt-1">Panel</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/60 pt-2 hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined">sensors</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-widest mt-1">En Vivo</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/60 pt-2 hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined">directions_transit</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-widest mt-1">Rutas</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/60 pt-2 hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-widest mt-1">Alertas</span>
+</div>
+</nav>
+</body></html>

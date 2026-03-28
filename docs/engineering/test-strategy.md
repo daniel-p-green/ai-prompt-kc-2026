@@ -2,8 +2,9 @@
 
 Date: 2026-03-28
 Repository: ai-prompt-kc-2026
-Current runtime: Vite multi-page frontend, React tracker page, Node-based data/build scripts
+Current runtime: Vite multi-page frontend, React dashboard page, Node-based data/build scripts
 Future-state app stack: `Next.js`, `TypeScript`, `Postgres`, and an SMS provider remain deferred
+Coverage focus: automated checks protect the architect web artifact inside the repo's final Oracle, Muse, and Architect submission package
 
 ## Quality Gates
 
@@ -17,6 +18,7 @@ Future-state app stack: `Next.js`, `TypeScript`, `Postgres`, and an SMS provider
 - Live arrivals scraper unit tests: `npm run test:arrivals`
 - StreetCart source-data contract tests: `npm run test:streetcart`
 - Tracker helper tests: `npm run test:tracker`
+- Dashboard helper tests: `npm run test:dashboard`
 - Combined regression check: `npm run test`
 - Live arrivals reference refresh: `npm run arrivals:fetch`
 - Tracker dataset rebuild: `npm run tracker:data`
@@ -25,11 +27,11 @@ Future-state app stack: `Next.js`, `TypeScript`, `Postgres`, and an SMS provider
 - Manual static-site walkthrough:
   - `index.html` loads the StreetCart proof with no missing assets
   - core KPIs, partner sections, and proof framing remain legible
-- Manual tracker walkthrough:
-  - `tracker.html` loads with a selected stop, stop rail, arrivals panel, and food-access panel
-  - stop switching updates the summary, arrivals, and food cards together
-  - filter changes preserve the selected stop and only change the visible food set
-  - live-feed failure preserves the shell and shows a readable warning
+- Manual dashboard walkthrough:
+  - `tracker.html` loads with the StreetCart hero, scoreboard, ZIP pressure board, budget panel, and pantry panel
+  - ZIP selection updates the detail panel in one interaction
+  - kiosk mode opens and exits cleanly
+  - the simulated live feed keeps the scoreboard view feeling active without breaking layout
 - Manual arrivals sanity check:
   - `docs/reference/kc-streetcar/arrivals/live-arrivals-latest.json` writes successfully
   - `River Market North Stop`, `North Loop Stops`, and `UMKC Stops` each contain expected stop codes and arrival arrays
@@ -41,6 +43,7 @@ Future-state app stack: `Next.js`, `TypeScript`, `Postgres`, and an SMS provider
 ### Unit
 
 - Tracker helpers: stop-group food matching, category classification, food filtering, arrival-group merging
+- Dashboard helpers: ZIP enrichment, budget-share math, and simulated scoreboard/feed updates
 - Scraper helpers: signage URL parsing, endpoint normalization, alert and stop payload shaping
 - Source-data contract checks: required StreetCart keys and deck/demo assumptions
 - Error handling: empty arrival arrays, missing food categories, stale-feed warnings, incomplete source JSON
@@ -49,12 +52,12 @@ Future-state app stack: `Next.js`, `TypeScript`, `Postgres`, and an SMS provider
 
 - Data boundaries: GTFS ingest, signage stop matching, OSM enrichment, and generated tracker dataset output
 - Build boundaries: deck generation from `data/streetcart-kc.json`, tracker bundle generation from `data/kc-streetcar-tracker.json`
-- State transitions: tracker shell to live-hydrated state, live success to stale-data warning, stop switch to synchronized UI update
+- State transitions: dashboard shell to live feed updates, ZIP switch to synchronized detail updates, kiosk toggle to condensed render
 
 ### End-to-End
 
-- Primary tracker flow: user lands on the tracker, reads the current stop, checks the next arrivals, and scans nearby food options
-- Critical edge flow: the tracker remains useful when live arrivals fail and falls back to the static stop + food shell
+- Primary dashboard flow: user lands on the dashboard, reads the winning team, checks a priority ZIP, and scans budget + pantry proof
+- Critical edge flow: kiosk mode still exposes scoreboard + stats without the full dashboard chrome
 - Static-proof rule: the current StreetCart proof remains a presentation artifact, not a production application
 
 ## Requirement-to-Test Mapping
@@ -62,6 +65,7 @@ Future-state app stack: `Next.js`, `TypeScript`, `Postgres`, and an SMS provider
 | Active requirement | Test level | Current command |
 |---|---|---|
 | Tracker data classifies and sorts food access correctly | Unit | `npm run test:tracker` |
+| Dashboard data enrichment and simulation logic stay correct | Unit | `npm run test:dashboard` |
 | Live-arrival scraper normalizes signage data correctly | Unit | `npm run test:arrivals` |
 | Source StreetCart JSON still satisfies the site/deck contract | Unit | `npm run test:streetcart` |
 | Multi-page bundle still builds successfully | Integration | `npm run build` |

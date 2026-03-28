@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voto y Verdura | StreetCart KC</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#e1e3e4",
+              "tertiary-container": "#e51a38",
+              "inverse-on-surface": "#f0f1f2",
+              "primary-fixed": "#d1e4ff",
+              "secondary": "#19629a",
+              "surface-container": "#edeeef",
+              "primary": "#005f9e",
+              "inverse-surface": "#2e3132",
+              "surface-tint": "#0061a2",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f3f4f5",
+              "surface-container-high": "#e7e8e9",
+              "tertiary-fixed-dim": "#ffb3b1",
+              "primary-container": "#0078c7",
+              "on-surface-variant": "#404752",
+              "on-primary-fixed-variant": "#00497c",
+              "surface-bright": "#f8f9fa",
+              "on-background": "#191c1d",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed": "#001d34",
+              "on-primary-fixed": "#001d35",
+              "tertiary-fixed": "#ffdad8",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#fffbff",
+              "secondary-fixed": "#d0e4ff",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary-fixed-variant": "#004a7a",
+              "outline-variant": "#c0c7d3",
+              "secondary-container": "#84c0ff",
+              "primary-fixed-dim": "#9dcaff",
+              "on-tertiary-fixed-variant": "#92001d",
+              "outline": "#707883",
+              "inverse-primary": "#9dcaff",
+              "surface-dim": "#d9dadb",
+              "error": "#ba1a1a",
+              "surface": "#f8f9fa",
+              "background": "#f8f9fa",
+              "on-secondary-container": "#004e81",
+              "on-error-container": "#93000a",
+              "on-surface": "#191c1d",
+              "on-tertiary-fixed": "#410007",
+              "tertiary": "#bb0027",
+              "secondary-fixed-dim": "#9bcbff",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#fdfcff",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3, .headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar Navigation Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-[#005f9e] dark:bg-[#005f9e] shadow-[0px_0px_0px_4px_rgba(0,130,214,0.1)]">
+<div class="text-2xl font-black text-white tracking-tighter uppercase">Voto y Verdura</div>
+<nav class="hidden md:flex space-x-8">
+<a class="text-white border-b-4 border-white pb-1 font-bold" href="#">Inicio</a>
+<a class="text-white/80 hover:text-white transition-colors" href="#">El Torneo</a>
+<a class="text-white/80 hover:text-white transition-colors" href="#">Donde Estamos</a>
+<a class="text-white/80 hover:text-white transition-colors" href="#">Votar</a>
+</nav>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-white hover:bg-white/10 p-2 rounded transition-all cursor-pointer">language</span>
+<span class="material-symbols-outlined text-white hover:bg-white/10 p-2 rounded transition-all cursor-pointer">account_circle</span>
+<button class="bg-white text-primary px-6 py-2 font-bold hover:bg-surface-container transition-all scale-95 active:scale-90">Votar</button>
+</div>
+</header>
+<!-- SideNavBar (Desktop Shell) -->
+<aside class="hidden lg:flex flex-col h-screen fixed left-0 top-0 w-64 bg-slate-50 border-r-0 pt-24 z-40 bg-slate-100/50">
+<div class="px-6 mb-8">
+<div class="font-black text-[#005f9e] text-xl">Voto y Verdura</div>
+<div class="font-['Manrope'] font-semibold uppercase tracking-widest text-[10px] text-slate-500">66101 &amp; 66105</div>
+</div>
+<nav class="flex-1 px-0 space-y-1">
+<a class="flex items-center px-6 py-3 bg-[#005f9e] text-white border-l-4 border-white transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mr-3">home</span>
+<span class="font-['Manrope'] font-semibold uppercase tracking-widest text-xs">Inicio</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-600 hover:bg-slate-200 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mr-3">emoji_events</span>
+<span class="font-['Manrope'] font-semibold uppercase tracking-widest text-xs">El Torneo</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-600 hover:bg-slate-200 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mr-3">location_on</span>
+<span class="font-['Manrope'] font-semibold uppercase tracking-widest text-xs">Donde Estamos</span>
+</a>
+<a class="flex items-center px-6 py-3 text-slate-600 hover:bg-slate-200 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mr-3">how_to_vote</span>
+<span class="font-['Manrope'] font-semibold uppercase tracking-widest text-xs">Votar</span>
+</a>
+</nav>
+<div class="p-6">
+<button class="w-full bg-tertiary text-white py-3 font-bold text-xs uppercase tracking-widest">Participa Ahora</button>
+</div>
+</aside>
+<main class="lg:ml-64 pt-20">
+<!-- Supply Alert Banner -->
+<div class="bg-tertiary text-white px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">warning</span>
+<p class="font-bold tracking-tight">URGENTE: Donación de emergencia de 1,000 lbs de verduras frescas. Disponible ahora en Crosslines.</p>
+</div>
+<button class="text-sm underline font-bold uppercase tracking-widest">Ver Mapa</button>
+</div>
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-center overflow-hidden bg-surface-dim">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="cinematic shot of fresh produce in a community market with warm sunlight hitting vibrant green vegetables and wooden crates" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7P-3Ew-KP_LnR8qVUV_DhbJ0cC20ZQhN5nLVElSjngWeGscQcUXgX_JSRFhBiWhOjH1pXvCznYqmjhqqbAkAvFWCbQBkHgTESn2Y5YmWFnp7kqlh9vSMS2LrrYCIoi1YlLHOY8rdQbYQbPMdPr8cFOZXwosP-VLxSRNc5-u-RtUMIiBijjgq3_kRMYliXRpstJqXBJAIOz0bGqvjenwEwNK3r6ipbxrBWvahPySGeAIHT_35Nyt0A6cL3PuDISXs9-VtlHiPQzWY"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-12 gap-6 w-full">
+<div class="col-span-12 md:col-span-8 lg:col-start-2">
+<h1 class="text-white text-6xl md:text-8xl font-extrabold tracking-tighter leading-tight mb-6">
+                        Voto y Verdura:<br/>Alimenta tu barrio.
+                    </h1>
+<p class="text-white text-xl md:text-2xl font-body max-w-2xl mb-10 opacity-90 leading-relaxed">
+                        StreetCart KC une al corredor del tranvía con nuestra comunidad para combatir la inseguridad alimentaria en 66101 y 66105.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-white text-primary px-8 py-4 font-black uppercase tracking-widest text-sm hover:bg-surface-container transition-all">Participa Ahora</button>
+<button class="border-2 border-white text-white px-8 py-4 font-black uppercase tracking-widest text-sm hover:bg-white/10 transition-all">Ver El Torneo</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Vote Priority -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-12 gap-8 items-center">
+<div class="col-span-12 lg:col-span-5 lg:col-start-2">
+<span class="inline-block bg-primary text-white text-[10px] font-black tracking-[0.2em] uppercase px-3 py-1 mb-4">Acción Civil Obligatoria</span>
+<h2 class="text-5xl font-black tracking-tighter text-on-surface mb-6 leading-none">Voto Comunitario</h2>
+<p class="text-xl text-on-surface-variant mb-8 leading-relaxed">
+                            Tu voz es necesaria. El concejo municipal requiere apoyo residente certificado en los códigos postales 66101 y 66105 para expandir la Red de Despensas.
+                        </p>
+</div>
+<div class="col-span-12 lg:col-span-5 bg-surface-container-lowest p-10 shadow-[0px_0px_0px_4px_rgba(0,130,214,0.05)]">
+<div class="flex justify-between items-end mb-4">
+<div>
+<span class="block text-[10px] font-black uppercase tracking-widest text-outline mb-1">Meta de Firmas</span>
+<span class="text-4xl font-black text-primary leading-none">4,128</span>
+</div>
+<span class="text-primary font-bold">82% Completado</span>
+</div>
+<div class="w-full h-4 bg-surface-container-high mb-8 overflow-hidden">
+<div class="h-full bg-primary" style="width: 82%"></div>
+</div>
+<button class="w-full bg-primary text-white py-5 font-black uppercase tracking-widest text-sm hover:bg-primary-container transition-all">Firmar Mi Apoyo</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Scoreboard Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16">
+<h2 class="text-5xl font-black tracking-tighter mb-4">El Marcador en Vivo</h2>
+<p class="text-on-surface-variant font-medium">¿Quién cerrará la brecha esta semana? Entrega cajas de alimentos y gana puntos para tu equipo.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Team Chiefs -->
+<div class="bg-inverse-surface text-inverse-on-surface p-6 border-l-[6px] border-tertiary relative overflow-hidden group">
+<div class="relative z-10">
+<span class="block text-[10px] font-black uppercase tracking-widest opacity-60 mb-2">Entregas</span>
+<div class="text-6xl font-black mb-4 tracking-tighter">412</div>
+<h3 class="text-xl font-bold uppercase tracking-tight">Chiefs</h3>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-9xl">sports_football</span>
+</div>
+</div>
+<!-- Team Royals -->
+<div class="bg-inverse-surface text-inverse-on-surface p-6 border-l-[6px] border-primary-container relative overflow-hidden group">
+<div class="relative z-10">
+<span class="block text-[10px] font-black uppercase tracking-widest opacity-60 mb-2">Entregas</span>
+<div class="text-6xl font-black mb-4 tracking-tighter">387</div>
+<h3 class="text-xl font-bold uppercase tracking-tight">Royals</h3>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-9xl">sports_baseball</span>
+</div>
+</div>
+<!-- Team KC Current -->
+<div class="bg-inverse-surface text-inverse-on-surface p-6 border-l-[6px] border-on-tertiary-fixed-variant relative overflow-hidden group">
+<div class="relative z-10">
+<span class="block text-[10px] font-black uppercase tracking-widest opacity-60 mb-2">Entregas</span>
+<div class="text-6xl font-black mb-4 tracking-tighter">315</div>
+<h3 class="text-xl font-bold uppercase tracking-tight">KC Current</h3>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-9xl">sports_soccer</span>
+</div>
+</div>
+<!-- Team Sporting KC -->
+<div class="bg-inverse-surface text-inverse-on-surface p-6 border-l-[6px] border-secondary-container relative overflow-hidden group">
+<div class="relative z-10">
+<span class="block text-[10px] font-black uppercase tracking-widest opacity-60 mb-2">Entregas</span>
+<div class="text-6xl font-black mb-4 tracking-tighter">294</div>
+<h3 class="text-xl font-bold uppercase tracking-tight">Sporting KC</h3>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-9xl">stadium</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pantry Network Grid -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="text-5xl font-black tracking-tighter mb-4 leading-none">Red de Despensas</h2>
+<p class="text-on-surface-variant leading-relaxed">Localiza recursos frescos en tu zona. Nuestra red garantiza acceso digno y multilingüe.</p>
+</div>
+<button class="bg-primary text-white px-8 py-3 font-bold text-sm uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined">map</span> Ver Mapa Completo
+                    </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-surface-container-high border-0">
+<!-- Partner: Crosslines -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-between hover:bg-white transition-all">
+<div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black tracking-tighter">Crosslines</h3>
+<span class="bg-surface-container text-primary font-bold px-3 py-1 text-xs">66105</span>
+</div>
+<div class="flex flex-wrap gap-4 mb-8">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">translate</span>
+<span class="text-xs font-bold uppercase tracking-widest">Español</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">kitchen</span>
+<span class="text-xs font-bold uppercase tracking-widest">Refrigeración</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">near_me</span>
+<span class="text-xs font-bold uppercase tracking-widest">0.8 mi</span>
+</div>
+</div>
+</div>
+<button class="text-primary font-black uppercase tracking-widest text-xs flex items-center gap-2 group">
+                            Cómo llegar <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Partner: El Centro -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-between hover:bg-white transition-all">
+<div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black tracking-tighter">El Centro</h3>
+<span class="bg-surface-container text-primary font-bold px-3 py-1 text-xs">66101</span>
+</div>
+<div class="flex flex-wrap gap-4 mb-8">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">translate</span>
+<span class="text-xs font-bold uppercase tracking-widest">Bilingüe</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">event</span>
+<span class="text-xs font-bold uppercase tracking-widest">Lun-Vie</span>
+</div>
+</div>
+</div>
+<button class="text-primary font-black uppercase tracking-widest text-xs flex items-center gap-2 group">
+                            Cómo llegar <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Partner: Harvesters -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-between hover:bg-white transition-all">
+<div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black tracking-tighter">Harvesters</h3>
+<span class="bg-surface-container text-primary font-bold px-3 py-1 text-xs">Regional</span>
+</div>
+<div class="flex flex-wrap gap-4 mb-8">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">local_shipping</span>
+<span class="text-xs font-bold uppercase tracking-widest">Distribución Masiva</span>
+</div>
+</div>
+</div>
+<button class="text-primary font-black uppercase tracking-widest text-xs flex items-center gap-2 group">
+                            Más info <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Partner: Guadalupe Centers -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-between hover:bg-white transition-all">
+<div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black tracking-tighter">Guadalupe Centers</h3>
+<span class="bg-surface-container text-primary font-bold px-3 py-1 text-xs">66105</span>
+</div>
+<div class="flex flex-wrap gap-4 mb-8">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">family_restroom</span>
+<span class="text-xs font-bold uppercase tracking-widest">Familiar</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">medical_services</span>
+<span class="text-xs font-bold uppercase tracking-widest">Servicios Extra</span>
+</div>
+</div>
+</div>
+<button class="text-primary font-black uppercase tracking-widest text-xs flex items-center gap-2 group">
+                            Cómo llegar <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Infrastructure Callout -->
+<section class="py-32 bg-primary text-white relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<img class="w-full h-full object-cover" data-alt="abstract architectural blueprint lines crossing over a dark navy blue background to simulate civil engineering plans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCboJ8TtxmyCkkKp-GFwZh0yuXCMZgN1LI-e1ZuEcXtSQeob8wehNXdX7ZCT8ynk1MiDk5UmfkAsPtrHUsAs5L8v340GJ1mfx222_6837iKYINmy8bn05ALVSsDfsoo1YcPSp-ISGiTHynher7u7KCGqFMYvm-hrgsEr3FwZ6F2GmIrXmM2WmQb8v7FfD0p5mOp6YL-F5jLopf0TvhiPONoolTzdKs2mHlOiM7Eh-qIH6mB-BRlV3K1gog5URiCUf-944Du_P3FTWw"/>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+<h2 class="text-6xl md:text-7xl font-black tracking-tighter mb-8 leading-none">Infraestructura civil<br/>con oficio obsesivo.</h2>
+<p class="text-xl md:text-2xl font-body max-w-3xl mx-auto mb-12 opacity-90">No solo entregamos comida, construimos el sistema de soporte vital de Kansas City.</p>
+<div class="flex justify-center gap-6">
+<button class="bg-white text-primary px-10 py-5 font-black uppercase tracking-widest text-sm hover:scale-105 transition-all">Únete al Equipo</button>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="w-full px-8 py-16 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto bg-[#f8f9fa] border-t-0 border-transparent">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-bold text-[#19629a] text-xl mb-2">StreetCart KC</div>
+<p class="text-slate-500 font-['Inter'] text-sm tracking-normal">© 2024 StreetCart KC - Voto y Verdura. Infraestructura civil con oficio obsesivo.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 hover:text-[#005f9e] underline decoration-2 underline-offset-4 text-sm font-['Inter'] transition-all" href="#">Privacidad</a>
+<a class="text-slate-500 hover:text-[#005f9e] underline decoration-2 underline-offset-4 text-sm font-['Inter'] transition-all" href="#">Términos</a>
+<a class="text-slate-500 hover:text-[#005f9e] underline decoration-2 underline-offset-4 text-sm font-['Inter'] transition-all" href="#">Contacto</a>
+<a class="text-slate-500 hover:text-[#005f9e] underline decoration-2 underline-offset-4 text-sm font-['Inter'] transition-all" href="#">StreetCart KC</a>
+</div>
+</footer>
+</main>
+<!-- Contextual FAB (Only for main landing context) -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="bg-tertiary text-white h-16 w-16 shadow-xl flex items-center justify-center scale-100 hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+</body></html>

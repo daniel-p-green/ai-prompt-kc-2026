@@ -2,175 +2,119 @@
 
 ## Product
 
-KC Streetcar Food Access Tracker
+StreetCart KC Final Submission Package
 
-This is a public-facing civic utility surface. It should feel as polished as a premium Apple page, but not luxurious, playful, or brand-performative. The right read is: public infrastructure with obsessive craft.
+Primary application surface: the StreetCart KC architect dashboard
+
+This surface should feel like a trusted city program, not a startup, not a charity guilt campaign, and not a novelty sports microsite. The baseline is KC Streetcar civic utility with tournament energy layered in carefully.
 
 ## Brand Thesis
 
-The interface should make Kansas City transit feel calm, precise, and trustworthy. The user should feel like the app already knows the one decision they need to make next and is presenting it without noise.
+StreetCart KC should look like public infrastructure that can defend itself with numbers. The architect dashboard needs to feel precise, calm, and highly legible while still carrying the competitive tension of the team bracket. Oracle, Muse, and Architect should read like one system, not three unrelated submissions.
 
-## Visual Direction
+## Tone
 
-- Tone: civic, modern, confident, human
-- Emotional read: useful first, elegant second
-- Design posture: strong framing, clean geometry, very little visual clutter
-- Anti-patterns: generic transit dashboard, glassmorphism, busy maps, oversized pills everywhere, playful illustrations, purple gradients
+- civic
+- direct
+- confident
+- useful first
+- Kansas City specific
+
+Avoid:
+
+- startup jargon
+- over-polished marketing language
+- playful mascot energy
+- "innovation" fluff
 
 ## Color System
 
-Use the KC Streetcar palette as the base system:
+Use the KC Streetcar civic palette as the base:
 
-- `--brand-blue: #0081C6`
-- `--brand-navy: #004987`
-- `--route-blue: #0693E3`
-- `--surface: #FFFFFF`
-- `--surface-muted: #F7FBFE`
-- `--ink-strong: #0E3558`
-- `--ink: #4D6985`
-- `--line: rgba(18, 50, 77, 0.08)`
-- `--warning: #F3B72F`
-- `--error: #C2410C`
-- `--success-bg: #E5F7EF`
-- `--success-ink: #0F6B43`
+- `--brand-blue: #0082D6`
+- `--brand-navy: #015890`
+- `--route-blue: #0A6FB7`
+- `--surface-muted: #F4F4F4`
+- `--ink-strong: #392F2B`
+- `--white: #FFFFFF`
+- `--alert-gold: #F4CE3C`
+
+Team colors are secondary and appear only inside scoreboard contexts:
+
+- Chiefs: `#E31837`
+- Royals: `#004687`
+- Sporting: `#93B1A7`
+- Current: `#D4001F`
+- KCK: `#2D6A4F`
 
 Rules:
 
-- Hero and route rail use blue/navy.
-- Primary information panels stay white.
-- Use color to direct attention, not decorate everything.
-- Keep contrast comfortably WCAG AA or better.
+- StreetCart blue stays dominant
+- budget, ZIP, and pantry panels stay mostly white
+- use color to guide attention, not decorate every surface
 
 ## Typography
 
 Target feel:
 
-- Headlines: geometric, assertive, transit-signage energy
-- Body: clean, neutral, highly readable
+- headlines: assertive transit signage
+- body: neutral, readable civic copy
 
 Recommended stack:
 
-- Display / headings: `Avenir Next`, `Inter`, `Segoe UI`, sans-serif
-- Body: `Avenir Next`, `Open Sans`, `Segoe UI`, sans-serif
+- headlines: `Avenir Next`, `Inter`, `Segoe UI`, sans-serif
+- body: `Avenir Next`, `Open Sans`, `Segoe UI`, sans-serif
 
-Type scale:
+Type rules:
 
-- Hero title: `56-72px`, `0.94-1.0` line height, bold
-- Section heading: `30-36px`, bold
-- Panel heading: `22-26px`, semibold/bold
-- Card heading: `18-20px`, semibold
-- Body: `16-18px`, `1.5-1.65` line height
-- Labels / eyebrow copy: `11-12px`, uppercase, `0.1-0.14em` letter spacing
+- short headings
+- strong numeric scale for scoreboard and KPI values
+- long text belongs in panels, not in the hero
 
-Rules:
+## Layout
 
-- Short labels
-- No decorative display type
-- Avoid long paragraphs in the UI
-- Use big type for the one thing the user needs now
+- strong horizontal bands over floating-card chaos
+- square or lightly softened corners
+- route-like separators and rails where structure helps
+- desktop should feel like one deliberate command surface
+- kiosk mode should reduce to scoreboard, stats, and CTA only
 
-## Layout + Spacing
+## Graphic Language
 
-Desktop target:
+Use:
 
-- Max content width: `1440-1480px`
-- Outer page padding: `24px`
-- Major module gap: `18px`
-- Primary radius: `22-28px`
-- Secondary radius: `16-22px`
-
-Module rules:
-
-- Hero is one large band, not a card mosaic
-- Route rail is a distinct anchored column
-- Main content is two large panels: arrivals and food access
-- Stats sit in a tight, even rhythm
-- Let whitespace create confidence; do not fill every gap
-
-## Motion
-
-- Hover / selection: `150-180ms`, ease-out
-- Panel/filter transitions: `180-220ms`
-- No bounce, no parallax, no showy entrance animation
-- Motion exists to confirm state change, never to entertain
-
-## Component Specs
-
-### Hero
-
-- Blue gradient or blue field with restrained depth
-- Strong title, one-sentence utility statement, two clear actions
-- Right-side stat stack on desktop
-- Must still feel composed when text wraps on mobile
-
-### Route rail
-
-- Ordered north to south
-- Each stop card shows: order number, stop name, next live summary, nearby food count
-- Selected stop must be obvious without harsh contrast tricks
-- Rail should feel like a transit object, not a marketing sidebar
-
-### Stop summary
-
-- Show selected stop name first
-- Show exact stop label beneath
-- Show two small badges: nearby places count, last live update
-- Never crowd this module
-
-### Arrival cards
-
-- Lead with direction and next countdown
-- Show next 2-3 predictions cleanly
-- Occupancy badges should be soft and readable
-- Empty state must say what is missing without implying the app is broken
-
-### Food cards
-
-- Lead with category and distance
-- Name must be prominent
-- Address and source should feel secondary
-- Card grid should feel airy, not dense
-
-### Filters
-
-- Short labels only
-- Clear active state
-- No fancy segmented-control styling if it weakens readability
-
-### Alerts and failure states
-
-- Alerts use warning yellow as an accent, not a full screaming banner
-- Failure state should say live data is unavailable but leave the rest of the page useful
-- Never collapse the page into an error wall
-
-## Copy Style
-
-- Declarative
-- Helpful
-- Confident
-- Never cute
-
-Good examples:
-
-- `Next streetcars`
-- `Walkable and short-hop options`
-- `Updated 1:06 PM`
-- `No current prediction for this direction.`
+- route lines
+- stop-marker logic
+- bracket and scoreboard rhythm
+- ZIP labels as first-class geography
 
 Avoid:
 
-- marketing slogans
-- startup jargon
-- transit jargon without translation
-- over-explaining obvious UI
+- glassmorphism
+- abstract gradient blobs
+- stock-photo hero treatment
+- generic SaaS dashboard tropes
+
+## Copy Style
+
+Say:
+
+- `Feed your block. Rep your team.`
+- `Community vote required`
+- `48-hour produce window`
+- `Priority ZIP share`
+
+Do not say:
+
+- `Reimagining food access`
+- `Frictionless equity platform`
+- `Disrupting hunger`
 
 ## QA Standard
 
-Do not ship if any of these are true:
+Do not ship if:
 
-- the first viewport looks busy or generic
-- the route rail feels like admin software
-- filter or stop changes cause jumpy reflow
-- empty states look accidental
-- mobile collapses into stacked clutter
-- the page is technically correct but aesthetically weak
+- the page looks like generic admin software
+- team colors overpower the civic brand
+- the budget and ZIP proof feel secondary
+- kiosk mode looks like a cropped desktop page instead of an intentional layout

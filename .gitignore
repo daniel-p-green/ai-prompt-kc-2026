@@ -1,7 +1,15 @@
 .DS_Store
 .cursor/
+.env
+.env.*
+*.key
+*.pem
 dist/
 node_modules/
+test-results/
 tmp/
 docs/reference/kc-streetcar/downloads/
 docs/reference/kc-streetcar/videos/
+.vercel
+The_Fight_for_Food_in_KC.mp4
+renders/

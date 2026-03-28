@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StreetCart KC | Live Streetcar &amp; Food Access Tracker</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#191c1d",
+              "on-tertiary-fixed": "#410007",
+              "on-primary-fixed": "#001d35",
+              "surface-dim": "#d9dadb",
+              "on-secondary-container": "#004e81",
+              "primary-container": "#0078c7",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#ffb3b1",
+              "outline-variant": "#c0c7d3",
+              "surface-container-highest": "#e1e3e4",
+              "on-tertiary-fixed-variant": "#92001d",
+              "tertiary-fixed": "#ffdad8",
+              "surface-container": "#edeeef",
+              "on-secondary-fixed-variant": "#004a7a",
+              "primary-fixed": "#d1e4ff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-container": "#fffbff",
+              "secondary-container": "#84c0ff",
+              "surface-container-low": "#f3f4f5",
+              "surface-bright": "#f8f9fa",
+              "primary": "#005f9e",
+              "on-primary-fixed-variant": "#00497c",
+              "error": "#ba1a1a",
+              "primary-fixed-dim": "#9dcaff",
+              "surface-container-high": "#e7e8e9",
+              "secondary": "#19629a",
+              "on-surface": "#191c1d",
+              "tertiary": "#bb0027",
+              "inverse-on-surface": "#f0f1f2",
+              "background": "#f8f9fa",
+              "inverse-surface": "#2e3132",
+              "surface-variant": "#e1e3e4",
+              "tertiary-container": "#e51a38",
+              "on-secondary-fixed": "#001d34",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#9bcbff",
+              "on-surface-variant": "#404752",
+              "on-primary-container": "#fdfcff",
+              "inverse-primary": "#9dcaff",
+              "outline": "#707883",
+              "surface": "#f8f9fa",
+              "surface-tint": "#0061a2",
+              "secondary-fixed": "#d0e4ff",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full flex justify-between items-center px-6 h-16 bg-slate-50 dark:bg-slate-900 z-50">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black tracking-tight text-blue-800 dark:text-blue-300 uppercase">StreetCart KC</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-4 border-blue-700 dark:border-blue-400 py-5" href="#">Track</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors py-1 px-3 rounded" href="#">Map</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors py-1 px-3 rounded" href="#">Impact</a>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-blue-700 dark:text-blue-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors rounded-full">
+<span class="material-symbols-outlined" data-icon="sensors">sensors</span>
+</button>
+<button class="p-2 text-blue-700 dark:text-blue-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-blue-700 dark:text-blue-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors rounded-full">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Layout Container -->
+<div class="flex pt-16 min-h-[calc(100vh-64px)]">
+<!-- SideNavBar (Route Rail) -->
+<nav class="fixed left-0 top-16 h-[calc(100vh-64px)] flex flex-col z-40 bg-blue-800 dark:bg-blue-950 w-20 md:w-80 shadow-[0px_0px_0px_4px_rgba(0,95,158,0.1)] overflow-y-auto">
+<div class="p-6 border-b border-blue-700/50 hidden md:block">
+<h2 class="text-white font-headline text-xl font-bold">Route Rail</h2>
+<p class="text-blue-200 text-xs uppercase tracking-widest font-semibold mt-1">Main Street Line</p>
+</div>
+<div class="flex-1 py-4">
+<!-- River Market - ACTIVE -->
+<div class="bg-blue-700 dark:bg-blue-900 border-l-4 border-white text-white flex items-center px-4 py-4 ml-2 mb-2 transition-all duration-300 ease-out cursor-pointer">
+<span class="material-symbols-outlined text-2xl mr-4" data-icon="train">train</span>
+<div class="hidden md:block flex-1">
+<div class="flex justify-between items-start">
+<span class="font-semibold text-sm">River Market North</span>
+<span class="bg-white/20 text-[10px] px-2 py-0.5 rounded font-bold">4 MIN</span>
+</div>
+<div class="flex items-center mt-1 text-blue-100 text-[10px] font-medium tracking-wide uppercase">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="restaurant">restaurant</span> 12 places
+                        </div>
+</div>
+</div>
+<!-- City Market -->
+<div class="text-blue-200 dark:text-blue-400 flex items-center px-4 py-4 opacity-70 hover:bg-blue-600 dark:hover:bg-blue-800 transition-all duration-300 ease-out cursor-pointer group">
+<span class="material-symbols-outlined text-2xl mr-4 group-hover:text-white" data-icon="flash_on">flash_on</span>
+<div class="hidden md:block flex-1">
+<div class="flex justify-between items-start">
+<span class="font-semibold text-sm group-hover:text-white">City Market</span>
+<span class="text-[10px] px-2 py-0.5 font-bold">9 MIN</span>
+</div>
+<div class="flex items-center mt-1 text-[10px] font-medium tracking-wide uppercase">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="restaurant">restaurant</span> 24 places
+                        </div>
+</div>
+</div>
+<!-- Victory Park -->
+<div class="text-blue-200 dark:text-blue-400 flex items-center px-4 py-4 opacity-70 hover:bg-blue-600 dark:hover:bg-blue-800 transition-all duration-300 ease-out cursor-pointer group">
+<span class="material-symbols-outlined text-2xl mr-4 group-hover:text-white" data-icon="account_balance">account_balance</span>
+<div class="hidden md:block flex-1">
+<div class="flex justify-between items-start">
+<span class="font-semibold text-sm group-hover:text-white">Victory Park</span>
+<span class="text-[10px] px-2 py-0.5 font-bold">14 MIN</span>
+</div>
+<div class="flex items-center mt-1 text-[10px] font-medium tracking-wide uppercase">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="restaurant">restaurant</span> 8 places
+                        </div>
+</div>
+</div>
+<!-- Power & Light -->
+<div class="text-blue-200 dark:text-blue-400 flex items-center px-4 py-4 opacity-70 hover:bg-blue-600 dark:hover:bg-blue-800 transition-all duration-300 ease-out cursor-pointer group">
+<span class="material-symbols-outlined text-2xl mr-4 group-hover:text-white" data-icon="museum">museum</span>
+<div class="hidden md:block flex-1">
+<span class="font-semibold text-sm group-hover:text-white">Power &amp; Light</span>
+</div>
+</div>
+<!-- Union Station -->
+<div class="text-blue-200 dark:text-blue-400 flex items-center px-4 py-4 opacity-70 hover:bg-blue-600 dark:hover:bg-blue-800 transition-all duration-300 ease-out cursor-pointer group">
+<span class="material-symbols-outlined text-2xl mr-4 group-hover:text-white" data-icon="shopping_bag">shopping_bag</span>
+<div class="hidden md:block flex-1">
+<span class="font-semibold text-sm group-hover:text-white">Union Station</span>
+</div>
+</div>
+</div>
+<div class="p-6 mt-auto hidden md:block">
+<button class="w-full bg-blue-700 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-sm flex items-center justify-center gap-2 transition-colors uppercase text-xs tracking-widest">
+<span class="material-symbols-outlined text-lg" data-icon="map">map</span>
+                    View Full Map
+                </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-20 md:ml-80 bg-surface min-h-full p-8 md:p-12 overflow-x-hidden">
+<!-- Alert Banner -->
+<div class="mb-12 flex items-center gap-4 bg-tertiary/10 border-l-4 border-tertiary p-4 rounded-r-lg">
+<span class="material-symbols-outlined text-tertiary" data-icon="warning">warning</span>
+<p class="text-tertiary font-semibold text-sm">TEFAP Federal Cut 40% - High Severity Alert: Food pantry supplies may be limited today.</p>
+</div>
+<!-- Page Header -->
+<header class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-[3.5rem] font-extrabold font-headline leading-tight tracking-tight text-on-surface">River Market North</h1>
+<p class="text-outline font-medium flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                            Updated 1:06 PM · GTFS Real-time
+                        </p>
+</div>
+<div class="flex gap-2">
+<span class="bg-primary-container text-on-primary-container px-4 py-2 rounded-sm font-bold uppercase text-[10px] tracking-widest">Live Tracking On</span>
+</div>
+</div>
+</header>
+<!-- Live Arrivals Panel -->
+<section class="mb-16">
+<h3 class="text-outline uppercase text-xs font-bold tracking-[0.2em] mb-6">Next streetcars</h3>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Northbound -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_0px_0px_1px_rgba(0,0,0,0.05)] flex flex-col justify-between">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h4 class="font-headline text-2xl font-bold text-on-surface">Northbound</h4>
+<p class="text-outline text-sm">To River Market North</p>
+</div>
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span> Low Occupancy
+                            </span>
+</div>
+<div class="flex items-baseline gap-4 mb-8">
+<span class="text-7xl font-headline font-extrabold text-primary">6</span>
+<span class="text-2xl font-bold text-primary">MIN</span>
+</div>
+<div class="flex items-center gap-6 border-t border-surface-container-high pt-6">
+<div>
+<p class="text-outline text-[10px] font-bold uppercase tracking-wider">Secondary</p>
+<p class="text-lg font-bold font-headline">14 min</p>
+</div>
+<div class="w-px h-8 bg-surface-container-high"></div>
+<div>
+<p class="text-outline text-[10px] font-bold uppercase tracking-wider">Tertiary</p>
+<p class="text-lg font-bold font-headline">22 min</p>
+</div>
+</div>
+</div>
+<!-- Southbound -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_0px_0px_1px_rgba(0,0,0,0.05)] flex flex-col justify-between">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h4 class="font-headline text-2xl font-bold text-on-surface">Southbound</h4>
+<p class="text-outline text-sm">To Union Station</p>
+</div>
+<span class="bg-surface-container-high text-tertiary px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span> Medium Occupancy
+                            </span>
+</div>
+<div class="flex items-baseline gap-4 mb-8">
+<span class="text-7xl font-headline font-extrabold text-on-surface">4</span>
+<span class="text-2xl font-bold text-on-surface">MIN</span>
+</div>
+<div class="flex items-center gap-6 border-t border-surface-container-high pt-6">
+<div>
+<p class="text-outline text-[10px] font-bold uppercase tracking-wider">Secondary</p>
+<p class="text-lg font-bold font-headline">12 min</p>
+</div>
+<div class="w-px h-8 bg-surface-container-high"></div>
+<div>
+<p class="text-outline text-[10px] font-bold uppercase tracking-wider">Tertiary</p>
+<p class="text-lg font-bold font-headline">20 min</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Food Access Discovery Panel -->
+<section class="mb-16">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-outline uppercase text-xs font-bold tracking-[0.2em]">Walkable food options</h3>
+<div class="flex gap-2">
+<button class="bg-surface-container-lowest px-4 py-2 rounded-sm text-xs font-bold text-primary shadow-sm hover:bg-primary hover:text-white transition-all">All</button>
+<button class="bg-surface-container-low px-4 py-2 rounded-sm text-xs font-bold text-outline hover:bg-primary-container hover:text-white transition-all">Pantry</button>
+<button class="bg-surface-container-low px-4 py-2 rounded-sm text-xs font-bold text-outline hover:bg-primary-container hover:text-white transition-all">Grocery</button>
+<button class="bg-surface-container-low px-4 py-2 rounded-sm text-xs font-bold text-outline hover:bg-primary-container hover:text-white transition-all">Farmers Market</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Food Card 1 -->
+<div class="bg-surface-container-lowest group hover:scale-[1.02] transition-transform duration-300">
+<div class="h-40 overflow-hidden">
+<img alt="Local marketplace with fresh vegetables" class="w-full h-full object-cover" data-alt="vibrant farmer's market stall with fresh organic bell peppers and tomatoes in wooden crates under bright sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDabnm7C9zP6xRRfQzQY8_2XIU1jH7Aa3IXgexbXUNq3f-9ZCWV1fZ4--Ch1VFlbE2DtmOQuF2pDyVB7sqtxg4ziWb7u_CAJG_P0Ia7CzeS7P-tL4U45sBBfSMC51xx45YDtreAk8m-GRzs7oXxZ-Y4g-q1gUjnmg1ga41GxyAwhd4x8QJzo-ROJHxNuvseijLo77c1jPfw6Gh82EegjYD3JlzxKlhf0nMLyR59oH8e_7mdv4l0RO-14RQh2xODftxUihkIp6KBpLw"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary bg-primary/10 px-2 py-0.5">Farmers Market</span>
+<span class="text-xs font-bold font-headline text-on-surface">0.1 mi</span>
+</div>
+<h5 class="font-headline text-xl font-bold mb-1">City Market KC</h5>
+<p class="text-outline text-sm mb-4">20 E 5th St, Kansas City, MO</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container-high">
+<span class="text-[10px] text-outline font-medium uppercase tracking-tighter">Source: GTFS/OSM</span>
+<button class="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-1">
+                                    Details <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Food Card 2 -->
+<div class="bg-surface-container-lowest group hover:scale-[1.02] transition-transform duration-300">
+<div class="h-40 overflow-hidden">
+<img alt="Interior of a modern grocery store" class="w-full h-full object-cover" data-alt="clean modern grocery store aisle with neatly stacked healthy food products and soft overhead architectural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7kL692qefbBEqFyEWhL_-5fZU-WdiPXWNkKHIJnd-qVBGT1t9LaRAlBtBBkiaVIAW9Dj64nhrwFDoz1eeMHBcYWu-YxwWwQBXBzmg7HdFKOmTW3FctnJIF5E3Zzmx3eDKHwRSlnIKTQROPZJDfw-zpCCtySMam2H-Uds3wnhIPa4rxonrXdhpZ9xyNyqUS7595vjR9uz-rp1JZvtUarIAiPx58qwQvlswb8w0GVfd-LUUHMYND2W-cHOE_HCBdgxeQ2NFtDtS7z8"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary bg-primary/10 px-2 py-0.5">Grocery</span>
+<span class="text-xs font-bold font-headline text-on-surface">0.4 mi</span>
+</div>
+<h5 class="font-headline text-xl font-bold mb-1">Aldi</h5>
+<p class="text-outline text-sm mb-4">Transit-Oriented Hub Plaza</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container-high">
+<span class="text-[10px] text-outline font-medium uppercase tracking-tighter">Source: GTFS/OSM</span>
+<button class="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-1">
+                                    Details <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Food Card 3 -->
+<div class="bg-surface-container-lowest group hover:scale-[1.02] transition-transform duration-300 border-l-4 border-tertiary">
+<div class="h-40 overflow-hidden">
+<img alt="Food pantry distribution center" class="w-full h-full object-cover" data-alt="organized community food bank warehouse with cardboard boxes and shelf-stable goods in a bright industrial space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZHNQxym6h6aU9n0SrnDOofShzyGKp8mihoM-hINJ9nMF784Avb3xsMtGl1ERO0EXMibvWrN-8MY-hPH7AIs-XuxOuI7z9cwpePzE6i9zpsFVYXkfZSRBp67yIN1RMXYCo3Iv2xxHsigWPMvoshcWPHwDVoIBPISH6Cl-7qxCjYYAkoK61uGBpKQtu2YwiDDfKZaoa1vPjxKfweFutQvdhZ17guCOJV_-sPuXL7x8MbMvG-sw7Ra9P3G1V1JFEK7uChVfNRjMlBK8"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] font-bold uppercase tracking-widest text-tertiary bg-tertiary/10 px-2 py-0.5">Pantry</span>
+<span class="text-xs font-bold font-headline text-on-surface">0.6 mi</span>
+</div>
+<h5 class="font-headline text-xl font-bold mb-1">Harvesters HQ</h5>
+<p class="text-outline text-sm mb-4">3801 Topping Ave, Kansas City, MO</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container-high">
+<span class="text-[10px] text-outline font-medium uppercase tracking-tighter">Source: Community Feed</span>
+<button class="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-1">
+                                    Details <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Context Section (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
+<div class="md:col-span-8 bg-surface-container-highest rounded-xl overflow-hidden min-h-[400px] relative">
+<img alt="Stylized map of Kansas City" class="w-full h-full object-cover grayscale opacity-50" data-alt="clean digital map representation of downtown kansas city with highlighted transit routes and food destination icons" data-location="Kansas City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdjK0hv6codW2xOAF3jbySGhQXS53yakPItS4y7S0CeAX4hBlST3QrLhgfUdKbryav0SMXy-R3d_EpuVGY7DWi1k5tZFEep9WTdGLS0f1n2tQyYUJGj5yl0U1Oa9AYiZfLc6SQXT1VD0KEzxYU4ab5AI3rdzbkOA7cn1exr9h57khUoDCrqiGwd_NC2x7uix8bODaFRRp7NcqK-Wgkh4LslhBhWQBCBaKjEKmPK3WG2dQbbEQq5O-w7TI9mVwGZMZ18PNTvKrAZgQ"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center bg-primary/20 p-12 text-center pointer-events-none">
+<span class="material-symbols-outlined text-6xl text-on-primary-container mb-4" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h4 class="text-white font-headline text-3xl font-extrabold shadow-sm">Real-time Location Context</h4>
+<p class="text-white max-w-md mt-4 font-medium opacity-90">View nearby food lockers, SNAP-eligible retailers, and public streetcar status on our interactive civic grid.</p>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col gap-8">
+<div class="bg-inverse-surface p-8 rounded-xl flex-1 border-l-4 border-primary">
+<h5 class="text-inverse-on-surface font-headline text-xl font-bold mb-4">Civic Impact Score</h5>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="text-4xl font-headline font-extrabold text-white">8.4</span>
+<span class="text-primary-container font-bold">/ 10</span>
+</div>
+<p class="text-inverse-on-surface/70 text-sm">River Market North currently has high food accessibility within a 5-minute walk from the transit stop.</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex-1">
+<h5 class="font-headline text-xl font-bold mb-4">Donation Match</h5>
+<p class="text-outline text-sm mb-6">Start a match for the "Double Your Dollars" farmers market initiative.</p>
+<button class="w-full bg-tertiary text-on-tertiary font-bold py-3 uppercase text-xs tracking-widest hover:opacity-90 transition-opacity">Submit Donation</button>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Mobile Navigation -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-slate-50 dark:bg-slate-900 flex justify-around items-center h-16 z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+<button class="flex flex-col items-center gap-1 text-blue-700">
+<span class="material-symbols-outlined" data-icon="train" style="font-variation-settings: 'FILL' 1;">train</span>
+<span class="text-[10px] font-bold uppercase">Track</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="text-[10px] font-bold uppercase">Food</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="text-[10px] font-bold uppercase">Map</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-bold uppercase">More</span>
+</button>
+</nav>
+</body></html>

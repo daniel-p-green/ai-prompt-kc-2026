@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StreetCart KC: The Muse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --base: #f8f9ff;
+      --white: #ffffff;
+      --low-tint: #eef4ff;
+      --primary: #006196;
+      --rail: #0693e3;
+      --text: #001d36;
+      --hero-start: #006196;
+      --hero-end: #007abc;
+      --success-bg: #e5f7ef;
+      --success-text: #0f6b43;
+      --warning: #f3b72f;
+      --chiefs: #e31837;
+      --royals: #004687;
+      --sporting: #93b1a7;
+      --current: #d4001f;
+      --kck: #2d6a4f;
+      --title-size: clamp(2rem, 5.2vw, 4.8rem);
+      --h2-size: clamp(1.4rem, 3vw, 2.5rem);
+      --h3-size: clamp(0.98rem, 1.8vw, 1.2rem);
+      --stat-size: clamp(1.8rem, 3.8vw, 3.2rem);
+      --body-size: clamp(0.8rem, 1.15vw, 1rem);
+      --small-size: clamp(0.68rem, 0.95vw, 0.84rem);
+      --label-size: clamp(0.62rem, 0.85vw, 0.75rem);
+      --slide-padding: clamp(1rem, 3.8vw, 3.4rem);
+      --content-gap: clamp(0.75rem, 1.8vw, 1.6rem);
+      --element-gap: clamp(0.45rem, 1vw, 0.9rem);
+      --radius: 2rem;
+      --shadow: 0 20px 60px rgba(0, 53, 87, 0.08);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; overflow-x: hidden; }
+    html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+    body { font-family: "Inter", sans-serif; background: var(--base); color: var(--text); }
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: var(--slide-padding);
+      background: var(--base);
+    }
+    .slide-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: var(--content-gap);
+      max-height: 100%;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+    .hero { background: linear-gradient(135deg, var(--hero-start), var(--hero-end)); color: var(--white); }
+    .soft { background: var(--low-tint); }
+    .rail-top::before {
+      content: "";
+      position: absolute;
+      top: calc(var(--slide-padding) * 0.45);
+      left: var(--slide-padding);
+      right: var(--slide-padding);
+      height: 0.5rem;
+      border-radius: 999px;
+      background: var(--rail);
+    }
+    h1, h2, h3, .display {
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      line-height: 0.95;
+    }
+    h1 { font-size: var(--title-size); max-width: 12ch; }
+    h2 { font-size: var(--h2-size); max-width: 12ch; }
+    h3 { font-size: var(--h3-size); }
+    p, li { font-size: var(--body-size); line-height: 1.45; }
+    .eyebrow, .label {
+      font-size: var(--label-size);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .subhead { font-size: clamp(1rem, 1.55vw, 1.35rem); max-width: 40ch; opacity: 0.9; }
+    .meta, .foot {
+      font-size: var(--small-size);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      opacity: 0.78;
+    }
+    .foot {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: clamp(1rem, 2vw, 2rem);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: var(--element-gap);
+      min-height: 0;
+    }
+    .three-col, .two-col, .channel-row, .assets-grid, .palette-row, .tagline-row {
+      display: grid;
+      gap: clamp(0.8rem, 1.2vw, 1rem);
+    }
+    .three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .channel-row { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .assets-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .palette-row { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .tagline-row { grid-template-columns: 1fr 1fr 1fr; }
+    .audience-card { position: relative; padding-left: 1.2rem; }
+    .audience-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 0.45rem;
+      border-radius: 999px;
+      background: var(--accent, var(--primary));
+    }
+    .bracket {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .match {
+      background: var(--white);
+      border-radius: 1.4rem;
+      padding: 0.9rem 1rem;
+      box-shadow: var(--shadow);
+      font-weight: 700;
+      display: grid;
+      gap: 0.35rem;
+    }
+    .arrow {
+      width: 2.8rem;
+      height: 0.45rem;
+      background: var(--rail);
+      border-radius: 999px;
+    }
+    .kiosk {
+      background: linear-gradient(180deg, #0d2a45, #03253b);
+      border-radius: 2rem;
+      padding: 1rem;
+      color: var(--white);
+      display: grid;
+      gap: 0.8rem;
+      min-height: 100%;
+    }
+    .kiosk-screen {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 1.5rem;
+      padding: 1rem;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .score-row {
+      display: grid;
+      gap: 0.4rem;
+    }
+    .score-row strong {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+    }
+    .bar {
+      height: 0.75rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+    }
+    .bar span {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+    }
+    .palette {
+      display: grid;
+      gap: 0.4rem;
+      justify-items: center;
+      text-align: center;
+    }
+    .swatch {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 1.2rem;
+      box-shadow: var(--shadow);
+    }
+    .chip {
+      align-self: flex-start;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      font-size: var(--label-size);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .chip-success { background: var(--success-bg); color: var(--success-text); }
+    .chip-warning { background: rgba(243, 183, 47, 0.18); color: #765400; }
+    .asset {
+      background: rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      padding: 0.9rem 1rem;
+      text-align: center;
+      font-weight: 600;
+    }
+    .nav-dots {
+      position: fixed;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      z-index: 20;
+    }
+    .nav-dots button {
+      width: 0.8rem;
+      height: 0.8rem;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(0, 29, 54, 0.22);
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .nav-dots button.active { background: var(--primary); transform: scale(1.2); }
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 0.35rem;
+      background: var(--rail);
+      width: 0;
+      z-index: 25;
+      transition: width 0.3s ease;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+    }
+    .slide.visible .reveal { opacity: 1; transform: translateY(0); }
+    .slide.initial .reveal { opacity: 1; transform: none; transition: none; }
+    .slide.visible .reveal:nth-child(2) { transition-delay: 0.08s; }
+    .slide.visible .reveal:nth-child(3) { transition-delay: 0.16s; }
+    .slide.visible .reveal:nth-child(4) { transition-delay: 0.24s; }
+    .slide.visible .reveal:nth-child(5) { transition-delay: 0.32s; }
+    @media (max-width: 980px) {
+      .three-col, .two-col, .channel-row, .assets-grid, .palette-row, .tagline-row, .bracket {
+        grid-template-columns: 1fr;
+      }
+      .arrow { width: 100%; }
+    }
+    @media (max-height: 700px) {
+      :root {
+        --slide-padding: clamp(0.9rem, 3vw, 1.8rem);
+        --title-size: clamp(1.8rem, 4.8vw, 3.4rem);
+      }
+    }
+    @media (max-height: 600px) {
+      :root {
+        --slide-padding: clamp(0.7rem, 2vw, 1.2rem);
+        --body-size: clamp(0.72rem, 1vw, 0.88rem);
+      }
+      .nav-dots { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <nav class="nav-dots" aria-label="Slide navigation"></nav>
+
+  <section class="slide rail-top" id="slide-1">
+    <div class="slide-content">
+      <div class="eyebrow reveal">StreetCart KC</div>
+      <h1 class="reveal">From Rail Line to Life Line</h1>
+      <p class="subhead reveal">The Muse: Go-to-Market &amp; Brand</p>
+      <div class="three-col reveal">
+        <article class="card audience-card" style="--accent:#006196">
+          <h3>Volunteers</h3>
+          <p>KC sports fans 22-45.</p>
+          <p><strong>Hook:</strong> Compete for their team.</p>
+        </article>
+        <article class="card audience-card" style="--accent:#2d6a4f">
+          <h3>Recipients</h3>
+          <p>Households in 6 priority ZIPs.</p>
+          <p><strong>Hook:</strong> Zero friction. No app. A box at the door.</p>
+        </article>
+        <article class="card audience-card" style="--accent:#f3b72f">
+          <h3>Funders</h3>
+          <p>City and foundations.</p>
+          <p><strong>Hook:</strong> Need data for renewal.</p>
+        </article>
+      </div>
+      <div class="foot reveal">
+        <span>Team Codex KC</span>
+        <span>March 28, 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-2">
+    <div class="slide-content">
+      <div class="eyebrow reveal">The tournament is the campaign</div>
+      <div class="two-col reveal">
+        <article class="card">
+          <div class="bracket">
+            <div class="match"><span>Chiefs</span><span>Royals</span></div>
+            <div class="arrow"></div>
+            <div class="match"><span>Sporting</span><span>Current</span></div>
+            <div class="arrow"></div>
+            <div class="match"><span>KCK</span><span>Universities</span><span>Championship</span></div>
+          </div>
+          <p><strong>25 kiosks. 10,000 daily riders.</strong> The scoreboard is the billboard.</p>
+          <div class="channel-row">
+            <div class="card"><h3>Sports socials</h3><p>Recruit</p></div>
+            <div class="card"><h3>Radio</h3><p>Awareness</p></div>
+            <div class="card"><h3>Kiosks</h3><p>Live scores</p></div>
+            <div class="card"><h3>Earned media</h3><p>Story</p></div>
+          </div>
+        </article>
+        <article class="kiosk">
+          <div class="label">Kiosk mockup</div>
+          <div class="kiosk-screen">
+            <div class="score-row">
+              <span class="label">This week</span>
+              <strong>Chiefs 412 vs Royals 387 deliveries</strong>
+            </div>
+            <div class="score-row">
+              <span>Chiefs</span>
+              <div class="bar"><span style="width:82%; background:var(--chiefs)"></span></div>
+            </div>
+            <div class="score-row">
+              <span>Royals</span>
+              <div class="bar"><span style="width:77%; background:var(--royals)"></span></div>
+            </div>
+            <div class="score-row">
+              <span>Sporting</span>
+              <div class="bar"><span style="width:59%; background:var(--sporting)"></span></div>
+            </div>
+            <div class="score-row">
+              <span>Current</span>
+              <div class="bar"><span style="width:44%; background:var(--current)"></span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="foot reveal">
+        <span>Live score drives repeated attention</span>
+        <span>Each surface has one job</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide soft" id="slide-3">
+    <div class="slide-content">
+      <div class="eyebrow reveal">Brand system and voice</div>
+      <div class="palette-row reveal">
+        <div class="palette"><div class="swatch" style="background:#006196"></div><span>#006196</span></div>
+        <div class="palette"><div class="swatch" style="background:#0693e3"></div><span>#0693E3</span></div>
+        <div class="palette"><div class="swatch" style="background:#f8f9ff"></div><span>#f8f9ff</span></div>
+        <div class="palette"><div class="swatch" style="background:#001d36"></div><span style="color:#001d36">#001d36</span></div>
+        <div class="palette"><div class="swatch" style="background:#F4CE3C"></div><span>#F4CE3C</span></div>
+      </div>
+      <div class="tagline-row reveal">
+        <div class="card"><p>From Rail Line to Life Line</p></div>
+        <div class="card"><p>Feed Your Block. Rep Your Team.</p></div>
+        <div class="card"><p>Alimenta tu barrio. Representa tu equipo.</p></div>
+      </div>
+      <div class="two-col reveal">
+        <article class="card">
+          <div class="chip chip-success">We say</div>
+          <p>Chiefs: 412. Royals: 387. Who closes the gap?</p>
+          <p>1,000 lbs, 48 hours. Who shows up first?</p>
+        </article>
+        <article class="card">
+          <div class="chip chip-warning">Never say</div>
+          <p>Reimagining food access</p>
+          <p>Frictionless equity ecosystem</p>
+          <p>Join the movement</p>
+        </article>
+      </div>
+      <div class="foot reveal">
+        <span>Scoreboard language beats abstract nonprofit language</span>
+        <span>Everything stays concrete and local</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide hero" id="slide-4">
+    <div class="slide-content">
+      <div class="eyebrow reveal">Curveball becomes launch campaign</div>
+      <h2 class="reveal">Voto y Verdura: Vote and Vegetables</h2>
+      <div class="two-col reveal">
+        <article class="card" style="background:rgba(255,255,255,0.12); color:#fff; box-shadow:none;">
+          <h3>Spanish-first by design</h3>
+          <p>66101: 63% Hispanic. 66105: 71%. Everything is Spanish-first.</p>
+          <p>Pop-ups at El Centro, Crosslines, laundromats, and tiendas. Every produce bag carries a card and support form.</p>
+        </article>
+        <article class="card" style="background:rgba(255,255,255,0.12); color:#fff; box-shadow:none;">
+          <h3>Trusted messengers</h3>
+          <p>Canvassers come from parent networks, not downtown.</p>
+          <p>Added KCK bracket team. <strong>$8,000</strong>. The community vote becomes the launch campaign.</p>
+        </article>
+      </div>
+      <div class="foot reveal">
+        <span>Respect generates consent</span>
+        <span>Consent generates momentum</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide hero" id="slide-5">
+    <div class="slide-content">
+      <div class="eyebrow reveal">Close</div>
+      <h2 class="reveal">From Rail Line to Life Line</h2>
+      <p class="subhead reveal">Feed Your Block. Rep Your Team. Alimenta tu barrio. Representa tu equipo.</p>
+      <div class="assets-grid reveal">
+        <div class="asset">StreetCartKC.com</div>
+        <div class="asset">Kiosk templates</div>
+        <div class="asset">Social templates</div>
+        <div class="asset">Bilingual flyers</div>
+        <div class="asset">Wrap mockup</div>
+      </div>
+      <div class="foot reveal">
+        <span>Team Codex KC</span>
+        <span>StreetCartKC.com</span>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    class SlidePresentation {
+      constructor() {
+        this.slides = [...document.querySelectorAll(".slide")];
+        this.progress = document.querySelector(".progress");
+        this.nav = document.querySelector(".nav-dots");
+        this.index = 0;
+        this.slides[0]?.classList.add("visible", "initial");
+        this.renderDots();
+        this.observeSlides();
+        this.bindEvents();
+        this.updateUI(0);
+      }
+      renderDots() {
+        this.slides.forEach((slide, index) => {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.setAttribute("aria-label", `Go to slide ${index + 1}`);
+          dot.addEventListener("click", () => this.goTo(index));
+          this.nav.appendChild(dot);
+        });
+      }
+      observeSlides() {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const index = this.slides.indexOf(entry.target);
+              entry.target.classList.add("visible");
+              this.updateUI(index);
+            }
+          });
+        }, { threshold: 0.6 });
+        this.slides.forEach((slide) => observer.observe(slide));
+      }
+      bindEvents() {
+        window.addEventListener("keydown", (event) => {
+          if (event.key === "ArrowDown" || event.key === "ArrowRight" || event.key === " ") {
+            event.preventDefault();
+            this.goTo(Math.min(this.index + 1, this.slides.length - 1));
+          }
+          if (event.key === "ArrowUp" || event.key === "ArrowLeft") {
+            event.preventDefault();
+            this.goTo(Math.max(this.index - 1, 0));
+          }
+        });
+      }
+      goTo(index) {
+        this.slides[index].scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      updateUI(index) {
+        this.index = index;
+        this.progress.style.width = `${((index + 1) / this.slides.length) * 100}%`;
+        [...this.nav.children].forEach((dot, dotIndex) => {
+          dot.classList.toggle("active", dotIndex === index);
+        });
+      }
+    }
+    new SlidePresentation();
+  </script>
+</body>
+</html>

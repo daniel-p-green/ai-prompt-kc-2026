@@ -1,184 +1,287 @@
 # StreetCart KC
 
-StreetCart KC is Team Codex KC's working repo for the 2026 AI Prompt Championship submission. The concept is a streetcar-led, partner-operated food-access pilot for Kansas City: the streetcar corridor is the public-facing spine, while pantry and nonprofit partners handle neighborhood fulfillment into priority ZIP codes.
+![StreetCart KC banner](docs/images/streetcart-banner.jpg)
 
-This repo currently carries three connected artifacts:
+StreetCart KC is Team Codex KC's final 2026 AI Prompt Championship submission set across all three tracks. The concept is a streetcar-led, partner-operated food-access pilot for Kansas City: the streetcar corridor is the visible civic spine, while pantry and nonprofit partners handle neighborhood fulfillment into priority ZIP codes.
 
-- Oracle: business case, pilot economics, and judge-facing deck
-- Muse: brand and creative system for the concept
-- Architect: a thin product proof made up of a static StreetCart site and a KC Streetcar tracker page
+[![Oracle Final Submission](docs/images/badges/oracle-final.svg)](https://ai-prompt-kc-2026.vercel.app/)
+[![Muse Final Submission](docs/images/badges/muse-final.svg)](https://www.youtube.com/watch?v=AE5dciNphNA)
+[![Architect Live Prototype](docs/images/badges/architect-live.svg)](https://streetcart-kc-434237915842.us-west1.run.app/)
+[![LinkedIn](docs/images/badges/linkedin-daniel-green.svg)](https://linkedin.com/in/danielpgreen)
+[![AI Collective Kansas City](docs/images/badges/ai-collective-kc.svg)](https://www.aicollective.com/chapters/kc)
 
-## Current Status
+Quick links: [Oracle](https://ai-prompt-kc-2026.vercel.app/) | [Muse](https://www.youtube.com/watch?v=AE5dciNphNA) | [Architect](https://streetcart-kc-434237915842.us-west1.run.app/) | [LinkedIn](https://linkedin.com/in/danielpgreen) | [AI Collective KC](https://www.aicollective.com/chapters/kc)
 
-As of `2026-03-28`, the repo has a usable competition baseline:
+## Final Submissions
 
-- A lightweight static StreetCart proof exists and serves from this repo.
-- A branded KC Streetcar food-access tracker ships as a separate React/Vite page at `tracker.html`.
-- The Oracle deck is generated from source data and preserved in the legacy archive.
-- Shared source data lives in `data/streetcart-kc.json` and `data/kc-streetcar-tracker.json`.
-- Structured benchmark research now also lives in `docs/research/2026-03-28-food-access-program-benchmark-dataset/`.
-- Research and side explorations are preserved as evidence, not treated as active requirements.
+- Oracle: [StreetCart KC submission site](https://ai-prompt-kc-2026.vercel.app/) plus the packaged deck artifact in `StreetCart_KC_Rail_to_Lifeline.pdf`
+- Muse: [The Fight for Food in KC](https://www.youtube.com/watch?v=AE5dciNphNA) plus the local export in `The_Fight_for_Food_in_KC.mp4`
+- Architect: [Live StreetCart prototype](https://streetcart-kc-434237915842.us-west1.run.app/) backed by the static and tracker proofs in this repo
 
-What is not done yet:
+Built by [Daniel Green](https://linkedin.com/in/danielpgreen) with the [AI Collective Kansas City chapter](https://www.aicollective.com/chapters/kc).
 
-- The long-term application stack (`Next.js`, `TypeScript`, `Postgres`, SMS provider) has not been scaffolded.
-- There is still no lint workflow or backend service.
-- The tracker is still a client-side proof backed by generated data and public feeds, not a production application.
+This repo is not a production application. It is a competition package plus a thin interactive proof:
 
-## Documentation Status
+- Oracle: business case, pilot logic, economics, and deck
+- Muse: brand, narrative, and creative system
+- Architect: lightweight web proofs that make the concept feel concrete
 
-- Active docs live in the repo root, `docs/product/`, `docs/engineering/`, `docs/logs/`, `docs/reference/`, and `docs/research/`.
-- Superseded competition-planning material was moved to `docs/archive/legacy/2026-03-28-competition-package/`.
-- Start with `docs/README.md` if you need the current doc map before opening individual files.
+## Current State
 
-## What We Have
+As of `2026-03-28`, the repository has:
 
-### Active docs
+- A live Oracle submission at `https://ai-prompt-kc-2026.vercel.app/`
+- A published Muse film at `https://www.youtube.com/watch?v=AE5dciNphNA`
+- A live Architect prototype at `https://streetcart-kc-434237915842.us-west1.run.app/`
+- A static StreetCart landing/proof page at `index.html`
+- A React/Vite tracker proof at `tracker.html`
+- A packaged Oracle PDF at `StreetCart_KC_Rail_to_Lifeline.pdf`
+- A local Muse export at `The_Fight_for_Food_in_KC.mp4`
+- Shared structured data for the deck and static proof in `data/streetcart-kc.json`
+- A generated tracker dataset in `data/kc-streetcar-tracker.json`
+- A KC Streetcar arrivals fetcher plus normalized snapshot under `docs/reference/kc-streetcar/arrivals/`
+- Research, reference, and worklog material showing how the concept was developed
 
-- Tracker product brief: `docs/product/kc-streetcar-food-access-tracker-prd.md`
-- Tracker user stories: `docs/product/kc-streetcar-food-access-tracker-user-stories.md`
-- UI and implementation handoff: `MASTER_DOC.md`
-- Visual and copy standard: `BRAND.md`
-- Decision trail: `docs/logs/2026-03-28-worklog.md`
+What this repo does not have yet:
 
-### Current artifacts
+- A Next.js application scaffold
+- A backend service
+- Postgres
+- SMS delivery
+- A lint workflow
 
-- Static StreetCart proof: `index.html`, `site/app.js`, `site/styles.css`, `data/streetcart-kc.json`
-- KC Streetcar tracker proof: `tracker.html`, `src/tracker/`, `data/kc-streetcar-tracker.json`
-- Research archive and supporting exploration: `docs/research/`
-- Historical discovery, Oracle, Muse, and planning docs: `docs/archive/legacy/2026-03-28-competition-package/`
+## Inventory
 
-### Reference material
+### Root docs
 
-- KC Streetcar scraped/reference material: `docs/reference/kc-streetcar/`
-- Active engineering guidance: `docs/engineering/test-strategy.md`
+- `AGENTS.md`: repo operating rules
+- `README.md`: repo handbook
+- `MASTER_DOC.md`: implementation and product handoff
+- `BRAND.md`: brand and creative guidance
+- `DESIGN.md`: design direction and UI guidance
+
+### Active product and engineering docs
+
+- `docs/product/kc-streetcar-food-access-tracker-prd.md`
+- `docs/product/kc-streetcar-food-access-tracker-user-stories.md`
+- `docs/engineering/test-strategy.md`
+- `docs/logs/2026-03-28-worklog.md`
+- `docs/logs/README.md`
+
+### Competition and research materials
+
+- `docs/research/`: supporting research artifacts and sourced exploration
+- `docs/archive/`: archived competition-planning material that is no longer the active source of truth
+
+### Reference bundle
+
+- `docs/reference/kc-streetcar/README.md`: guide to the KC Streetcar reference corpus
+- `docs/reference/kc-streetcar/arrivals/`: normalized live-signage endpoint inventory and latest snapshot
+- `docs/reference/kc-streetcar/downloads/`: downloaded public PDFs/images used as source material
+- `docs/reference/kc-streetcar/manifests/`: crawl manifests and snapshot indices
+- `docs/reference/kc-streetcar/pages/` and `docs/reference/kc-streetcar/posts/`: scraped page and post snapshots
+
+Note: `docs/reference/kc-streetcar/videos/` is intentionally kept local and ignored from Git because the raw media set is large and not needed for the tracked repo.
+
+### Data and generated artifacts
+
+- `data/streetcart-kc.json`: shared concept facts used by the deck and static proof
+- `data/kc-streetcar-tracker.json`: generated route/stop/food-access dataset for the tracker
+- `docs/archive/legacy/2026-03-28-competition-package/plans/StreetCart_KC_Oracle.pptx`: generated Oracle source deck
+- `StreetCart_KC_Rail_to_Lifeline.pdf`: packaged Oracle final deck
+- `The_Fight_for_Food_in_KC.mp4`: local Muse export
+
+### App and site files
+
+- `index.html`: static StreetCart proof entrypoint
+- `tracker.html`: React tracker entrypoint
+- `site/`: static landing-page assets
+- `src/tracker/`: React tracker UI
+- `src/lib/tracker.js`: tracker helper logic
+- `src/lib/streetcart-dashboard.js`: StreetCart dashboard helper logic
+
+### Scripts
+
+- `scripts/build_oracle_deck.mjs`: rebuilds the Oracle deck from source data
+- `scripts/build_streetcar_tracker_data.mjs`: rebuilds the tracker dataset
+- `scripts/fetch_kc_streetcar_arrivals.mjs`: fetches and normalizes public KC Streetcar arrival data
+- `scripts/fetch_kc_streetcar_arrivals.test.mjs`: arrivals-fetcher tests
+- `scripts/streetcart_data_contract.test.mjs`: source data contract tests
 
 ## Repo Map
 
 ```text
 .
-├── AGENTS.md                        # Project operating rules
-├── BRAND.md                         # Current tracker brand/design standard
-├── MASTER_DOC.md                    # Current tracker implementation handoff
-├── README.md                        # Root project handbook
-├── data/                            # Shared demo/deck/tracker data
+├── AGENTS.md
+├── BRAND.md
+├── DESIGN.md
+├── MASTER_DOC.md
+├── README.md
+├── data/
 ├── docs/
-│   ├── README.md                    # Active-vs-archived doc index
-│   ├── archive/                     # Legacy competition planning material
-│   ├── engineering/                 # Implementation and test strategy notes
-│   ├── logs/                        # Dated worklogs and operating record
-│   ├── product/                     # Active tracker PRD and user stories
-│   ├── reference/                   # External reference snapshots
-│   └── research/                    # Side research and source artifacts
-├── scripts/                         # Artifact generation scripts
-├── site/                            # Static demo assets
-├── src/tracker/                     # React tracker app
-├── index.html                       # Static demo entrypoint
-├── package.json                     # Current repo scripts
-├── tracker.html                     # React tracker entrypoint
-└── vite.config.js                   # Multi-page Vite config
+│   ├── archive/
+│   ├── engineering/
+│   ├── logs/
+│   ├── product/
+│   ├── reference/
+│   └── research/
+├── scripts/
+├── site/
+├── src/
+│   ├── lib/
+│   └── tracker/
+├── index.html
+├── tracker.html
+├── kc-streetcar-tracker-opus.html
+├── package.json
+└── vite.config.js
 ```
 
 ## Commands
 
-Current scripts:
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Current scripts:
+
+```bash
 npm run dev
 npm run build
 npm run preview
-npm run arrivals:fetch
-npm run deck:build
 npm run site:serve
+npm run deck:build
 npm run tracker:data
+npm run arrivals:fetch
 npm run test
 npm run test:arrivals
-npm run test:streetcart
 npm run test:tracker
+npm run test:dashboard
+npm run test:url-state
+npm run test:streetcart
 ```
 
-What each one does:
+What they do:
 
-- `npm run dev`: serves both the landing page and the tracker page locally with Vite
-- `npm run build`: builds the multi-page site to `dist/`
-- `npm run preview`: serves the built output for browser verification
-- `npm run arrivals:fetch`: fetches the live KC Streetcar signage data from the public Firebase backend and writes `docs/reference/kc-streetcar/arrivals/live-arrivals-latest.json`
-- `npm run deck:build`: regenerates the Oracle PowerPoint from `data/streetcart-kc.json`
-- `npm run site:serve`: serves the repo root at `http://127.0.0.1:4173/`
-- `npm run tracker:data`: rebuilds the streetcar stop + food-access dataset at `data/kc-streetcar-tracker.json`
-- `npm run test`: runs arrival, tracker, and StreetCart data-contract tests
-- `npm run test:arrivals`: runs the scraper unit tests for signage URL parsing and output normalization
-- `npm run test:streetcart`: verifies the StreetCart source JSON contract used by the deck and static proof
-- `npm run test:tracker`: runs tracker helper tests for GTFS stop matching and food-access filtering
+- `npm run dev`: runs the Vite app locally
+- `npm run build`: builds the web artifacts into `dist/`
+- `npm run preview`: previews the built output
+- `npm run site:serve`: serves the repo root directly on `http://127.0.0.1:4173/`
+- `npm run deck:build`: regenerates `docs/archive/legacy/2026-03-28-competition-package/plans/StreetCart_KC_Oracle.pptx`
+- `npm run tracker:data`: regenerates `data/kc-streetcar-tracker.json`
+- `npm run arrivals:fetch`: refreshes `docs/reference/kc-streetcar/arrivals/live-arrivals-latest.json`
+- `npm run test`: runs the repo's current test suite
 
-There is still no lint workflow, but the repo now has real `dev`, `build`, `preview`, and combined `test` commands.
+### Current URL entrypoints
 
-## Operating Sources Of Truth
+- `tracker.html`: exhibit mode
+- `tracker.html?mode=stage`: presentation mode
+- `tracker.html?zip=66101`: exhibit mode with a selected ZIP deep link
+- `index.html?view=resident&lang=en`: landing-page demo state deep link
 
-When docs disagree, use this order:
+### Preview deployment
 
-1. `MASTER_DOC.md`
-2. `docs/product/kc-streetcar-food-access-tracker-prd.md`
-3. `docs/product/kc-streetcar-food-access-tracker-user-stories.md`
-4. `docs/logs/2026-03-28-worklog.md`
-5. Historical material in `docs/archive/legacy/2026-03-28-competition-package/`
+- Preferred deploy target for this repo is a Vercel preview under team `3percentclub-3d65be01`
+- Use Vite's default static build output; there is no backend, database, or payment configuration in this repo
+- Repo-owned Node baseline is `22.x` (`package.json` engines and `.nvmrc`)
+- Preferred Vercel flow for this repo is `vercel build` followed by `vercel deploy --prebuilt --target preview`
 
-Working rules:
+## Process
 
-- Keep the streetcar as the public-facing spine, not the full logistics system.
-- Keep phase one pickup-first and partner-supported.
-- Keep the proof centered on households served, priority ZIPs, and verified completions.
-- Preserve side explorations as process evidence, but do not let them compete with the active tracker requirements.
+This repo is being run as a disciplined competition package, not as an open-ended product build.
 
-## Delivery Workflow
+### Working rules
 
-For any non-trivial task in this repo:
+- Start each non-trivial task with success criteria.
+- Update the controlling doc before changing dependent artifacts.
+- Prefer minimal, reversible changes.
+- Keep the streetcar as the public-facing spine, not the freight vehicle.
+- Keep phase one partner-operated and operationally believable.
+- Record meaningful decisions in the dated worklog.
+- Verify outputs before claiming completion.
 
-1. Write success criteria first.
-2. Make or update the controlling doc before changing artifacts.
-3. Log meaningful decisions in the dated worklog.
-4. Rebuild the affected artifact.
-5. Verify the output before claiming completion.
+### Source-of-truth order
 
-Current artifact flow:
+When documents disagree, use this order:
 
-1. Update the controlling source doc or source data first.
-2. Regenerate the affected artifact:
-   - Oracle deck: `npm run deck:build`
-   - Tracker data: `npm run tracker:data`
-   - Live arrivals snapshot: `npm run arrivals:fetch`
-3. Run the relevant tests.
-4. Review the affected page or artifact locally.
-5. Record the result in `docs/logs/2026-03-28-worklog.md` when the change materially affects project direction.
+1. `AGENTS.md`
+2. `MASTER_DOC.md`
+3. `BRAND.md`
+4. `docs/product/kc-streetcar-food-access-tracker-prd.md`
+5. `docs/product/kc-streetcar-food-access-tracker-user-stories.md`
+6. `docs/logs/2026-03-28-worklog.md`
+7. Archived material in `docs/archive/`
 
-## Recommended Next Build Path
+### Typical change flow
 
-The repo's long-term application direction is still:
+1. Write down done criteria.
+2. Update the source doc or source data first.
+3. Regenerate the affected artifact.
+4. Run the relevant tests.
+5. Review the affected page, deck, or output locally.
+6. Append a checkpoint to `docs/logs/2026-03-28-worklog.md` if the work changes direction, scope, or evidence.
+7. Commit and push without deleting local-only reference material.
+
+### Artifact flow
+
+- Deck changes:
+  1. Update `data/streetcart-kc.json` or the controlling docs
+  2. Run `npm run deck:build`
+  3. Review `docs/archive/legacy/2026-03-28-competition-package/plans/StreetCart_KC_Oracle.pptx`
+
+- Tracker changes:
+  1. Update tracker docs, source data, or tracker code
+  2. Run `npm run tracker:data` if data inputs changed
+  3. Run `npm run test:tracker` and `npm run test:dashboard`
+  4. Review `tracker.html` locally
+
+- Live arrivals reference refresh:
+  1. Run `npm run arrivals:fetch`
+  2. Run `npm run test:arrivals`
+  3. Review `docs/reference/kc-streetcar/arrivals/live-arrivals-latest.json`
+
+## Verification
+
+The current repo has working `build` and `test` scripts, but no lint command yet.
+
+Baseline verification for most changes:
+
+```bash
+npm run test
+npm run build
+```
+
+For narrower changes, run the specific relevant script instead of pretending broader verification happened.
+
+## Practical Notes
+
+- `dist/`, `node_modules/`, and `tmp/` are local build/runtime directories.
+- The raw KC Streetcar video dump is intentionally local-only.
+- Research artifacts are evidence. They are not automatically active requirements.
+- Archive material is for history and traceability, not day-to-day implementation decisions.
+
+## Next Build Path
+
+The long-term product direction is still:
 
 - Frontend: `Next.js` + `TypeScript`
 - Data: `Postgres`
-- Messaging: SMS provider for resident notifications
+- Messaging: SMS provider
 
-Recommended sequence:
+But the current priority is still competition clarity over infrastructure expansion:
 
-1. Preserve the current static demo and tracker as the content and UX baseline.
-2. Scaffold the actual app only after the competition narrative and tracker requirements are stable.
-3. Move shared facts into a typed data layer when the app scaffold exists.
-4. Add a lint workflow once the framework and file conventions stabilize.
+1. Keep the static proof, tracker, and deck aligned.
+2. Tighten the story, brand, and evidence.
+3. Only scaffold the long-term app once the competition package is stable.
 
-## Risks
+## End-Of-Task Retrospective
 
-- The repo can look more finished than it is if the static demo is mistaken for production architecture.
-- The deck, site, and source JSON can diverge if changes are made directly in generated artifacts.
-- Historical competition docs can still cause confusion if contributors ignore the new archive boundary.
-- The team can lose time by expanding the live product before the competition story is fully stable.
+At the end of a meaningful work block, capture:
 
-## Retrospective Prompt
-
-At the end of each work block, answer:
-
-- What changed?
-- What did we verify?
-- What is the next highest-leverage move?
-- What would we do differently next time?
+- What changed
+- What was verified
+- What still looks risky
+- What the next highest-leverage move is
+- What we would do differently next time

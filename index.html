@@ -8,11 +8,14 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1020'/%3E%3Ccircle cx='22' cy='46' r='6' fill='%23e3a23b'/%3E%3Ccircle cx='46' cy='46' r='6' fill='%23e3a23b'/%3E%3Cpath d='M12 18h28l6 16H18z' fill='%23c53e37'/%3E%3C/svg%3E"
     />
+    <link rel="stylesheet" href="site/shared.css" />
     <link rel="stylesheet" href="site/styles.css" />
   </head>
   <body>
-    <div class="site-shell">
-      <header class="hero">
+    <a class="skip-link" href="#demo">Skip to the live proof</a>
+    <div class="alert-strip" id="alert-strip" hidden></div>
+    <header class="hero">
+      <div class="hero-frame">
         <div class="hero-copy">
           <p class="eyebrow">Oracle-first competition package • Team Codex KC</p>
           <h1>StreetCart KC</h1>
@@ -21,23 +24,46 @@
           </p>
           <p class="hero-thesis" id="thesis"></p>
           <div class="hero-actions">
-            <a class="button primary" href="tracker.html">Open the live tracker</a>
-            <a class="button primary" href="#demo">See the 2-minute demo</a>
-            <a class="button secondary" href="docs/archive/legacy/2026-03-28-competition-package/discovery/muse-package-brief.md">Open the Muse brief</a>
+            <a class="button primary" href="tracker.html">Open the exhibit dashboard</a>
+            <a class="button primary" href="tracker.html?mode=stage">Launch stage mode</a>
+            <a
+              class="button secondary"
+              href="https://www.youtube.com/watch?v=AE5dciNphNA"
+              target="_blank"
+              rel="noreferrer"
+            >Watch the Muse brief</a>
           </div>
         </div>
         <div class="hero-visual">
-          <img src="site/assets/streetcart-hub.jpg" alt="Kansas City streetcar station concept render" />
+          <div class="hero-visual-inner">
+            <div class="hero-stat-grid">
+              <div class="hero-stat"><span class="hero-stat-value">5.7 mi</span><span class="hero-stat-label">Fare-free corridor</span></div>
+              <div class="hero-stat"><span class="hero-stat-value">10K+</span><span class="hero-stat-label">Weekday riders</span></div>
+              <div class="hero-stat"><span class="hero-stat-value">25</span><span class="hero-stat-label">Digital kiosks</span></div>
+              <div class="hero-stat"><span class="hero-stat-value">$500K</span><span class="hero-stat-label">Contract value</span></div>
+            </div>
+            <div class="hero-route-line">
+              <span>River Market</span>
+              <span class="route-dots"></span>
+              <span>Union Station</span>
+              <span class="route-dots"></span>
+              <span>Westport</span>
+              <span class="route-dots"></span>
+              <span>UMKC</span>
+            </div>
+          </div>
           <div class="hero-badge">
             <span>Phase 2</span>
             <strong>KC's free bus network extends reach beyond the corridor.</strong>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <section class="proof-grid" id="proof-grid"></section>
+    <div class="site-shell">
+      <section class="proof-grid" id="proof-grid" data-reveal></section>
 
-      <section class="narrative-band">
+      <section class="narrative-band" data-reveal>
         <div>
           <p class="section-label">Why this wins</p>
           <h2>Streetcar is the right answer for the brief. Buses are the right answer for expansion.</h2>
@@ -48,15 +74,15 @@
         </p>
       </section>
 
-      <section class="demo" id="demo">
+      <section class="demo" id="demo" data-reveal>
         <div class="section-heading">
           <p class="section-label">Thin live proof</p>
           <h2>Three views. Under two minutes. No extra features.</h2>
         </div>
         <div class="tab-bar" role="tablist" aria-label="StreetCart demo views">
-          <button class="tab is-active" data-view="operator" role="tab" aria-selected="true">Operator</button>
-          <button class="tab" data-view="resident" role="tab" aria-selected="false">Resident</button>
-          <button class="tab" data-view="leaderboard" role="tab" aria-selected="false">Leaderboard</button>
+          <button type="button" class="tab is-active" data-view="operator" role="tab" aria-selected="true">Operator</button>
+          <button type="button" class="tab" data-view="resident" role="tab" aria-selected="false">Resident</button>
+          <button type="button" class="tab" data-view="leaderboard" role="tab" aria-selected="false">Leaderboard</button>
         </div>
         <div class="app-frame">
           <aside class="app-rail">
@@ -83,6 +109,11 @@
                 <div class="status-pill">60-day pilot</div>
               </div>
               <div class="kpi-grid" id="kpi-grid"></div>
+              <div class="budget-section">
+                <p class="section-label">$500K contract allocation</p>
+                <div class="budget-bar-track" id="budget-bar"></div>
+                <div class="budget-legend" id="budget-legend"></div>
+              </div>
               <div class="hub-grid" id="hub-grid"></div>
             </section>
 
@@ -93,8 +124,8 @@
                   <h3>Pickup-first, bilingual, and human-readable</h3>
                 </div>
                 <div class="language-toggle" role="group" aria-label="Language toggle">
-                  <button class="lang is-active" data-lang="es">Español</button>
-                  <button class="lang" data-lang="en">English</button>
+                  <button type="button" class="lang is-active" data-lang="es" aria-pressed="true">Español</button>
+                  <button type="button" class="lang" data-lang="en" aria-pressed="false">English</button>
                 </div>
               </div>
               <div class="resident-layout">
@@ -135,8 +166,11 @@
               </div>
               <div class="leaderboard-board">
                 <div class="board-screen">
-                  <p class="board-label">StreetCart KC • Week 3</p>
+                  <p class="board-label">StreetCart KC • Week 5</p>
                   <div id="team-list" class="team-list"></div>
+                  <div class="live-feed" id="live-feed">
+                    <p class="board-label" style="margin-top:18px">Live feed</p>
+                  </div>
                 </div>
                 <div class="board-sidebar">
                   <div class="note-card">
@@ -156,7 +190,7 @@
         </div>
       </section>
 
-      <section class="artifacts">
+      <section class="artifacts" data-reveal>
         <div class="section-heading">
           <p class="section-label">Linked artifacts</p>
           <h2>Oracle leads. Muse and Architect stay on the same rails.</h2>
@@ -167,10 +201,15 @@
             <h3>Oracle-led PPTX</h3>
             <p>Primary judge artifact. Narrative, economics, KPI logic, objections, and curveball reserve.</p>
           </a>
-          <a class="artifact-card" href="docs/archive/legacy/2026-03-28-competition-package/discovery/muse-package-brief.md">
+          <a
+            class="artifact-card"
+            href="https://www.youtube.com/watch?v=AE5dciNphNA"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span class="artifact-tag">Muse</span>
-            <h3>Creative system brief</h3>
-            <p>Brand direction, scoreboard logic, wrap guardrails, and bilingual collateral tied to the same facts.</p>
+            <h3>Creative system brief video</h3>
+            <p>Watch the YouTube Muse brief covering brand direction, scoreboard logic, wrap guardrails, and bilingual collateral.</p>
           </a>
           <a class="artifact-card" href="docs/archive/legacy/2026-03-28-competition-package/product/oracle-muse-fact-base.md">
             <span class="artifact-tag">Source</span>

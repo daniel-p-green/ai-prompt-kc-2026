@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StreetCart KC - Architect Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#005f9e",
+              "outline-variant": "#c0c7d3",
+              "surface-dim": "#d9dadb",
+              "on-secondary-container": "#004e81",
+              "surface-tint": "#0061a2",
+              "on-primary": "#ffffff",
+              "surface-container": "#edeeef",
+              "primary-container": "#0078c7",
+              "tertiary-fixed": "#ffdad8",
+              "background": "#f8f9fa",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f0f1f2",
+              "surface-container-high": "#e7e8e9",
+              "on-primary-fixed-variant": "#00497c",
+              "surface-variant": "#e1e3e4",
+              "tertiary": "#bb0027",
+              "secondary-container": "#84c0ff",
+              "on-background": "#191c1d",
+              "on-tertiary-fixed": "#410007",
+              "on-secondary-fixed": "#001d34",
+              "error": "#ba1a1a",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#9dcaff",
+              "on-surface-variant": "#404752",
+              "on-primary-fixed": "#001d35",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#d1e4ff",
+              "on-error": "#ffffff",
+              "surface-container-low": "#f3f4f5",
+              "on-tertiary-fixed-variant": "#92001d",
+              "secondary": "#19629a",
+              "surface-bright": "#f8f9fa",
+              "on-secondary-fixed-variant": "#004a7a",
+              "tertiary-fixed-dim": "#ffb3b1",
+              "surface-container-highest": "#e1e3e4",
+              "secondary-fixed": "#d0e4ff",
+              "secondary-fixed-dim": "#9bcbff",
+              "inverse-surface": "#2e3132",
+              "on-tertiary-container": "#fffbff",
+              "on-surface": "#191c1d",
+              "error-container": "#ffdad6",
+              "outline": "#707883",
+              "surface": "#f8f9fa",
+              "on-primary-container": "#fdfcff",
+              "tertiary-container": "#e51a38",
+              "primary-fixed-dim": "#9dcaff"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            boxShadow: {
+              'route-rail': '0px 0px 4px 0px rgba(0, 95, 158, 0.10)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Manrope', sans-serif; }
+        
+        /* The "No-Line" Rule - Tonal Stacking */
+        .card-base {
+            background-color: #ffffff; /* surface-container-lowest */
+        }
+        
+        .section-base {
+            background-color: #f3f4f5; /* surface-container-low */
+        }
+        
+        /* Route Rail Shadow */
+        .rail-shadow {
+            box-shadow: 0px 0px 4px 0px rgba(0, 95, 158, 0.10);
+        }
+        
+        /* Asymmetrical Layout helpers */
+        .editorial-pl { padding-left: max(1rem, 8vw); }
+    </style>
+</head>
+<body class="text-on-background min-h-screen flex">
+<!-- Primary Navigation: Route Rail (Vertical) -->
+<nav class="w-20 bg-primary flex flex-col items-center py-8 flex-shrink-0 z-50">
+<div class="w-10 h-10 bg-on-primary rounded-DEFAULT flex items-center justify-center mb-12">
+<span class="material-symbols-outlined text-primary font-bold" style="font-variation-settings: 'FILL' 1;">train</span>
+</div>
+<div class="flex flex-col gap-8 w-full items-center">
+<!-- Active Indicator -->
+<div class="relative w-full flex justify-center group cursor-pointer">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-on-primary"></div>
+<span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+</div>
+<div class="w-full flex justify-center group cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-on-primary">map</span>
+</div>
+<div class="w-full flex justify-center group cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-on-primary">leaderboard</span>
+</div>
+<div class="w-full flex justify-center group cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-on-primary">groups</span>
+</div>
+</div>
+<div class="mt-auto">
+<div class="w-full flex justify-center group cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-on-primary">settings</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-grow flex flex-col overflow-hidden">
+<!-- Header (Shared Component adapted for context) -->
+<header class="bg-surface-container-lowest px-10 py-6 flex flex-col gap-2 z-10 rail-shadow">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4 text-on-surface">
+<h2 class="text-on-surface text-xl font-headline font-bold leading-tight tracking-[-0.015em]">StreetCart KC</h2>
+</div>
+<div class="text-right">
+<p class="text-outline text-sm font-label uppercase tracking-widest font-semibold">Architect Dashboard</p>
+</div>
+</div>
+<div>
+<h1 class="text-on-surface text-4xl font-headline font-bold leading-tight tracking-[-0.02em] mt-2">Feed Your Block. Rep Your Team.</h1>
+</div>
+</header>
+<!-- Supply Alert Banner (CRITICAL) -->
+<div class="bg-surface-dim px-10 py-4 flex flex-wrap gap-8 items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-headline font-bold text-tertiary uppercase text-sm tracking-wider">Supply Alert</span>
+</div>
+<div class="flex gap-8 overflow-x-auto text-sm font-body font-medium text-on-surface">
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-tertiary"></span> TEFAP Federal Cut 40%</span>
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-tertiary"></span> 311 Food Calls Up 28%</span>
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary-container"></span> Emergency Produce Donation: 1,000 lbs</span>
+</div>
+</div>
+<!-- Dashboard Grid -->
+<div class="flex-grow overflow-y-auto section-base p-10">
+<div class="max-w-[1440px] mx-auto grid grid-cols-12 gap-8">
+<!-- LEFT COLUMN (Dominant) -->
+<div class="col-span-12 lg:col-span-8 flex flex-col gap-8">
+<!-- Tournament Scoreboard (High-Contrast) -->
+<section class="bg-inverse-surface rounded-DEFAULT p-8">
+<div class="flex justify-between items-end mb-8">
+<h2 class="text-inverse-on-surface font-headline text-3xl font-bold tracking-[-0.02em]">Tournament Scoreboard</h2>
+<p class="text-outline-variant font-label text-sm uppercase tracking-widest">Live Standings</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Chiefs (Winning) -->
+<div class="bg-surface-container-highest/10 p-6 rounded-DEFAULT border-l-4 border-tertiary flex flex-col gap-2 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl text-inverse-on-surface">sports_football</span>
+</div>
+<p class="text-inverse-on-surface font-label text-sm uppercase tracking-widest opacity-80">Chiefs</p>
+<p class="text-inverse-on-surface font-headline text-5xl font-bold">412 <span class="text-xl font-normal opacity-70 text-outline-variant">deliveries</span></p>
+<div class="mt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">arrow_upward</span>
+<span class="text-xs text-outline-variant font-body">Leading</span>
+</div>
+</div>
+<!-- Royals -->
+<div class="bg-surface-container-highest/5 p-6 rounded-DEFAULT border-l-4 border-primary-container flex flex-col gap-2 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-6xl text-inverse-on-surface">sports_baseball</span>
+</div>
+<p class="text-inverse-on-surface font-label text-sm uppercase tracking-widest opacity-80">Royals</p>
+<p class="text-inverse-on-surface font-headline text-4xl font-bold">387 <span class="text-lg font-normal opacity-70 text-outline-variant">deliveries</span></p>
+</div>
+<!-- Sporting KC -->
+<div class="bg-surface-container-highest/5 p-6 rounded-DEFAULT border-l-4 border-[#002f65] flex flex-col gap-2 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-6xl text-inverse-on-surface">sports_soccer</span>
+</div>
+<p class="text-inverse-on-surface font-label text-sm uppercase tracking-widest opacity-80">Sporting KC</p>
+<p class="text-inverse-on-surface font-headline text-4xl font-bold">294 <span class="text-lg font-normal opacity-70 text-outline-variant">deliveries</span></p>
+</div>
+<!-- KC Current -->
+<div class="bg-surface-container-highest/5 p-6 rounded-DEFAULT border-l-4 border-on-tertiary-fixed-variant flex flex-col gap-2 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-6xl text-inverse-on-surface">sports_soccer</span>
+</div>
+<p class="text-inverse-on-surface font-label text-sm uppercase tracking-widest opacity-80">KC Current</p>
+<p class="text-inverse-on-surface font-headline text-4xl font-bold">215 <span class="text-lg font-normal opacity-70 text-outline-variant">deliveries</span></p>
+</div>
+</div>
+</section>
+<!-- KPI Cards (Data Dense) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="card-base p-6 rounded-DEFAULT flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<p class="text-outline font-label text-xs uppercase tracking-widest font-semibold">Target Deliveries</p>
+<span class="material-symbols-outlined text-primary text-sm">target</span>
+</div>
+<p class="text-on-surface font-headline text-3xl font-bold">7,500</p>
+<div class="w-full bg-surface-container h-1 mt-auto">
+<div class="bg-primary h-1" style="width: 45%;"></div>
+</div>
+<p class="text-xs text-on-surface-variant font-body mt-1">Goal: 5,000 - 7,500</p>
+</div>
+<div class="card-base p-6 rounded-DEFAULT flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<p class="text-outline font-label text-xs uppercase tracking-widest font-semibold">Volume Moved (lbs)</p>
+<span class="material-symbols-outlined text-primary text-sm">scale</span>
+</div>
+<p class="text-on-surface font-headline text-3xl font-bold">184k</p>
+<div class="w-full bg-surface-container h-1 mt-auto">
+<div class="bg-primary h-1" style="width: 60%;"></div>
+</div>
+<p class="text-xs text-on-surface-variant font-body mt-1">Goal: 150k - 250k lbs</p>
+</div>
+<div class="card-base p-6 rounded-DEFAULT flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<p class="text-outline font-label text-xs uppercase tracking-widest font-semibold">Priority ZIP Routing</p>
+<span class="material-symbols-outlined text-primary text-sm">route</span>
+</div>
+<p class="text-on-surface font-headline text-3xl font-bold">72%</p>
+<div class="w-full bg-surface-container h-1 mt-auto">
+<div class="bg-primary h-1" style="width: 72%;"></div>
+</div>
+<p class="text-xs text-on-surface-variant font-body mt-1">Target: &gt; 70%</p>
+</div>
+</section>
+<!-- ZIP Code Heat Map / Curveball -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Heat Map Area -->
+<div class="card-base p-6 rounded-DEFAULT flex flex-col">
+<h3 class="text-on-surface font-headline text-xl font-bold tracking-[-0.015em] mb-4">Delivery Density</h3>
+<div class="flex-grow bg-surface-container-high rounded-DEFAULT mb-4 min-h-[200px] relative overflow-hidden flex items-center justify-center">
+<!-- Decorative Map Placeholder -->
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 50% 50%, #005f9e 2px, transparent 2px); background-size: 20px 20px;"></div>
+<span class="text-outline font-label text-sm uppercase tracking-widest relative z-10 bg-surface-container-lowest px-4 py-2 rounded">Map Interface</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center py-2 border-b border-surface-container-high">
+<span class="font-body text-sm font-semibold text-on-surface">64127</span>
+<span class="font-headline font-bold text-primary">High</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-surface-container-high">
+<span class="font-body text-sm font-semibold text-on-surface">64130</span>
+<span class="font-headline font-bold text-primary">High</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="font-body text-sm text-on-surface-variant">64128, 64132</span>
+<span class="font-headline font-bold text-outline">Med</span>
+</div>
+</div>
+</div>
+<!-- Curveball Integration: Voto y Verdura -->
+<div class="bg-surface-dim p-6 rounded-DEFAULT flex flex-col justify-between border-l-4 border-tertiary">
+<div>
+<p class="text-tertiary font-label text-xs uppercase tracking-widest font-bold mb-2">Campaign Focus</p>
+<h3 class="text-on-surface font-headline text-2xl font-bold tracking-[-0.015em] mb-1">Voto y Verdura</h3>
+<p class="text-on-surface-variant font-body text-sm mb-4">Alimenta tu barrio. Targeted activation in priority ZIPs 66101 &amp; 66105.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-DEFAULT flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<span class="font-body text-sm font-semibold text-on-surface">66101 Status</span>
+<span class="px-2 py-1 bg-tertiary/10 text-tertiary text-xs font-bold rounded">Active</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body text-sm font-semibold text-on-surface">66105 Status</span>
+<span class="px-2 py-1 bg-surface-container text-outline text-xs font-bold rounded">Pending</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN (Secondary/Feeds) -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-8">
+<!-- Pantry Network List -->
+<section class="card-base p-6 rounded-DEFAULT">
+<h3 class="text-on-surface font-headline text-lg font-bold tracking-[-0.015em] mb-6">Pantry Network</h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">storefront</span>
+</div>
+<div>
+<p class="font-body font-semibold text-on-surface text-sm">Harvesters</p>
+<p class="font-body text-xs text-on-surface-variant">Central Hub • Operating Normal</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">storefront</span>
+</div>
+<div>
+<p class="font-body font-semibold text-on-surface text-sm">Bishop Sullivan</p>
+<p class="font-body text-xs text-on-surface-variant">Node • High Volume</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">storefront</span>
+</div>
+<div>
+<p class="font-body font-semibold text-on-surface text-sm">Guadalupe Centers</p>
+<p class="font-body text-xs text-on-surface-variant">Node • Voto y Verdura Active</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">storefront</span>
+</div>
+<div>
+<p class="font-body font-semibold text-on-surface text-sm">Crosslines</p>
+<p class="font-body text-xs text-on-surface-variant">Node • Operating Normal</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Feed -->
+<section class="card-base p-6 rounded-DEFAULT flex-grow flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-on-surface font-headline text-lg font-bold tracking-[-0.015em]">Live Feed</h3>
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+</div>
+<div class="flex flex-col gap-6 relative before:absolute before:inset-0 before:ml-[11px] before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-surface-container-high z-0">
+<!-- Feed Item -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+<div class="flex items-center justify-center w-6 h-6 rounded-full border border-surface-container-lowest bg-primary text-on-primary shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow z-10">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-1.5rem)] pl-4 md:pl-0 md:group-even:pl-4 md:group-odd:pr-4">
+<div class="bg-surface p-3 rounded-DEFAULT border border-surface-container-high">
+<p class="text-xs text-on-surface-variant font-body mb-1">Just now</p>
+<p class="text-sm font-body text-on-surface font-medium">Volunteers picked up produce at River Market stop.</p>
+</div>
+</div>
+</div>
+<!-- Feed Item -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+<div class="flex items-center justify-center w-6 h-6 rounded-full border border-surface-container-lowest bg-surface-container-highest text-outline shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow z-10">
+<span class="material-symbols-outlined text-[10px]">directions_run</span>
+</div>
+<div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-1.5rem)] pl-4 md:pl-0 md:group-even:pl-4 md:group-odd:pr-4">
+<div class="bg-surface p-3 rounded-DEFAULT border border-surface-container-high">
+<p class="text-xs text-outline font-body mb-1">12m ago</p>
+<p class="text-sm font-body text-on-surface-variant">Team Royals completed batch delivery in 64127.</p>
+</div>
+</div>
+</div>
+<!-- Feed Item -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+<div class="flex items-center justify-center w-6 h-6 rounded-full border border-surface-container-lowest bg-surface-container-highest text-outline shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow z-10">
+<span class="material-symbols-outlined text-[10px]">inventory_2</span>
+</div>
+<div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-1.5rem)] pl-4 md:pl-0 md:group-even:pl-4 md:group-odd:pr-4">
+<div class="bg-surface p-3 rounded-DEFAULT border border-surface-container-high">
+<p class="text-xs text-outline font-body mb-1">45m ago</p>
+<p class="text-sm font-body text-on-surface-variant">Crosslines logged 250 lbs incoming.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</body></html>
