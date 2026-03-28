@@ -12,6 +12,8 @@ StreetCart KC is AICodex's final 2026 AI Prompt Championship submission set acro
 
 Quick links: [Oracle](https://ai-prompt-kc-2026.vercel.app/) | [Muse](https://www.youtube.com/watch?v=AE5dciNphNA) | [Architect](https://streetcart-kc-434237915842.us-west1.run.app/) | [LinkedIn](https://linkedin.com/in/danielpgreen) | [AI Collective KC](https://www.aicollective.com/chapters/kc)
 
+![StreetCart KC overview](docs/images/streetcart-overview.jpg)
+
 ## Final Submissions
 
 - Oracle: [StreetCart KC submission site](https://ai-prompt-kc-2026.vercel.app/) plus the packaged deck artifact in `StreetCart_KC_Rail_to_Lifeline.pdf`
