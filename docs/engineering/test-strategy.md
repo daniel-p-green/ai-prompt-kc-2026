@@ -1,8 +1,8 @@
-# Test Strategy: BridgeKC
+# Test Strategy: StreetCart KC
 
 Date: 2026-03-28
 Repository: ai-prompt-kc-2026
-Working stack: Repo not initialized yet. Recommended MVP stack: Next.js, TypeScript, Postgres, and an SMS provider.
+Working stack: Repo not initialized yet. Recommended MVP stack for a thin Architect demo: Next.js, TypeScript, Postgres, and an SMS provider.
 
 ## Quality Gates
 
@@ -14,35 +14,35 @@ Working stack: Repo not initialized yet. Recommended MVP stack: Next.js, TypeScr
 
 ### Unit
 
-- Core business logic: ZIP priority scoring, pantry eligibility filtering, resident match ranking, alert audience selection
-- Validation rules: language fallback, ID-required filtering, stale-data banners, ZIP normalization
-- Error handling: empty results, upstream sync failures, SMS delivery failures
+- Core business logic: ZIP priority scoring, hub selection, volunteer points, leaderboard ranking, resident service matching
+- Validation rules: language fallback, event eligibility, stale-data banners, ZIP normalization, points verification
+- Error handling: empty hub schedule, upstream sync failures, SMS delivery failures, unverified team submissions
 
 ### Integration
 
 - Data boundaries: challenge API ingestion, normalization, cache refresh, and snapshot fallback
-- Service boundaries: SMS provider send flow, outbound alert audit log, authenticated operator actions
-- State transitions: draft alert to published alert, sync success to stale-data fallback, resident match to outcome confirmation
+- Service boundaries: SMS provider send flow, outbound alert audit log, leaderboard updates, authenticated operator actions
+- State transitions: draft hub to published hub, sync success to stale-data fallback, volunteer completion to verified points
 
 ### End-to-End
 
-- Primary user flow: resident gets a valid resource recommendation in English or Spanish from a mobile device
-- Critical edge flow: operator publishes a new ZIP-targeted alert after a supply shock and sees it appear in the resident experience
+- Primary user flow: operator publishes a hub, resident receives service instructions, volunteer completion updates the leaderboard
+- Critical edge flow: the pilot remains coherent when direct streetcar transport is unavailable and the system falls back to partner hub fulfillment
 
 ## Requirement-to-Test Mapping
 
 | PRD criterion | Test level | Test case id |
 |---|---|---|
-| ZIP priorities display with reasons | Integration | INT-001 |
-| Resident gets best-fit resource matches | Unit + E2E | UNIT-004, E2E-001 |
-| Operator can publish a targeted alert | Integration + E2E | INT-007, E2E-002 |
-| Metrics update after referral outcome changes | Integration | INT-010 |
+| ZIP priorities and proposed hubs display with reasons | Integration | INT-001 |
+| Resident gets valid pickup or delivery instructions | Unit + E2E | UNIT-004, E2E-001 |
+| Operator can publish a hub and notify residents | Integration + E2E | INT-007, E2E-002 |
+| Leaderboard updates only after verified completions | Unit + Integration | UNIT-009, INT-010 |
 
 ## Test Data and Fixtures
 
-- Required fixtures: pantry dataset snapshot, supply alert snapshot, demographics for pilot ZIPs, resident search inputs, operator accounts
-- Synthetic data needs: mock SMS delivery receipts, invalid pantry hours, missing language support, stale snapshot timestamps
-- Cleanup strategy: seed deterministic fixture data for local and preview environments and reset operator-created alerts between test runs
+- Required fixtures: pantry dataset snapshot, supply alert snapshot, demographics for pilot ZIPs, sample hub schedules, resident search inputs, operator accounts, volunteer teams
+- Synthetic data needs: mock SMS delivery receipts, invalid event windows, missing language support, stale snapshot timestamps, duplicate or fraudulent team completions
+- Cleanup strategy: seed deterministic fixture data for local and preview environments and reset operator-created hubs, alerts, and leaderboard entries between test runs
 
 ## Release Verification Checklist
 
@@ -50,4 +50,5 @@ Working stack: Repo not initialized yet. Recommended MVP stack: Next.js, TypeScr
 - [ ] Regression tests pass
 - [ ] No flaky tests introduced
 - [ ] Live pilot ZIP data reviewed for freshness and obvious bad recommendations
+- [ ] Every public-facing artifact still ties back to food access metrics and priority ZIPs
 - [ ] Risk summary written

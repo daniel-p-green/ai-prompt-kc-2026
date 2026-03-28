@@ -1,74 +1,77 @@
-# PRD: BridgeKC
+# PRD: StreetCart KC
 
 Date: 2026-03-28
 Repository: ai-prompt-kc-2026
-Working stack: Repo not initialized yet. Recommended MVP stack: Next.js, TypeScript, Postgres, and an SMS provider.
+Working stack: Repo not initialized yet. Recommended MVP stack for a thin Architect demo: Next.js, TypeScript, Postgres, and an SMS provider.
 
 ## Problem Statement
 
 Kansas City does not only have too little food supply. It also has fragmented access. In the challenge data, ZIP 64130 shows 18.2% food insecurity and 38% no-vehicle access, while ZIP 66101 shows 24.1% food insecurity and 48% no-vehicle access. At the same time, TEFAP cuts created a 3-million-pound shortfall and recent store closures increased pressure on neighborhoods that were already underserved.
 
-Families need a no-wrong-door way to find a workable food option quickly. Coordinators need a lightweight operations layer that turns distress signals into targeted outreach and smarter distribution.
+StreetCart KC responds with one city-native idea that can power all three competition tracks: treat the streetcar corridor as the public engagement and staging spine, use streetcar-adjacent hubs plus pantry partners to move food into priority ZIP codes, and drive volunteer turnout through a March Madness-style service competition that updates a live leaderboard.
 
 ## Goals
 
-- Help residents in pilot ZIP codes find a food resource they can actually use based on language, hours, ID requirements, and travel constraints.
-- Give coordinators a single place to prioritize ZIP codes, publish pop-up resources, and send targeted alerts within minutes instead of days.
-- Produce a 60-day pilot demo with measurable usage, not a speculative concept.
+- Show a credible 60-day pilot that moves more food into priority ZIP codes using existing civic infrastructure instead of a brand-new logistics system.
+- Give coordinators one operating view for ZIP priorities, hub schedules, volunteer assignments, and verified service metrics.
+- Turn community participation into an engagement engine through a sports-style tournament, public leaderboard, and renewal-phase streetcar wrap prize.
 
 ## Non-Goals
 
 - Building a full inventory management suite for every pantry partner
 - Running direct payment assistance, grocery commerce, or benefits enrollment workflows
+- Requiring direct food transport on streetcar vehicles in phase one
 
 ## Users and Context
 
-- Primary user: resident in a high-need ZIP code who needs food assistance today and may have no car, limited English proficiency, or low trust in formal systems
-- Secondary user: city food access lead or nonprofit coordinator managing outreach and limited supply
-- Key usage context: mobile-first, low-bandwidth, bilingual, rapidly changing supply conditions, high need for trust and clarity
+- Primary user: city food access lead or nonprofit coordinator managing scarce supply, partner agencies, and public accountability
+- Secondary user: resident in a high-need ZIP code who needs predictable access to a pickup hub or delivery option
+- Tertiary user: volunteer teams, schools, fan groups, and churches participating in the service tournament
+- Key usage context: rapidly changing supply conditions, need for visible public momentum, low-bandwidth resident communication, and tight event time constraints
 
 ## Requirements
 
 ### Functional
 
-1. Ingest and normalize challenge data for pantries, supply alerts, store closures, demographics, and priority ZIP signals.
-2. Rank pilot ZIP codes based on current need so operators can focus outreach and supply where it matters most.
-3. Let residents search by ZIP and simple constraints such as language, no-car status, ID availability, and desired service time.
-4. Return the top 1-3 best-fit food resources with clear explanations: address, hours, language support, ID requirement, and why the match was chosen.
-5. Let operators create and publish targeted alerts or pop-up events to selected ZIP codes and language audiences.
-6. Track basic outcomes such as search started, match delivered, alert sent, click-through, and partner-confirmed pickup.
+1. Ingest and normalize challenge data for pantries, supply alerts, store closures, demographics, and ZIP priority signals.
+2. Rank pilot ZIP codes and recommend three to four streetcar-adjacent hub windows or partner staging points for the first 60-day pilot.
+3. Let operators schedule hub events, assign partner agencies, and define which households or ZIPs each event serves.
+4. Let residents receive simple pickup or delivery instructions in English or Spanish, including where to go, when to show up, and what requirements apply.
+5. Track volunteer teams, verified delivery or hub-shift completions, and a public leaderboard that updates the bracket.
+6. Expose a simple scoreboard or leaderboard view suitable for mock streetcar signage, social sharing, and judge demos.
 
 ### Non-Functional
 
-1. Performance: resident lookup should return results in under 2 seconds for cached pilot data.
+1. Performance: operators should be able to load the pilot dashboard and resident lookup in under 2 seconds for cached pilot data.
 2. Reliability: if upstream data is unavailable, the product should fall back to the last successful sync and show a stale-data banner.
-3. Accessibility: resident flow must work on low-end mobile devices and meet WCAG 2.2 AA expectations for the web experience.
-4. Security: collect only minimal contact data, separate operator access from resident access, and log all outbound alert actions.
+3. Accessibility: resident and public leaderboard views must work on low-end mobile devices and meet WCAG 2.2 AA expectations for the web experience.
+4. Security: collect only minimal contact data, separate operator access from public views, and log all outbound alert actions.
 
 ## Acceptance Criteria
 
-1. Given an operator opens the dashboard after the daily sync, when they view pilot ZIP priorities, then the top ZIPs are ranked with visible reasons pulled from challenge data and latest alerts.
-2. Given a resident in ZIP 64130 enters English or Spanish and indicates limited transportation, when they request help, then they receive up to three eligible resources that exclude mismatched hours, language, or ID barriers.
-3. Given a coordinator creates a pop-up event for a critical ZIP, when they publish it, then subscribed residents in that ZIP receive the alert in their chosen language and the event appears in the resident experience.
-4. Given a partner later confirms or rejects a referral outcome, when the result is recorded, then the dashboard metrics update without exposing resident-sensitive details.
+1. Given an operator opens the dashboard after the daily sync, when they view pilot ZIP priorities, then the top ZIPs are ranked with visible reasons pulled from challenge data and linked to proposed hub windows.
+2. Given a coordinator schedules a streetcar-adjacent hub or partner event, when they publish it, then residents in the selected ZIPs can see or receive the event details in their chosen language.
+3. Given a volunteer team completes verified deliveries or hub shifts, when the completion is recorded, then the public leaderboard updates without exposing resident-sensitive details.
+4. Given a judge views the demo, when they step through the coordinator, resident, and leaderboard views, then they can understand how the same system supports Oracle, Muse, and Architect.
 
 ## UX Notes
 
-- Key user flow: resident enters ZIP, language, and constraints; system returns a short ranked list; resident can save or text themselves details
-- Empty and error states: no-match flow should explain why, offer broader nearby options, and surface a phone contact instead of a dead end
-- Analytics events: `resident_search_started`, `resident_match_returned`, `resource_clicked`, `alert_published`, `alert_delivered`, `pickup_confirmed`
+- Key user flow: coordinator picks a priority ZIP and hub, residents receive pickup guidance, volunteers record completions, leaderboard updates
+- Empty and error states: if a hub is full or a ZIP has no nearby option, the system should show the next partner option and a hotline fallback instead of a dead end
+- Analytics events: `hub_created`, `resident_notified`, `pickup_confirmed`, `delivery_verified`, `leaderboard_updated`, `team_points_awarded`
 
 ## Rollout and Measurement
 
-- Rollout strategy: pilot five ZIP codes first: 64130, 64127, 66101, 66105, and 64132; onboard a small set of agencies before broader launch
-- Success metric: 500 resident matches delivered in 60 days with at least 65% partner-confirmed or resident-confirmed successful resource use
-- Guardrail metric: fewer than 5% stale or invalid recommendations, fewer than 2% outbound alert opt-outs, zero storage of sensitive household financial data
+- Rollout strategy: pilot three to four streetcar-adjacent hubs serving five high-need ZIP codes first: 64130, 64127, 66101, 66105, and 64132; onboard a small set of agencies before broader launch
+- Phase 2 expansion: use KC's free bus network to extend reach beyond the streetcar corridor without changing the streetcar-led brand or operating spine
+- Success metric: 600 verified household pickups or deliveries in 60 days, with at least 70% of service volume tied to priority ZIP codes and at least 50 recurring volunteers or team participants
+- Guardrail metric: fewer than 10% failed pickups or missed windows, fewer than 5% stale event details, zero storage of sensitive household financial data
 
 ## Risks and Mitigations
 
 | Risk | Impact | Mitigation |
 |---|---|---|
-| Pantry hours or eligibility data becomes stale | Residents lose trust after failed trips | Require visible freshness timestamps and a coordinator review flow before outbound alerts |
+| The concept feels gimmicky instead of operational | Judges dismiss the bracket as marketing fluff | Anchor every slide and screen in households served, priority ZIPs, and verified completions |
+| Direct use of streetcar vehicles is not approved in 60 days | Feasibility questions stall the pitch | Frame phase one as streetcar-adjacent hubs plus partner fulfillment, not full transit retrofitting |
 | Partner staff do not update event or capacity data | Dashboard becomes informational instead of operational | Limit pilot to a small set of committed agencies and support manual override workflows |
-| Residents do not trust a new tool | Low adoption despite real need | Use SMS, Spanish support, partner flyers, and agency-branded outreach instead of app-only distribution |
-| Scope expands into delivery or case management | 60-day pilot slips | Keep v1 focused on matching, alerting, and outcomes only |
+| Scope expands into a citywide delivery network | 60-day pilot slips | Keep v1 focused on hubs, alerts, leaderboard, and proof of demand |

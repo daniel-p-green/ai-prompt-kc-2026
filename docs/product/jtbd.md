@@ -1,57 +1,60 @@
-# JTBD: BridgeKC
+# JTBD: StreetCart KC
 
 Date: 2026-03-28
 Repository: ai-prompt-kc-2026
 
 ## Core Job Statement
 
-When I need food support in my neighborhood and resources keep changing, I want a simple way to find the best option for me right now, so I can get food without wasting time, money, or trust.
+When I need to prove a city can move more food into high-need neighborhoods fast, I want to use infrastructure and behaviors people already recognize, so I can increase service without asking judges to believe in a fantasy rollout.
 
 ## Primary Jobs
 
-1. As a resident, find a food resource I can realistically use today given my language, transportation, and documentation constraints.
-2. As a coordinator, decide where to focus limited supply and outreach so scarce food reaches the highest-need ZIP codes first.
+1. As a coordinator, turn food access data into a simple pilot plan that clearly shows where the city should focus next.
+2. As a resident, get predictable pickup or delivery instructions without decoding a maze of pantry options.
+3. As a volunteer team, participate in a service challenge that feels visible, local, and worth repeating.
 
 ## Job Steps
 
 | Step | Current friction | Desired progress |
 |---|---|---|
-| Discover | Residents hear incomplete information through flyers, calls, or word of mouth | Resident starts from one SMS or mobile entry point |
-| Decide | Hours, ID rules, and language support are unclear | Resident sees a small ranked list with clear fit reasons |
-| Execute | People show up to closed or unreachable sites | Resident gets an option they can actually reach and use |
-| Verify | Coordinators cannot easily tell if outreach worked | Pickup and engagement signals roll back into dashboard metrics |
-| Maintain | Supply shocks and closures force constant manual rework | Operators can quickly publish new events and alerts for affected ZIPs |
+| Discover | Data, partners, and volunteers are fragmented across different channels | One visible city program ties the streetcar corridor, partner hubs, and volunteers together |
+| Decide | It is unclear which ZIPs, stops, or partners should be prioritized first | Coordinator sees a short list of high-need ZIPs and proposed hub plays |
+| Execute | Residents miss events and volunteers lose motivation | Clear pickup windows, team assignments, and a public leaderboard drive action |
+| Verify | Programs struggle to prove impact quickly | Verified deliveries and pickups roll into a simple scorecard |
+| Maintain | Momentum fades after launch week | Bracket competition, public standings, and renewal-phase rewards keep participation going |
 
 ## Outcome Expectations
 
-- Speed: get a usable recommendation in under 2 minutes
-- Confidence: trust that the recommendation is current enough to act on
-- Control: understand why a match was suggested and what to do next
+- Speed: stand up a credible, understandable pilot in days, not months
+- Confidence: show that the concept uses existing KC assets and priority ZIP evidence
+- Control: give the city and partners clear knobs to adjust hubs, teams, and communication
 
 ## Forces of Adoption
 
 ### Push (pain)
 
-- Families cannot afford failed trips when gas, time, and child care are tight.
 - Coordinators are reacting to supply cuts with fragmented tools and manual outreach.
+- Residents and partners cannot afford failed trips or inconsistent event communication.
 
 ### Pull (benefits)
 
-- One entry point for residents instead of multiple phone calls
-- Better targeting for ZIP-level alerts and pop-up events
+- One city-native story that is easy for judges, residents, and sponsors to repeat
+- Better targeting for ZIP-level service plus a visible engagement loop for volunteers
 
 ### Anxiety (risk)
 
-- Residents may worry about surveillance or data sharing.
-- Agencies may worry that another tool creates more admin work.
+- Judges may worry the concept is more branding than food access.
+- Agencies may worry that another program creates more admin work.
 
 ### Habits (status quo)
 
 - Word-of-mouth referrals
 - Paper flyers
 - Staff phone trees and spreadsheets
+- One-off volunteer events with no durable engagement loop
 
 ## Evidence Links
 
 - Challenge data: `/api/challenge/supply-alerts` updated 2026-03-28
 - Challenge data: `/api/challenge/harvest`, `/api/challenge/demographics?zip=64130`, `/api/challenge/demographics?zip=66101`
+- User notes: StreetCart KC concept, March Madness-style volunteer bracket, live streetcar scoreboard, Mar 28 working session
