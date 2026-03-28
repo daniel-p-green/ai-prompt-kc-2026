@@ -1,0 +1,1175 @@
+{
+  "fetchedAt": "2026-03-28T17:31:12.607Z",
+  "firebaseBaseUrl": "https://kiosk-6e6b4.firebaseio.com",
+  "alerts": [],
+  "endpoints": [
+    {
+      "label": "River Market North Stop",
+      "url": "https://arrivals.kcstreetcar.org/rmn",
+      "stopCodes": [
+        "rmn"
+      ],
+      "stops": [
+        {
+          "code": "rmn",
+          "label": "River Market North",
+          "direction": "Southbound",
+          "directionId": 1,
+          "stopName": "RIVER MARKET (3RD & GRAND)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "2 min",
+              "headsign": "UMKC",
+              "time": "12:33pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            },
+            {
+              "countdown": "7 min",
+              "headsign": "UMKC",
+              "time": "12:38pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            },
+            {
+              "countdown": "10 min",
+              "headsign": "UMKC",
+              "time": "12:41pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "River Market West Stop",
+      "url": "https://arrivals.kcstreetcar.org/rmw",
+      "stopCodes": [
+        "rmw"
+      ],
+      "stops": [
+        {
+          "code": "rmw",
+          "label": "River Market West",
+          "direction": "Southbound",
+          "directionId": 1,
+          "stopName": "RIVER MARKET WEST (4TH & DELWARE)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "3 min",
+              "headsign": "UMKC",
+              "time": "12:35pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            },
+            {
+              "countdown": "8 min",
+              "headsign": "UMKC",
+              "time": "12:39pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            },
+            {
+              "countdown": "13 min",
+              "headsign": "UMKC",
+              "time": "12:45pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "City Market Stop",
+      "url": "https://arrivals.kcstreetcar.org/cmk",
+      "stopCodes": [
+        "cmk"
+      ],
+      "stops": [
+        {
+          "code": "cmk",
+          "label": "City Market",
+          "direction": "Northbound",
+          "directionId": 0,
+          "stopName": "CITY MARKET (5TH & WALNUT ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "5 min",
+              "headsign": "River Market",
+              "time": "12:36pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            },
+            {
+              "countdown": "7 min",
+              "headsign": "River Market",
+              "time": "12:39pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            },
+            {
+              "countdown": "24 min",
+              "headsign": "River Market",
+              "time": "12:56pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "804"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "North Loop Stops",
+      "url": "https://arrivals.kcstreetcar.org/nlnnls",
+      "stopCodes": [
+        "nln",
+        "nls"
+      ],
+      "stops": [
+        {
+          "code": "nln",
+          "label": "North Loop",
+          "direction": "Northbound",
+          "directionId": 0,
+          "stopName": "NORTH LOOP (7TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "Due",
+              "headsign": "River Market",
+              "time": "12:31pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            },
+            {
+              "countdown": "2 min",
+              "headsign": "River Market",
+              "time": "12:34pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            },
+            {
+              "countdown": "19 min",
+              "headsign": "River Market",
+              "time": "12:51pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "804"
+            }
+          ]
+        },
+        {
+          "code": "nls",
+          "label": "North Loop",
+          "direction": "Southbound",
+          "directionId": 1,
+          "stopName": "NORTH LOOP (7TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "5 min",
+              "headsign": "UMKC",
+              "time": "12:36pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            },
+            {
+              "countdown": "9 min",
+              "headsign": "UMKC",
+              "time": "12:40pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            },
+            {
+              "countdown": "14 min",
+              "headsign": "UMKC",
+              "time": "12:46pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Library Stops",
+      "url": "https://arrivals.kcstreetcar.org/lbnlbs",
+      "stopCodes": [
+        "lbn",
+        "lbs"
+      ],
+      "stops": [
+        {
+          "code": "lbn",
+          "label": "Library",
+          "direction": "Northbound",
+          "directionId": 0,
+          "stopName": "LIBRARY (9TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "Due",
+              "headsign": "River Market",
+              "time": "12:33pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            },
+            {
+              "countdown": "19 min",
+              "headsign": "River Market",
+              "time": "12:51pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "804"
+            },
+            {
+              "countdown": "24 min",
+              "headsign": "River Market",
+              "time": "12:55pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            }
+          ]
+        },
+        {
+          "code": "lbs",
+          "label": "Library",
+          "direction": "Southbound",
+          "directionId": 1,
+          "stopName": "LIBRARY (9TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "5 min",
+              "headsign": "UMKC",
+              "time": "12:37pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            },
+            {
+              "countdown": "9 min",
+              "headsign": "UMKC",
+              "time": "12:41pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            },
+            {
+              "countdown": "15 min",
+              "headsign": "UMKC",
+              "time": "12:46pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Metro Center Stops",
+      "url": "https://arrivals.kcstreetcar.org/mcnmcs",
+      "stopCodes": [
+        "mcn",
+        "mcs"
+      ],
+      "stops": [
+        {
+          "code": "mcn",
+          "label": "Metro Center",
+          "direction": "Northbound",
+          "directionId": 0,
+          "stopName": "METRO CENTER (12TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "Due",
+              "headsign": "River Market",
+              "time": "12:31pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            },
+            {
+              "countdown": "18 min",
+              "headsign": "River Market",
+              "time": "12:49pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "804"
+            },
+            {
+              "countdown": "23 min",
+              "headsign": "River Market",
+              "time": "12:54pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            }
+          ]
+        },
+        {
+          "code": "mcs",
+          "label": "Metro Center",
+          "direction": "Southbound",
+          "directionId": 1,
+          "stopName": "METRO CENTER (12TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "7 min",
+              "headsign": "UMKC",
+              "time": "12:38pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            },
+            {
+              "countdown": "10 min",
+              "headsign": "UMKC",
+              "time": "12:42pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            },
+            {
+              "countdown": "16 min",
+              "headsign": "UMKC",
+              "time": "12:47pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Power & Light Stops",
+      "url": "https://arrivals.kcstreetcar.org/plnpls",
+      "stopCodes": [
+        "pln",
+        "pls"
+      ],
+      "stops": [
+        {
+          "code": "pln",
+          "label": "Power & Light",
+          "direction": "Northbound",
+          "directionId": 0,
+          "stopName": "POWER & LIGHT (14TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "17 min",
+              "headsign": "River Market",
+              "time": "12:48pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "804"
+            },
+            {
+              "countdown": "22 min",
+              "headsign": "River Market",
+              "time": "12:54pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            },
+            {
+              "countdown": "26 min",
+              "headsign": "River Market",
+              "time": "12:58pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "810"
+            }
+          ]
+        },
+        {
+          "code": "pls",
+          "label": "Power & Light",
+          "direction": "Southbound",
+          "directionId": 1,
+          "stopName": "POWER & LIGHT (14TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "7 min",
+              "headsign": "UMKC",
+              "time": "12:39pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            },
+            {
+              "countdown": "12 min",
+              "headsign": "UMKC",
+              "time": "12:43pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            },
+            {
+              "countdown": "17 min",
+              "headsign": "UMKC",
+              "time": "12:49pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Kauffman Center Stops",
+      "url": "https://arrivals.kcstreetcar.org/kcnkcs",
+      "stopCodes": [
+        "kcn",
+        "kcs"
+      ],
+      "stops": [
+        {
+          "code": "kcn",
+          "label": "Kauffman Center",
+          "direction": "Northbound",
+          "directionId": 0,
+          "stopName": "KAUFFMAN CENTER (16TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "16 min",
+              "headsign": "River Market",
+              "time": "12:47pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "804"
+            },
+            {
+              "countdown": "21 min",
+              "headsign": "River Market",
+              "time": "12:53pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            },
+            {
+              "countdown": "25 min",
+              "headsign": "River Market",
+              "time": "12:57pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "810"
+            }
+          ]
+        },
+        {
+          "code": "kcs",
+          "label": "Kauffman Center",
+          "direction": "Southbound",
+          "directionId": 1,
+          "stopName": "KAUFFMAN CENTER (16TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "8 min",
+              "headsign": "UMKC",
+              "time": "12:40pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            },
+            {
+              "countdown": "12 min",
+              "headsign": "UMKC",
+              "time": "12:44pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            },
+            {
+              "countdown": "18 min",
+              "headsign": "UMKC",
+              "time": "12:50pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Crossroads Stops",
+      "url": "https://arrivals.kcstreetcar.org/crncrs",
+      "stopCodes": [
+        "crn",
+        "crs"
+      ],
+      "stops": [
+        {
+          "code": "crn",
+          "label": "Crossroads",
+          "direction": "To River Market",
+          "directionId": 0,
+          "stopName": "CROSSROADS (19TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "14 min",
+              "headsign": "River Market",
+              "time": "12:46pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "804"
+            },
+            {
+              "countdown": "20 min",
+              "headsign": "River Market",
+              "time": "12:52pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            },
+            {
+              "countdown": "24 min",
+              "headsign": "River Market",
+              "time": "12:56pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "810"
+            }
+          ]
+        },
+        {
+          "code": "crs",
+          "label": "Crossroads",
+          "direction": "Southbound",
+          "directionId": 1,
+          "stopName": "CROSSROADS (19TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "9 min",
+              "headsign": "UMKC",
+              "time": "12:41pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            },
+            {
+              "countdown": "13 min",
+              "headsign": "UMKC",
+              "time": "12:45pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            },
+            {
+              "countdown": "20 min",
+              "headsign": "UMKC",
+              "time": "12:52pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Union Station Stops",
+      "url": "https://arrivals.kcstreetcar.org/usnuss",
+      "stopCodes": [
+        "usn",
+        "uss"
+      ],
+      "stops": [
+        {
+          "code": "usn",
+          "label": "Union Station",
+          "direction": "Northbound",
+          "directionId": 0,
+          "stopName": "UNION STATION (PERSHING & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "13 min",
+              "headsign": "River Market",
+              "time": "12:44pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "804"
+            },
+            {
+              "countdown": "19 min",
+              "headsign": "River Market",
+              "time": "12:50pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            },
+            {
+              "countdown": "23 min",
+              "headsign": "River Market",
+              "time": "12:54pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "810"
+            }
+          ]
+        },
+        {
+          "code": "uss",
+          "label": "Union Station",
+          "direction": "Southbound",
+          "directionId": 1,
+          "stopName": "UNION STATION (PERSHING & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "10 min",
+              "headsign": "UMKC",
+              "time": "12:42pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            },
+            {
+              "countdown": "14 min",
+              "headsign": "UMKC",
+              "time": "12:46pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            },
+            {
+              "countdown": "22 min",
+              "headsign": "UMKC",
+              "time": "12:54pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "WWI Museum & Memorial Stops",
+      "url": "https://arrivals.kcstreetcar.org/wwnwws",
+      "stopCodes": [
+        "wwn",
+        "wws"
+      ],
+      "stops": [
+        {
+          "code": "wwn",
+          "label": "WWI Museum",
+          "direction": "To River Market",
+          "directionId": 0,
+          "stopName": "WWI MUSEUM & MEMORIAL (27TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "9 min",
+              "headsign": "River Market",
+              "time": "12:41pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "804"
+            },
+            {
+              "countdown": "15 min",
+              "headsign": "River Market",
+              "time": "12:47pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            },
+            {
+              "countdown": "19 min",
+              "headsign": "River Market",
+              "time": "12:51pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "810"
+            }
+          ]
+        },
+        {
+          "code": "wws",
+          "label": "WWI Museum",
+          "direction": "To UMKC",
+          "directionId": 1,
+          "stopName": "WW1 MUSEUM & MEMORIAL (27TH & MAIN)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "13 min",
+              "headsign": "UMKC",
+              "time": "12:44pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            },
+            {
+              "countdown": "15 min",
+              "headsign": "UMKC",
+              "time": "12:47pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            },
+            {
+              "countdown": "25 min",
+              "headsign": "UMKC",
+              "time": "12:56pm",
+              "occupancyStatus": "STANDING_ROOM_ONLY",
+              "vehicleId": "807"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Union Hill Stops",
+      "url": "https://arrivals.kcstreetcar.org/uhnuhs",
+      "stopCodes": [
+        "uhn",
+        "uhs"
+      ],
+      "stops": [
+        {
+          "code": "uhn",
+          "label": "Union Hill",
+          "direction": "To River Market",
+          "directionId": 0,
+          "stopName": "UNION HILL (31ST & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "7 min",
+              "headsign": "River Market",
+              "time": "12:39pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "804"
+            },
+            {
+              "countdown": "12 min",
+              "headsign": "River Market",
+              "time": "12:44pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            },
+            {
+              "countdown": "16 min",
+              "headsign": "River Market",
+              "time": "12:48pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "810"
+            }
+          ]
+        },
+        {
+          "code": "uhs",
+          "label": "Union Hill",
+          "direction": "To UMKC",
+          "directionId": 1,
+          "stopName": "UNION HILL (31ST & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "Due",
+              "headsign": "UMKC",
+              "time": "12:32pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "813"
+            },
+            {
+              "countdown": "14 min",
+              "headsign": "UMKC",
+              "time": "12:46pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            },
+            {
+              "countdown": "18 min",
+              "headsign": "UMKC",
+              "time": "12:50pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Armour Stops",
+      "url": "https://arrivals.kcstreetcar.org/arnars",
+      "stopCodes": [
+        "arn",
+        "ars"
+      ],
+      "stops": [
+        {
+          "code": "arn",
+          "label": "Armour",
+          "direction": "To River Market",
+          "directionId": 0,
+          "stopName": "ARMOUR (35TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "4 min",
+              "headsign": "River Market",
+              "time": "12:36pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "804"
+            },
+            {
+              "countdown": "10 min",
+              "headsign": "River Market",
+              "time": "12:42pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            },
+            {
+              "countdown": "14 min",
+              "headsign": "River Market",
+              "time": "12:45pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "810"
+            }
+          ]
+        },
+        {
+          "code": "ars",
+          "label": "Armour",
+          "direction": "To UMKC",
+          "directionId": 1,
+          "stopName": "ARMOUR (35TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "3 min",
+              "headsign": "UMKC",
+              "time": "12:35pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "813"
+            },
+            {
+              "countdown": "16 min",
+              "headsign": "UMKC",
+              "time": "12:48pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            },
+            {
+              "countdown": "20 min",
+              "headsign": "UMKC",
+              "time": "12:52pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "805"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Westport Stops",
+      "url": "https://arrivals.kcstreetcar.org/wpnwps",
+      "stopCodes": [
+        "wpn",
+        "wps"
+      ],
+      "stops": [
+        {
+          "code": "wpn",
+          "label": "Westport",
+          "direction": "To River Market",
+          "directionId": 0,
+          "stopName": "WESTPORT(39TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "2 min",
+              "headsign": "River Market",
+              "time": "12:34pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "804"
+            },
+            {
+              "countdown": "8 min",
+              "headsign": "River Market",
+              "time": "12:39pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            },
+            {
+              "countdown": "12 min",
+              "headsign": "River Market",
+              "time": "12:43pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "810"
+            }
+          ]
+        },
+        {
+          "code": "wps",
+          "label": "Westport",
+          "direction": "To UMKC",
+          "directionId": 1,
+          "stopName": "WESTPORT (39TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "Due",
+              "headsign": "UMKC",
+              "time": "12:32pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "814"
+            },
+            {
+              "countdown": "5 min",
+              "headsign": "UMKC",
+              "time": "12:37pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "813"
+            },
+            {
+              "countdown": "19 min",
+              "headsign": "UMKC",
+              "time": "12:50pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Southmoreland Stops",
+      "url": "https://arrivals.kcstreetcar.org/smnsms",
+      "stopCodes": [
+        "smn",
+        "sms"
+      ],
+      "stops": [
+        {
+          "code": "smn",
+          "label": "Southmoreland",
+          "direction": "To River Market",
+          "directionId": 0,
+          "stopName": "SOUTHMORELAND (43RD & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "Due",
+              "headsign": "River Market",
+              "time": "12:31pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "804"
+            },
+            {
+              "countdown": "5 min",
+              "headsign": "River Market",
+              "time": "12:37pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            },
+            {
+              "countdown": "9 min",
+              "headsign": "River Market",
+              "time": "12:41pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "810"
+            }
+          ]
+        },
+        {
+          "code": "sms",
+          "label": "Southmoreland",
+          "direction": "To UMKC",
+          "directionId": 1,
+          "stopName": "SOUTHMORELAND (43RD & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "3 min",
+              "headsign": "UMKC",
+              "time": "12:34pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "814"
+            },
+            {
+              "countdown": "8 min",
+              "headsign": "UMKC",
+              "time": "12:40pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "813"
+            },
+            {
+              "countdown": "22 min",
+              "headsign": "UMKC",
+              "time": "12:53pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Art Museums Stops",
+      "url": "https://arrivals.kcstreetcar.org/amnams",
+      "stopCodes": [
+        "amn",
+        "ams"
+      ],
+      "stops": [
+        {
+          "code": "amn",
+          "label": "Art Museums",
+          "direction": "To River Market",
+          "directionId": 0,
+          "stopName": "ART MUSEUMS (45TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "3 min",
+              "headsign": "River Market",
+              "time": "12:35pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            },
+            {
+              "countdown": "8 min",
+              "headsign": "River Market",
+              "time": "12:39pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "810"
+            },
+            {
+              "countdown": "16 min",
+              "headsign": "River Market",
+              "time": "12:47pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "814"
+            }
+          ]
+        },
+        {
+          "code": "ams",
+          "label": "Art Museums",
+          "direction": "To UMKC",
+          "directionId": 1,
+          "stopName": "ART MUSEUMS (45TH & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "4 min",
+              "headsign": "UMKC",
+              "time": "12:36pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "814"
+            },
+            {
+              "countdown": "10 min",
+              "headsign": "UMKC",
+              "time": "12:41pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "813"
+            },
+            {
+              "countdown": "23 min",
+              "headsign": "UMKC",
+              "time": "12:55pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Plaza Stops",
+      "url": "https://arrivals.kcstreetcar.org/pznpzs",
+      "stopCodes": [
+        "pzn",
+        "pzs"
+      ],
+      "stops": [
+        {
+          "code": "pzn",
+          "label": "Plaza",
+          "direction": "To River Market",
+          "directionId": 0,
+          "stopName": "PLAZA (CLEAVER II & MAIN ST)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "3 min",
+              "headsign": "River Market",
+              "time": "12:35pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            },
+            {
+              "countdown": "7 min",
+              "headsign": "River Market",
+              "time": "12:39pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "810"
+            },
+            {
+              "countdown": "15 min",
+              "headsign": "River Market",
+              "time": "12:47pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "814"
+            }
+          ]
+        },
+        {
+          "code": "pzs",
+          "label": "Plaza",
+          "direction": "To UMKC",
+          "directionId": 1,
+          "stopName": "PLAZA (CLEAVER/BROOKSIDE)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "6 min",
+              "headsign": "UMKC",
+              "time": "12:38pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "814"
+            },
+            {
+              "countdown": "12 min",
+              "headsign": "UMKC",
+              "time": "12:43pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "813"
+            },
+            {
+              "countdown": "25 min",
+              "headsign": "UMKC",
+              "time": "12:57pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "812"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "UMKC Stops",
+      "url": "https://arrivals.kcstreetcar.org/umn",
+      "stopCodes": [
+        "umn"
+      ],
+      "stops": [
+        {
+          "code": "umn",
+          "label": "UMKC",
+          "direction": "To River Market",
+          "directionId": 0,
+          "stopName": "UMKC (51ST & BROOKSIDE BLVD)",
+          "timestamp": "2026-03-28T17:31:10.099Z",
+          "arrivals": [
+            {
+              "countdown": "Due",
+              "headsign": "River Market",
+              "time": "12:31pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "809"
+            },
+            {
+              "countdown": "2 min",
+              "headsign": "River Market",
+              "time": "12:34pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "810"
+            },
+            {
+              "countdown": "12 min",
+              "headsign": "River Market",
+              "time": "12:44pm",
+              "occupancyStatus": "MANY_SEATS_AVAILABLE",
+              "vehicleId": "814"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

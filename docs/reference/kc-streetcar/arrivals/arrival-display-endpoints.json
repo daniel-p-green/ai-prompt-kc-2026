@@ -1,0 +1,74 @@
+[
+  {
+    "label": "River Market North Stop",
+    "url": "https://arrivals.kcstreetcar.org/rmn"
+  },
+  {
+    "label": "River Market West Stop",
+    "url": "https://arrivals.kcstreetcar.org/rmw"
+  },
+  {
+    "label": "City Market Stop",
+    "url": "https://arrivals.kcstreetcar.org/cmk"
+  },
+  {
+    "label": "North Loop Stops",
+    "url": "https://arrivals.kcstreetcar.org/nlnnls"
+  },
+  {
+    "label": "Library Stops",
+    "url": "https://arrivals.kcstreetcar.org/lbnlbs"
+  },
+  {
+    "label": "Metro Center Stops",
+    "url": "https://arrivals.kcstreetcar.org/mcnmcs"
+  },
+  {
+    "label": "Power & Light Stops",
+    "url": "https://arrivals.kcstreetcar.org/plnpls"
+  },
+  {
+    "label": "Kauffman Center Stops",
+    "url": "https://arrivals.kcstreetcar.org/kcnkcs"
+  },
+  {
+    "label": "Crossroads Stops",
+    "url": "https://arrivals.kcstreetcar.org/crncrs"
+  },
+  {
+    "label": "Union Station Stops",
+    "url": "https://arrivals.kcstreetcar.org/usnuss"
+  },
+  {
+    "label": "WWI Museum & Memorial Stops",
+    "url": "https://arrivals.kcstreetcar.org/wwnwws"
+  },
+  {
+    "label": "Union Hill Stops",
+    "url": "https://arrivals.kcstreetcar.org/uhnuhs"
+  },
+  {
+    "label": "Armour Stops",
+    "url": "https://arrivals.kcstreetcar.org/arnars"
+  },
+  {
+    "label": "Westport Stops",
+    "url": "https://arrivals.kcstreetcar.org/wpnwps"
+  },
+  {
+    "label": "Southmoreland Stops",
+    "url": "https://arrivals.kcstreetcar.org/smnsms"
+  },
+  {
+    "label": "Art Museums Stops",
+    "url": "https://arrivals.kcstreetcar.org/amnams"
+  },
+  {
+    "label": "Plaza Stops",
+    "url": "https://arrivals.kcstreetcar.org/pznpzs"
+  },
+  {
+    "label": "UMKC Stops",
+    "url": "https://arrivals.kcstreetcar.org/umn"
+  }
+]

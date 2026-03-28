@@ -1,0 +1,7 @@
+.DS_Store
+.cursor/
+dist/
+node_modules/
+tmp/
+docs/reference/kc-streetcar/downloads/
+docs/reference/kc-streetcar/videos/
