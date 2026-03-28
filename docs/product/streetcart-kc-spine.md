@@ -6,7 +6,7 @@ Team: Team Codex KC
 
 ## One-Sentence Thesis
 
-StreetCart KC turns the Kansas City streetcar corridor into a rolling food spine and live scoreboard, using a March Madness-style volunteer tournament to move more groceries into the city's highest-need ZIP codes through streetcar-adjacent hubs and partner pantries in 60 days.
+StreetCart KC uses the Kansas City streetcar corridor as the public-facing food-access spine, while partner hubs handle neighborhood fulfillment and a verified volunteer bracket keeps the 60-day pilot visible in the city's highest-need ZIP codes.
 
 ## What This Actually Solves
 
@@ -109,6 +109,9 @@ Do not spend the clock building:
 - full routing optimization
 - real-time vehicle tracking
 - complete pantry inventory management
+- a Next.js migration
+- Postgres or backend setup
+- auth or a full outbound messaging system
 
 ## Likely Judge Objections and Answers
 
@@ -130,10 +133,16 @@ Answer: it creates one city-level operating spine, better targeting, repeat volu
 
 ## Best First Slide
 
-StreetCart KC turns Kansas City's streetcar corridor into a public food distribution spine and live citywide scoreboard, using sports-fueled volunteer competition to deliver more groceries into priority ZIP codes in 60 days.
+StreetCart KC uses Kansas City's streetcar corridor as the public-facing food-access spine, with partner hubs moving food into priority ZIP codes and a verified volunteer bracket keeping the 60-day pilot visible.
 
 ## Recommended Build Order From Here
 
 1. Finish Oracle first.
 2. Build Muse around the exact same thesis and metrics.
-3. Only then build the thinnest possible Architect proof.
+3. Only then keep Architect to the thinnest possible three-view proof.
+
+## Track Priority Lock
+
+- Oracle is the controlling submission.
+- Muse is the polish layer and inherits the Oracle facts directly.
+- Architect is proof, not product.

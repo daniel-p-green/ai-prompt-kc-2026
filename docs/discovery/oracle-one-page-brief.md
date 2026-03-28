@@ -3,86 +3,84 @@
 Date: 2026-03-28
 Repository: ai-prompt-kc-2026
 Concept: StreetCart KC
+Source of truth: `docs/product/oracle-muse-fact-base.md`
 
 ## Executive Call
 
-Kansas City should fund a thin coordination-and-fulfillment pilot, not a new store and not a broad logistics rebuild. The right 60-day move is a citywide operating layer that helps partners schedule recurring food-access hubs, route residents to the next best pickup or delivery option, and move perishables fast in priority zones.
+Kansas City should fund StreetCart KC as a thin, visible food-access operating layer. The right 60-day move is not a new grocery store and not a broad logistics rebuild. It is a streetcar-led public spine that helps partners stage recurring hubs, guide residents to the next best pickup option, and reserve delivery for the households and produce surges that would otherwise fail.
 
-## Why This Problem Matters Now
+## Why This Matters Now
 
-The challenge brief is clear. Kansas City lost two grocery stores in the last year. The region’s main food bank lost 3 million pounds of food from federal cuts. Food insecurity is at a 10-year high, with 1 in 7 Kansas Citians affected.[^1] The curveball raises the bar. The city needs resident support in two zones within 14 days, one zone is 80% Spanish-speaking, and 1,000 pounds of produce spoil in 48 hours.[^1]
+The challenge economics are already clear: `$500,000` in contract revenue, `$150,000` in direct 60-day operating costs, and only `60 days` to prove the city should renew. The operating pressure is also clear:
 
-This is not just a supply problem. It is an access and coordination problem. Residents still need clear instructions, trusted pickup sites, language access, and a fallback when transportation breaks down. Partners need one operating picture instead of fragmented tools and phone trees.[^3][^4]
+- `1 in 7` Kansas Citians are food insecure
+- the main food bank lost `3 million pounds` from federal cuts
+- recent closures deepened pressure in `64127`, `64130`, and nearby ZIPs
+- `66101` and `66105` create real bilingual and Spanish-language urgency
 
-## What Other Cities Proved
+This is not just a supply problem. It is an access and coordination problem. Residents need one visible system for where to go, when to show up, and how to get served. Partners need one operating picture instead of fragmented referrals and one-off outreach.
 
-Other cities already tested the operating pattern Kansas City needs:
+## What StreetCart KC Actually Is
 
-- Baltimore used neighborhood pickup sites such as libraries and senior centers instead of building new stores. The Virtual Supermarket Program reached 16 sites, and 92.5% of surveyed users said it made healthy eating easier.[^5]
-- Atlanta used transit stations as fresh-food access points. Fresh MARTA Market drew more than 13,000 visitors and sold 15,000 pounds of produce across four stations in one season.[^6]
-- Philadelphia built a shared food-access coordination layer across institutions instead of another siloed program. FAST showed that centralized intake and routing can reduce duplication and speed response.[^7]
-- A CDC-published multi-city produce-box model showed high participant satisfaction and measurable gains in fruit and vegetable consumption when trusted community organizations handled distribution.[^8]
+StreetCart KC uses the streetcar corridor as the city-facing spine while partners do neighborhood fulfillment.
 
-The pattern is consistent. Cities move faster when they coordinate demand and supply, use trusted neighborhood sites, and keep delivery narrow.
+The pilot is two visible streetcar-facing hubs plus two partner feeder hubs:
 
-## Recommended Model
+- River Market Exchange Hub
+- Union Station Civic Hub
+- Guadalupe Family Hub
+- Cross-Lines Connector Hub
 
-StreetCart KC should launch a three-part pilot:
+The five locked pilot ZIPs are:
 
-1. **Recurring neighborhood hubs**  
-   Run three to four weekly hubs in priority ZIP codes through streetcar-adjacent or bus-accessible sites plus pantry and nonprofit partners.
+- `64130`
+- `64127`
+- `66101`
+- `66105`
+- `64132`
 
-2. **Bilingual resident navigation**  
-   Use SMS and partner-assisted intake to tell residents where to go, when to show up, and what they need to bring. Support English and Spanish on day one.
+The public partner list is also locked:
 
-3. **Targeted last-mile delivery**  
-   Use delivery only for seniors, no-vehicle households, or urgent produce allocation where pickup would fail.
+- Harvesters
+- Guadalupe Centers
+- Bishop Sullivan Center
+- Cross-Lines Community Outreach
+- After the Harvest KC for produce-surge support
 
-## Why This Wins
+## Why The Streetcar Still Wins
 
-- It solves the real operating problem, not just the marketing problem.
-- It fits the 60-day window because it uses existing partners and sites.
-- It answers the curveball because it supports Spanish-language outreach and fast produce movement.
-- It gives the city a measurable renewal case.
+The streetcar is not the whole logistics system. It is the best public spine for this brief.
 
-## 60-Day Proof Plan
+- It is instantly Kansas City-specific.
+- It creates one visible corridor judges can understand in seconds.
+- It gives the city a cleaner organizing symbol than a bus-heavy or warehouse-heavy pitch.
+- It still leaves room for bus access and partner delivery beyond the corridor.
 
-### Pilot scope
+Use this sentence everywhere:
 
-- Priority ZIPs: 64130, 64127, 66101, 66105, and 64132
-- Hub cadence: three to four recurring weekly hub windows
-- Service modes: pickup first, selective delivery second, perishables fast-track always on
-- Outreach: bilingual SMS, partner referrals, and vote support in the two active zones
+> StreetCart KC uses the streetcar corridor to organize the city-facing program, while existing bus routes and partner agencies extend reach into the surrounding priority ZIP codes.
 
-### What success looks like
+## 60-Day Proof
 
-- Verified household pickups and deliveries in priority ZIPs
-- Percentage of service volume delivered in target ZIPs
-- Fresh produce moved before spoilage
-- Volunteer or partner shift fill rate
-- Resident completion rate after outreach
+The top-line proof target is `1,800+` unique households reached in `60` days.
+
+The package should also show:
+
+- `3,200+` completed service events
+- `60,000 pounds` of food moved
+- `50+` volunteer teams activated
+- `70%+` of service volume in the five priority ZIPs
+- `85%+` resident completion after SMS or partner outreach
 
 ## Commercial Logic
 
-The challenge gives the business frame: $500,000 in contract revenue and $150,000 in operating costs.[^1] That means the pitch should not chase margin through heavy infrastructure. It should show disciplined spend, rapid proof, and renewal logic.
+StreetCart KC should present the money in two layers:
 
-The smart cost structure is simple:
+1. Direct pilot operating costs: `$150,000`
+2. Remaining contribution pool for build, program management, renewal runway, and margin: `$350,000`
 
-- spend on coordination, outreach, and partner execution
-- avoid fixed assets and store build-out
-- keep tech thin and focused on scheduling, messaging, and proof
+That frame is stronger than pretending the whole `500,000` is direct field spend. It shows discipline, believable economics, and a real renewal case.
 
 ## Bottom Line
 
-Kansas City does not need a bigger idea. It needs a tighter one. The best pitch is a city-backed coordination layer that makes food access easier to use, easier to prove, and easier to renew.
-
-## Sources
-
-[^1]: AI Prompt Championship, “KC Regional Challenge,” accessed March 28, 2026, [https://aipromptchamp.com/regional/kansascity-2026/challenge](https://aipromptchamp.com/regional/kansascity-2026/challenge).
-[^2]: Harvesters, “Hunger in our Region,” accessed March 28, 2026, [https://www.harvesters.org/learn-about-hunger/hunger-in-our-region](https://www.harvesters.org/learn-about-hunger/hunger-in-our-region).
-[^3]: Harvesters, “Food Assistance FAQ,” accessed March 28, 2026, [https://www.harvesters.org/get-food-assistance/food-assistance-faq](https://www.harvesters.org/get-food-assistance/food-assistance-faq).
-[^4]: City of Kansas City, Missouri, “SNAP Resource Hub,” accessed March 28, 2026, [https://www.kcmo.gov/city-hall/housing/snap-resource-hub](https://www.kcmo.gov/city-hall/housing/snap-resource-hub).
-[^5]: Pooja Lagisetty et al., “A Multi-Stakeholder Evaluation of the Baltimore City Virtual Supermarket Program,” *BMC Public Health* 17, 837 (2017), [https://doi.org/10.1186/s12889-017-4864-9](https://doi.org/10.1186/s12889-017-4864-9).
-[^6]: Food Well Alliance, “Case Study: Fresh MARTA Market,” accessed March 28, 2026, [https://www.foodwellalliance.org/casestudy-freshmarta](https://www.foodwellalliance.org/casestudy-freshmarta).
-[^7]: C. A. Lyles et al., “Food Access Support Technology (FAST): A Centralized City-Wide Platform for Rapid Response to Food Insecurity,” *Journal of General Internal Medicine* 38 (2023), [https://pmc.ncbi.nlm.nih.gov/articles/PMC10506975/](https://pmc.ncbi.nlm.nih.gov/articles/PMC10506975/).
-[^8]: Kerri L. Vasold et al., “Evaluation of a Distribution Model to Increase Access to Affordable Fruits and Vegetables,” *Preventing Chronic Disease* 21 (2024): 230206, [https://www.cdc.gov/pcd/issues/2024/23_0206.htm](https://www.cdc.gov/pcd/issues/2024/23_0206.htm).
+StreetCart KC should be pitched as the access layer that makes the current food system easier to use, easier to prove, and easier to renew. The streetcar makes the program visible. The partners make it real.

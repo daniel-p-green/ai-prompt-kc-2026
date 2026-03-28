@@ -10,6 +10,22 @@ Working stack: Repo not initialized yet. Recommended MVP stack for a thin Archit
 - Test: `Not configured yet in repo. Target command after scaffold: npm run test`
 - Build: `Not configured yet in repo. Target command after scaffold: npm run build`
 
+## Current Baseline Verification
+
+- Live arrivals scraper unit tests: `npm run test:arrivals`
+- Live arrivals reference refresh: `npm run arrivals:fetch`
+- Deck rebuild: `npm run deck:build`
+- Thin demo review: `npm run site:serve`
+- Manual Architect walkthrough:
+  - operator view loads with ZIPs, hubs, and KPI cards
+  - resident language toggle works in English and Spanish
+  - leaderboard view renders and keeps food-access outcomes ahead of team energy
+- Manual arrivals sanity check:
+  - `docs/reference/kc-streetcar/arrivals/live-arrivals-latest.json` writes successfully
+  - `River Market North Stop`, `North Loop Stops`, and `UMKC Stops` each contain expected stop codes and arrival arrays
+  - alerts remain present as an array even when empty
+- Scope guardrail: no walkthrough should imply a real backend, auth, SMS provider, or production scheduling stack
+
 ## Test Scope
 
 ### Unit
@@ -28,6 +44,7 @@ Working stack: Repo not initialized yet. Recommended MVP stack for a thin Archit
 
 - Primary user flow: operator publishes a hub, resident receives service instructions, volunteer completion updates the leaderboard
 - Critical edge flow: the pilot remains coherent when direct streetcar transport is unavailable and the system falls back to partner hub fulfillment
+- Thin demo rule: the current competition proof stays limited to operator, resident, and leaderboard views until a real app scaffold exists
 
 ## Requirement-to-Test Mapping
 
@@ -51,4 +68,6 @@ Working stack: Repo not initialized yet. Recommended MVP stack for a thin Archit
 - [ ] No flaky tests introduced
 - [ ] Live pilot ZIP data reviewed for freshness and obvious bad recommendations
 - [ ] Every public-facing artifact still ties back to food access metrics and priority ZIPs
+- [ ] Architect remains limited to operator, resident, and leaderboard proof only
+- [ ] No artifact implies unsupported production workflows
 - [ ] Risk summary written

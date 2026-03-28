@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StreetCart KC</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1020'/%3E%3Ccircle cx='22' cy='46' r='6' fill='%23e3a23b'/%3E%3Ccircle cx='46' cy='46' r='6' fill='%23e3a23b'/%3E%3Cpath d='M12 18h28l6 16H18z' fill='%23c53e37'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="site/styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Oracle-first competition package • Team Codex KC</p>
+          <h1>StreetCart KC</h1>
+          <p class="hero-subtitle">
+            Kansas City's streetcar-led food access pilot with a thin live proof for judges.
+          </p>
+          <p class="hero-thesis" id="thesis"></p>
+          <div class="hero-actions">
+            <a class="button primary" href="#demo">See the 2-minute demo</a>
+            <a class="button secondary" href="docs/discovery/muse-package-brief.md">Open the Muse brief</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="site/assets/streetcart-hub.jpg" alt="Kansas City streetcar station concept render" />
+          <div class="hero-badge">
+            <span>Phase 2</span>
+            <strong>KC's free bus network extends reach beyond the corridor.</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="proof-grid" id="proof-grid"></section>
+
+      <section class="narrative-band">
+        <div>
+          <p class="section-label">Why this wins</p>
+          <h2>Streetcar is the right answer for the brief. Buses are the right answer for expansion.</h2>
+        </div>
+        <p>
+          The streetcar gives the city a public spine it can stand in front of. Partner hubs and feeder reach
+          make the model honest. The story stays memorable without pretending the corridor solves everything by itself.
+        </p>
+      </section>
+
+      <section class="demo" id="demo">
+        <div class="section-heading">
+          <p class="section-label">Thin live proof</p>
+          <h2>Three views. Under two minutes. No extra features.</h2>
+        </div>
+        <div class="tab-bar" role="tablist" aria-label="StreetCart demo views">
+          <button class="tab is-active" data-view="operator" role="tab" aria-selected="true">Operator</button>
+          <button class="tab" data-view="resident" role="tab" aria-selected="false">Resident</button>
+          <button class="tab" data-view="leaderboard" role="tab" aria-selected="false">Leaderboard</button>
+        </div>
+        <div class="app-frame">
+          <aside class="app-rail">
+            <div>
+              <p class="rail-label">Pilot geography</p>
+              <ul id="zip-list" class="zip-list"></ul>
+            </div>
+            <div class="curveball-module">
+              <p class="rail-label">Curveball-ready module</p>
+              <h3 id="curveball-title"></h3>
+              <p id="curveball-body"></p>
+            </div>
+          </aside>
+          <main class="app-main">
+            <section class="view is-active" id="view-operator" aria-label="Operator dashboard">
+              <div class="view-header">
+                <div>
+                  <p class="section-label">Operator dashboard</p>
+                  <h3>Priority ZIPs, next hubs, and KPI cards</h3>
+                </div>
+                <div class="status-pill">60-day pilot</div>
+              </div>
+              <div class="kpi-grid" id="kpi-grid"></div>
+              <div class="hub-grid" id="hub-grid"></div>
+            </section>
+
+            <section class="view" id="view-resident" aria-label="Resident instruction view">
+              <div class="view-header">
+                <div>
+                  <p class="section-label">Resident instruction view</p>
+                  <h3>Pickup-first, bilingual, and human-readable</h3>
+                </div>
+                <div class="language-toggle" role="group" aria-label="Language toggle">
+                  <button class="lang is-active" data-lang="es">Español</button>
+                  <button class="lang" data-lang="en">English</button>
+                </div>
+              </div>
+              <div class="resident-layout">
+                <div class="phone-card">
+                  <p class="phone-eyebrow" id="resident-name"></p>
+                  <h4 id="resident-title"></h4>
+                  <p id="resident-body"></p>
+                  <div class="phone-footer" id="resident-fallback"></div>
+                </div>
+                <div class="resident-notes">
+                  <div class="note-card">
+                    <p class="section-label">Why this matters</p>
+                    <h4>Zero dead ends</h4>
+                    <p>
+                      The resident flow answers the only question that matters: where do I go next, when do I go,
+                      and what do I need?
+                    </p>
+                  </div>
+                  <div class="note-card">
+                    <p class="section-label">Support model</p>
+                    <h4>Pickup first, delivery second</h4>
+                    <p>
+                      Selective delivery remains available for seniors, no-vehicle households, and produce
+                      preservation cases.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="view" id="view-leaderboard" aria-label="Public leaderboard">
+              <div class="view-header">
+                <div>
+                  <p class="section-label">Public leaderboard</p>
+                  <h3>Sports energy without losing the food-access metric</h3>
+                </div>
+                <div class="status-pill accent">Verified points only</div>
+              </div>
+              <div class="leaderboard-board">
+                <div class="board-screen">
+                  <p class="board-label">StreetCart KC • Week 3</p>
+                  <div id="team-list" class="team-list"></div>
+                </div>
+                <div class="board-sidebar">
+                  <div class="note-card">
+                    <p class="section-label">Renewal logic</p>
+                    <h4>What the city gets back</h4>
+                    <ul id="renewal-list" class="simple-list"></ul>
+                  </div>
+                  <div class="note-card dark">
+                    <p class="section-label">AI mastery</p>
+                    <h4>Reasoning on display</h4>
+                    <ul id="ai-list" class="simple-list"></ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+      </section>
+
+      <section class="artifacts">
+        <div class="section-heading">
+          <p class="section-label">Linked artifacts</p>
+          <h2>Oracle leads. Muse and Architect stay on the same rails.</h2>
+        </div>
+        <div class="artifact-grid">
+          <a class="artifact-card" href="docs/plans/StreetCart_KC_Oracle.pptx">
+            <span class="artifact-tag">Deck</span>
+            <h3>Oracle-led PPTX</h3>
+            <p>Primary judge artifact. Narrative, economics, KPI logic, objections, and curveball reserve.</p>
+          </a>
+          <a class="artifact-card" href="docs/discovery/muse-package-brief.md">
+            <span class="artifact-tag">Muse</span>
+            <h3>Creative system brief</h3>
+            <p>Brand direction, scoreboard logic, wrap guardrails, and bilingual collateral tied to the same facts.</p>
+          </a>
+          <a class="artifact-card" href="docs/product/oracle-muse-fact-base.md">
+            <span class="artifact-tag">Source</span>
+            <h3>Shared fact base</h3>
+            <p>Oracle and Muse inherit their ZIPs, hubs, partners, KPI targets, and messaging rules from this file.</p>
+          </a>
+          <a class="artifact-card" href="docs/logs/2026-03-28-worklog.md">
+            <span class="artifact-tag">Process</span>
+            <h3>Timestamped worklog</h3>
+            <p>Evidence that the idea was pressure-tested, narrowed, and aligned before the artifacts were polished.</p>
+          </a>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="site/app.js"></script>
+  </body>
+  </html>

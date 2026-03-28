@@ -62,9 +62,9 @@ StreetCart KC responds with one city-native idea that can power all three compet
 
 ## Rollout and Measurement
 
-- Rollout strategy: pilot three to four streetcar-adjacent hubs serving five high-need ZIP codes first: 64130, 64127, 66101, 66105, and 64132; onboard a small set of agencies before broader launch
+- Rollout strategy: pilot four hubs serving five high-need ZIP codes first: River Market Exchange Hub, Union Station Civic Hub, Guadalupe Family Hub, and Cross-Lines Connector Hub; onboard a small set of agencies before broader launch
 - Phase 2 expansion: use KC's free bus network to extend reach beyond the streetcar corridor without changing the streetcar-led brand or operating spine
-- Success metric: 600 verified household pickups or deliveries in 60 days, with at least 70% of service volume tied to priority ZIP codes and at least 50 recurring volunteers or team participants
+- Success metric: 1,800+ unique households reached and 3,200+ completed service events in 60 days, with at least 70% of volume tied to priority ZIP codes and at least 50 volunteer teams activated
 - Guardrail metric: fewer than 10% failed pickups or missed windows, fewer than 5% stale event details, zero storage of sensitive household financial data
 
 ## Risks and Mitigations

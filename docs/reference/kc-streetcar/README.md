@@ -18,6 +18,7 @@ Current bundle counts:
 - `posts/`: local markdown snapshots of the public `post` sitemap content
 - `downloads/`: public PDFs, images, and other linked files discovered from Streetcar rider/resource pages
 - `arrivals/arrival-display-endpoints.csv`: the stop-specific arrival-display URLs published on the Streetcar arrivals page
+- `arrivals/live-arrivals-latest.json`: latest normalized snapshot from the live signage backend, generated locally from the published endpoints
 - `manifests/all-urls.txt`: all public URLs found in the Streetcar sitemap index at fetch time
 - `manifests/summary.json`: current snapshot counts and the main files called out below
 
@@ -25,6 +26,7 @@ Current bundle counts:
 
 - Route map: `downloads/2978_KCSA_PylonMap_RUN-122025.pdf`
 - Arrival display endpoints: `arrivals/arrival-display-endpoints.csv`
+- Live arrivals snapshot: `arrivals/live-arrivals-latest.json`
 - Arrival instructions snapshot: `pages/how-to-ride/arrival-times/index.md`
 - Streetcar tracker snapshot: `pages/how-to-ride/streetcar-tracker/index.md`
 - Rider entry page: `pages/how-to-ride/index.md`
@@ -56,6 +58,7 @@ Current bundle counts:
 
 ## Notes
 
-- The arrival-display links are live services. The URLs are archived locally, but the timing data itself still depends on the live Streetcar arrivals system.
+- The arrival-display links are live services. The URLs are archived locally, and `arrivals/live-arrivals-latest.json` is only a point-in-time snapshot generated with `npm run arrivals:fetch`.
+- The signage pages are a Vue shell backed by the public Firebase Realtime Database at `https://kiosk-6e6b4.firebaseio.com`. The scraper reads `stops`, `alerts`, and `byStop/*` directly instead of scraping rendered HTML.
 - This bundle includes the full public `page`, `faq`, `location`, and `post` sitemap content as markdown snapshots.
 - `manifests/all-urls.txt` keeps the full public sitemap inventory if you want to pull more of the site later.

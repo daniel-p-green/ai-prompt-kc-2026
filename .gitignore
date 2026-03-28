@@ -1,2 +1,5 @@
 .DS_Store
+node_modules/
+tmp/
 docs/reference/kc-streetcar/downloads/
+docs/reference/kc-streetcar/videos/

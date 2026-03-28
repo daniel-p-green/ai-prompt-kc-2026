@@ -1,0 +1,15 @@
+{
+  "name": "streetcart-kc",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "arrivals:fetch": "node scripts/fetch_kc_streetcar_arrivals.mjs",
+    "deck:build": "node scripts/build_oracle_deck.mjs",
+    "site:serve": "python3 -m http.server 4173 --directory .",
+    "test:arrivals": "node --test scripts/fetch_kc_streetcar_arrivals.test.mjs"
+  },
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}
