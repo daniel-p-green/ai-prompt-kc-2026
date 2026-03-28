@@ -7,7 +7,13 @@ const loadJson = (relPath) =>
   JSON.parse(fs.readFileSync(path.join(root, relPath), "utf8"));
 
 const data = loadJson("data/streetcart-kc.json");
-const outPath = path.join(root, "docs/plans/StreetCart_KC_Oracle.pptx");
+const outPath = path.join(
+  root,
+  "docs/archive/legacy/2026-03-28-competition-package/plans/StreetCart_KC_Oracle.pptx"
+);
+const curveball = data.curveballModule;
+const curveballVote = curveball.communityVote;
+const curveballProduce = curveball.produceSurge;
 
 const pptx = new PptxGenJS();
 pptx.layout = "LAYOUT_WIDE";
@@ -1054,151 +1060,300 @@ slide9.addText("AI mastery score target: show intentional direction, not acciden
 addFooter(slide9, "Reference docs: streetcart-kc-spine.md, data-strategy.md, 2026-03-28-worklog.md");
 
 const slide10 = pptx.addSlide();
-addSlideBase(slide10, { bg: COLORS.ink });
+addSlideBase(slide10);
 addTitle(
   slide10,
+  "The hard questions already have answers",
+  "Reserve one slide for direct objections so the curveball lands as proof of discipline, not improvisation."
+);
+const objections = [
+  {
+    title: "This is branding, not operations",
+    body: "The package leads with households served, ZIP targeting, partner staffing, and verified completions before it shows the bracket."
+  },
+  {
+    title: "The streetcar cannot carry food",
+    body: "Phase one never depends on cargo on trains. The streetcar is the city-facing spine while partners and feeder hubs handle fulfillment."
+  },
+  {
+    title: "Why not just use buses?",
+    body: "Buses expand reach in phase two, but the streetcar is the most visible Kansas City-specific organizing line for a 60-day proof."
+  },
+  {
+    title: "Why is this better than pantry outreach today?",
+    body: "It gives the city one public operating layer for schedules, resident guidance, volunteer turnout, and proof instead of fragmented referrals."
+  }
+];
+objections.forEach((item, index) => {
+  const x = 0.78 + (index % 2) * 6.15;
+  const y = 1.8 + Math.floor(index / 2) * 2.18;
+  slide10.addShape(pptx.ShapeType.roundRect, {
+    x,
+    y,
+    w: 5.65,
+    h: 1.78,
+    rectRadius: 0.08,
+    fill: { color: index % 2 === 0 ? "FFF6EE" : "F5F7FF" },
+    line: { color: index % 2 === 0 ? "E8C7BE" : "CBD6FF" }
+  });
+  slide10.addText(item.title, {
+    x: x + 0.22,
+    y: y + 0.2,
+    w: 4.9,
+    h: 0.24,
+    fontSize: 14,
+    bold: true,
+    color: COLORS.ink
+  });
+  slide10.addText(item.body, {
+    x: x + 0.22,
+    y: y + 0.58,
+    w: 5.0,
+    h: 0.78,
+    fontSize: 10.5,
+    color: COLORS.muted
+  });
+});
+slide10.addText("Slides 9-11 should feel like judge defense: evidence, objections, then the curveball.", {
+  x: 0.82,
+  y: 6.6,
+  w: 6.8,
+  h: 0.22,
+  fontSize: 9.5,
+  italic: true,
+  color: COLORS.red
+});
+addFooter(slide10, "Keep the rebuttals operational. Avoid defensive copy.");
+
+const slide11 = pptx.addSlide();
+addSlideBase(slide11, { bg: COLORS.ink });
+addTitle(
+  slide11,
   "Curveball response",
-  "This slide is reserved for the 1:00 PM prompt so the team pivots without breaking the story.",
+  curveball.title,
   { color: COLORS.white, subColor: "C5CEDA" }
 );
-slide10.addShape(pptx.ShapeType.roundRect, {
-  x: 0.9,
-  y: 1.7,
-  w: 5.7,
-  h: 3.2,
+slide11.addText(curveball.body, {
+  x: 0.82,
+  y: 1.25,
+  w: 8.6,
+  h: 0.42,
+  fontSize: 11.5,
+  color: "D7DDE8"
+});
+slide11.addShape(pptx.ShapeType.roundRect, {
+  x: 0.78,
+  y: 1.75,
+  w: 5.95,
+  h: 4.35,
   rectRadius: 0.08,
   fill: { color: "121B2D" },
   line: { color: "26344F" }
 });
-slide10.addText("Prepared response frame", {
-  x: 1.18,
-  y: 1.98,
-  w: 2.4,
+slide11.addText(curveballVote.title, {
+  x: 1.05,
+  y: 2.0,
+  w: 3.4,
   h: 0.26,
-  fontSize: 18,
+  fontSize: 16,
   bold: true,
   color: COLORS.gold
 });
-addBulletList(slide10, [
-  "What changed in the environment?",
-  "Which operating lever moves first: hub schedule, partner assignment, resident messaging, or produce triage?",
-  "How does the public proof loop stay intact?"
-], {
-  x: 1.18,
-  y: 2.42,
-  w: 4.8,
-  h: 1.3,
-  size: 11,
+addPill(slide11, `${curveballVote.zips.join(" + ")} • ${curveballVote.window}`, 1.05, 2.36, COLORS.red);
+slide11.addText(curveballVote.summary, {
+  x: 1.05,
+  y: 2.74,
+  w: 5.1,
+  h: 0.72,
+  fontSize: 10,
   color: "D7DDE8"
 });
-slide10.addShape(pptx.ShapeType.roundRect, {
-  x: 7.1,
-  y: 1.7,
-  w: 5.2,
-  h: 3.2,
+slide11.addText("Trusted anchors", {
+  x: 1.05,
+  y: 3.62,
+  w: 1.4,
+  h: 0.18,
+  fontSize: 10,
+  bold: true,
+  color: COLORS.white
+});
+addBulletList(slide11, curveballVote.anchors.slice(0, 3), {
+  x: 1.02,
+  y: 3.86,
+  w: 2.35,
+  h: 1.15,
+  size: 8.8,
+  color: "D7DDE8",
+  paraSpaceAfterPt: 4
+});
+slide11.addText("Operating moves", {
+  x: 3.55,
+  y: 3.62,
+  w: 1.5,
+  h: 0.18,
+  fontSize: 10,
+  bold: true,
+  color: COLORS.white
+});
+addBulletList(slide11, curveballVote.tactics, {
+  x: 3.5,
+  y: 3.86,
+  w: 2.65,
+  h: 1.2,
+  size: 8.6,
+  color: "D7DDE8",
+  paraSpaceAfterPt: 4
+});
+slide11.addText("Spanish first • bilingual hotline • community canvassers", {
+  x: 1.05,
+  y: 5.32,
+  w: 3.9,
+  h: 0.18,
+  fontSize: 8.8,
+  italic: true,
+  color: "AAB5C7"
+});
+slide11.addShape(pptx.ShapeType.roundRect, {
+  x: 4.95,
+  y: 5.16,
+  w: 1.35,
+  h: 0.5,
+  rectRadius: 0.08,
+  fill: { color: COLORS.blue },
+  line: { color: COLORS.blue }
+});
+slide11.addText(curveballVote.bracketTeam, {
+  x: 5.02,
+  y: 5.31,
+  w: 1.2,
+  h: 0.14,
+  fontSize: 8.4,
+  bold: true,
+  color: COLORS.white,
+  align: "center"
+});
+slide11.addShape(pptx.ShapeType.roundRect, {
+  x: 6.92,
+  y: 1.75,
+  w: 5.62,
+  h: 4.35,
   rectRadius: 0.08,
   fill: { color: "FFF6E7" },
   line: { color: "EACE91" }
 });
-slide10.addText(data.curveballModule.title, {
-  x: 7.42,
-  y: 1.98,
-  w: 3.0,
+slide11.addText(curveballProduce.title, {
+  x: 7.18,
+  y: 2.0,
+  w: 3.5,
   h: 0.26,
-  fontSize: 18,
+  fontSize: 16,
   bold: true,
   color: COLORS.ink
 });
-slide10.addText(data.curveballModule.body, {
-  x: 7.42,
-  y: 2.45,
-  w: 4.2,
-  h: 0.85,
-  fontSize: 11.5,
+addPill(slide11, `${curveballProduce.totalLbs} lbs • ${curveballProduce.window}`, 7.18, 2.36, COLORS.green);
+slide11.addText(curveballProduce.summary, {
+  x: 7.18,
+  y: 2.74,
+  w: 4.96,
+  h: 0.72,
+  fontSize: 9.8,
   color: COLORS.ink
 });
-slide10.addText("Because phase one and phase two are already separated, the model can flex without sounding improvised.", {
-  x: 7.42,
-  y: 3.52,
-  w: 4.1,
-  h: 0.55,
-  fontSize: 10,
-  italic: true,
+slide11.addText("Route", {
+  x: 7.2,
+  y: 3.7,
+  w: 1.1,
+  h: 0.16,
+  fontSize: 9,
+  bold: true,
   color: COLORS.red
 });
-addFooter(slide10, "Update this slide first at 1:00 PM before touching anything else.", COLORS.ink);
-
-const slide11 = pptx.addSlide();
-slide11.background = { color: COLORS.ink };
-slide11.addShape(pptx.ShapeType.rect, {
-  x: 0,
-  y: 0,
-  w: 13.33,
-  h: 7.5,
-  fill: { color: COLORS.ink }
-});
-slide11.addText("StreetCart KC", {
-  x: 0.82,
-  y: 0.92,
-  w: 4.0,
-  h: 0.45,
-  fontSize: 24,
-  bold: true,
-  color: COLORS.gold
-});
-slide11.addText("Fund the access layer that makes the existing system work better.", {
-  x: 0.82,
-  y: 1.55,
-  w: 8.5,
-  h: 0.85,
-  fontSize: 28,
-  bold: true,
-  color: COLORS.white
-});
-addBulletList(slide11, [
-  "Uses existing infrastructure and trusted partners",
-  "Moves food into priority ZIPs in 60 days",
-  "Creates a public proof loop the city can renew"
-], {
-  x: 0.9,
-  y: 2.85,
-  w: 5.2,
-  h: 1.4,
-  size: 12,
-  color: "D7DDE8"
-});
-slide11.addText("Linked live proof: operator dashboard • resident instructions • public leaderboard", {
-  x: 0.9,
-  y: 5.5,
-  w: 5.8,
-  h: 0.24,
-  fontSize: 11,
-  color: COLORS.gold
-});
-slide11.addImage({
-  path: image("site/assets/streetcart-hub.jpg"),
-  x: 7.35,
-  y: 1.1,
-  w: 5.25,
-  h: 4.6
-});
-slide11.addText("Ready for judges at 2:30 PM", {
-  x: 7.5,
-  y: 6.15,
-  w: 3.2,
-  h: 0.28,
-  fontSize: 14,
-  bold: true,
-  color: COLORS.white
-});
-slide11.addText("Team Codex KC  •  Oracle-led submission", {
-  x: 0.9,
-  y: 6.82,
-  w: 4.2,
-  h: 0.22,
+slide11.addText("Lbs", {
+  x: 10.35,
+  y: 3.7,
+  w: 0.5,
+  h: 0.16,
   fontSize: 9,
-  color: "9FB0C8"
+  bold: true,
+  color: COLORS.red
 });
+slide11.addText("Cold chain", {
+  x: 11.0,
+  y: 3.7,
+  w: 1.0,
+  h: 0.16,
+  fontSize: 9,
+  bold: true,
+  color: COLORS.red
+});
+curveballProduce.allocations.forEach((allocation, index) => {
+  const rowY = 3.98 + index * 0.42;
+  slide11.addText(allocation.destination.replace(" Community Outreach", "").replace(" Services", ""), {
+    x: 7.18,
+    y: rowY,
+    w: 2.95,
+    h: 0.15,
+    fontSize: 8.6,
+    color: COLORS.ink
+  });
+  slide11.addText(String(allocation.lbs), {
+    x: 10.38,
+    y: rowY,
+    w: 0.32,
+    h: 0.15,
+    fontSize: 8.6,
+    bold: true,
+    color: COLORS.ink,
+    align: "right"
+  });
+  slide11.addText(allocation.coldChain, {
+    x: 10.95,
+    y: rowY,
+    w: 1.05,
+    h: 0.15,
+    fontSize: 8.1,
+    color: COLORS.muted
+  });
+});
+slide11.addText("Dispatch flow", {
+  x: 7.18,
+  y: 5.72,
+  w: 1.3,
+  h: 0.16,
+  fontSize: 9,
+  bold: true,
+  color: COLORS.red
+});
+slide11.addText(curveballProduce.dispatchSteps.join("  •  "), {
+  x: 7.18,
+  y: 5.96,
+  w: 5.0,
+  h: 0.24,
+  fontSize: 8.5,
+  color: COLORS.ink
+});
+slide11.addShape(pptx.ShapeType.roundRect, {
+  x: 0.78,
+  y: 6.34,
+  w: 11.76,
+  h: 0.66,
+  rectRadius: 0.08,
+  fill: { color: "182334" },
+  line: { color: "2D405D" }
+});
+slide11.addText(curveball.architectureProof, {
+  x: 1.03,
+  y: 6.53,
+  w: 6.6,
+  h: 0.16,
+  fontSize: 9.2,
+  color: COLORS.white
+});
+addPill(slide11, curveballVote.window, 8.0, 6.46, COLORS.red);
+addPill(slide11, curveballProduce.window, 9.2, 6.46, COLORS.green);
+addPill(slide11, curveball.budgetImpact.voteSupport, 10.45, 6.46, COLORS.blue);
+addPill(slide11, curveball.budgetImpact.produceMove, 11.72, 6.46, COLORS.gold, COLORS.ink);
+addFooter(slide11, "Keep the curveball on one slide. Use the detailed playbook for speaker-note overflow.", COLORS.ink);
 
 await pptx.writeFile({ fileName: outPath });
 console.log(`Wrote ${outPath}`);

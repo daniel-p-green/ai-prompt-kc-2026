@@ -3,7 +3,7 @@
 Date: 2026-03-28
 Repository: ai-prompt-kc-2026
 Concept: StreetCart KC
-Source of truth: `docs/product/oracle-muse-fact-base.md`
+Source of truth: `docs/archive/legacy/2026-03-28-competition-package/product/oracle-muse-fact-base.md`
 
 ## Executive Call
 
@@ -80,6 +80,15 @@ StreetCart KC should present the money in two layers:
 2. Remaining contribution pool for build, program management, renewal runway, and margin: `$350,000`
 
 That frame is stronger than pretending the whole `500,000` is direct field spend. It shows discipline, believable economics, and a real renewal case.
+
+## Curveball Proof
+
+The curveball should strengthen the pitch, not break it.
+
+- `66101` and `66105` need resident support in `14 days`, which fits StreetCart KC's existing participation loop if the vote campaign is Spanish-first and runs through trusted anchors such as El Centro Academy, Cross-Lines Community Outreach, Guadalupe Centers, and After the Harvest KC touchpoints.
+- The `1,000-pound` produce surge should be framed as a `48-hour` perishables response led by cold-chain capacity first: Cross-Lines, Guadalupe Centers, Della Lamb, and Harvesters each absorb part of the allocation while volunteers treat the move as a preseason service run.
+- The package should name `KCK Wildcats` as the local bracket identity so KCK residents are not forced into a Missouri-first sports framing.
+- Curveball spending stays inside the existing budget: `$8K` for vote support and `~$190` for the emergency produce move.
 
 ## Bottom Line
 

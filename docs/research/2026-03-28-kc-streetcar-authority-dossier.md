@@ -89,6 +89,7 @@ The streetcar system overview page says the KC Streetcar:
 
 - runs from River Market to UMKC
 - serves River Market, Downtown, Crossroads, Union Hill, Midtown, Westport, Country Club Plaza, and South Plaza
+- has 31 platform stops according to the overview page
 - spans 5.7 miles of track
 
 ### Service Model
@@ -278,3 +279,4 @@ KCSA is now managing a materially larger, higher-demand transit system than the 
 - [Main Street Extension](https://kcstreetcar.org/about-streetcar/mainstreet-extension/)
 - [Riverfront Extension](https://kcstreetcar.org/about-streetcar/streetcar-riverfront-extension/)
 - [CPKC Pavilion](https://kcstreetcar.org/cpkc-pavilion/)
+- [December 11, 2025 KCSA Board Presentation PDF](https://kcstreetcar.org/wp-content/uploads/2025/12/KCStreetcar_BOD12112025.pdf)

@@ -39,6 +39,7 @@ StreetCart KC responds with one city-native idea that can power all three compet
 4. Let residents receive simple pickup or delivery instructions in English or Spanish, including where to go, when to show up, and what requirements apply.
 5. Track volunteer teams, verified delivery or hub-shift completions, and a public leaderboard that updates the bracket.
 6. Expose a simple scoreboard or leaderboard view suitable for mock streetcar signage, social sharing, and judge demos.
+7. Support a curveball-response mode that can switch the package into community-vote or produce-surge messaging without changing the core hub model.
 
 ### Non-Functional
 
@@ -53,12 +54,14 @@ StreetCart KC responds with one city-native idea that can power all three compet
 2. Given a coordinator schedules a streetcar-adjacent hub or partner event, when they publish it, then residents in the selected ZIPs can see or receive the event details in their chosen language.
 3. Given a volunteer team completes verified deliveries or hub shifts, when the completion is recorded, then the public leaderboard updates without exposing resident-sensitive details.
 4. Given a judge views the demo, when they step through the coordinator, resident, and leaderboard views, then they can understand how the same system supports Oracle, Muse, and Architect.
+5. Given the challenge shifts into resident-vote or perishables-surplus conditions, when the package switches to curveball mode, then the response still reads as the same partner-supported, pickup-first pilot rather than a bolt-on idea.
 
 ## UX Notes
 
 - Key user flow: coordinator picks a priority ZIP and hub, residents receive pickup guidance, volunteers record completions, leaderboard updates
 - Empty and error states: if a hub is full or a ZIP has no nearby option, the system should show the next partner option and a hotline fallback instead of a dead end
 - Analytics events: `hub_created`, `resident_notified`, `pickup_confirmed`, `delivery_verified`, `leaderboard_updated`, `team_points_awarded`
+- Curveball packaging rule: community-vote outreach should be Spanish-first in `66101` and `66105`, while produce-surge timing should be described as a `48-hour` window rather than locked weekday/date copy
 
 ## Rollout and Measurement
 

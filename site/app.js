@@ -6,6 +6,44 @@ const loadData = async () => {
 
 const formatPercent = (value) => `${value.toFixed(1)}%`;
 
+const renderListItems = (items) => items.map((item) => `<li>${item}</li>`).join("");
+
+const renderCurveball = (module) => {
+  document.getElementById("curveball-title").textContent = module.title;
+  document.getElementById("curveball-body").textContent = module.body;
+
+  const vote = module.communityVote;
+  document.getElementById("curveball-vote").innerHTML = `
+    <p class="curveball-tag">Community vote • ${vote.window}</p>
+    <h4>${vote.title}</h4>
+    <p>${vote.summary}</p>
+    <p class="curveball-hotline">${vote.hotlineLabel}</p>
+    <ul class="curveball-list">${renderListItems(vote.tactics)}</ul>
+    <p class="curveball-note">Spanish first. Community-led. ${vote.bracketTeam} gives KCK a local lane in the bracket.</p>
+  `;
+
+  const produce = module.produceSurge;
+  document.getElementById("curveball-produce").innerHTML = `
+    <p class="curveball-tag">Produce surge • ${produce.window}</p>
+    <h4>${produce.title}</h4>
+    <p>${produce.summary}</p>
+    <ul class="curveball-list">${renderListItems(
+      produce.allocations.map((allocation) => `${allocation.lbs} lbs -> ${allocation.destination}`)
+    )}</ul>
+    <p class="curveball-note">Day 0 / Day 1 / Day 2 flow keeps the timing abstract while the cold-chain logic stays concrete.</p>
+  `;
+
+  const budgetImpact = module.budgetImpact;
+  document.getElementById("curveball-footer").innerHTML = `
+    <p>${module.architectureProof}</p>
+    <div class="curveball-metrics">
+      <span>${budgetImpact.voteSupport}</span>
+      <span>${budgetImpact.produceMove}</span>
+    </div>
+    <p class="curveball-note">${budgetImpact.detail}</p>
+  `;
+};
+
 const renderProof = (data) => {
   document.getElementById("thesis").textContent = data.thesis;
 
@@ -36,9 +74,7 @@ const renderSidebar = (data) => {
     `;
     list.appendChild(li);
   });
-
-  document.getElementById("curveball-title").textContent = data.curveballModule.title;
-  document.getElementById("curveball-body").textContent = data.curveballModule.body;
+  renderCurveball(data.curveballModule);
 };
 
 const renderOperator = (data) => {

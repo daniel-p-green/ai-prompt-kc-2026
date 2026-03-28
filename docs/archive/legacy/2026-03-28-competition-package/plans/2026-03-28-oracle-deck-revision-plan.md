@@ -2,8 +2,8 @@
 
 Date: 2026-03-28
 Repository: ai-prompt-kc-2026
-Primary artifact: `docs/plans/StreetCart_KC_Oracle.pptx`
-Source of truth: `docs/product/oracle-muse-fact-base.md`
+Primary artifact: `docs/archive/legacy/2026-03-28-competition-package/plans/StreetCart_KC_Oracle.pptx`
+Source of truth: `docs/archive/legacy/2026-03-28-competition-package/product/oracle-muse-fact-base.md`
 
 ## Objective
 
@@ -21,7 +21,7 @@ The revised deck should:
 - The current problem slide includes `64128` in the pilot logic. `64128` should stay as closure context only.
 - The current budget slide spends the full `$500K` as if it were all direct pilot cost. Oracle now needs the `$500K revenue / $150K direct opex / $350K contribution pool` framing.
 - The current deck leans into the tournament and scoreboard before it clearly locks the partner-supported operating model.
-- The current closing slide is decorative. That slot should be reclaimed for the curveball placeholder.
+- The current closing slide is decorative. That slot should be reclaimed for a real curveball response slide.
 
 ## Slide Map
 
@@ -35,9 +35,9 @@ The revised deck should:
 | 6 | City ROI | Split the current material: use service proof for the KPI slide and keep renewal logic for the ROI slide | 7. KPI scorecard and 8. ROI / renewal case |
 | 7 | Why StreetCart wins | Rewrite as the “Why the streetcar spine works” slide using the locked streetcar-vs-bus line | 3. Why the streetcar spine works |
 | 8 | Renewal path | Keep the renewal logic, but tie it directly to the KPI scorecard and Phase 2 bus expansion language | 8. ROI / renewal case |
-| 9 | AI mastery | Keep, but update the repo evidence list to include the worklog, benchmark brief, challenge data brief, Streetcar reference bundle, and fact base | 10. AI mastery / evidence of work |
-| 10 | Curveball response | Keep as a live placeholder, but pre-structure it around Spanish outreach, vote support, and produce reallocation | 11. Curveball placeholder |
-| 11 | Decorative close | Remove from the main flow; either delete it or move it to appendix / backup | none in main flow |
+| 9 | AI mastery | Keep, but update the repo evidence list to include the worklog, benchmark brief, challenge data brief, Streetcar reference bundle, and fact base | 9. AI mastery / evidence of work |
+| 10 | Curveball response | Replace the placeholder framing with a full response covering the vote plan, produce routing, and architecture proof | 11. Curveball response |
+| 11 | Decorative close | Replace with the dedicated curveball response and move any verbal close back to spoken delivery only | 11. Curveball response |
 
 ## Revised Slide Order
 
@@ -49,9 +49,9 @@ The revised deck should:
 6. Budget and staffing
 7. KPI scorecard
 8. ROI / renewal case
-9. Risks and objections
-10. AI mastery / evidence of work
-11. Curveball placeholder
+9. AI mastery / evidence of work
+10. Risks and objections
+11. Curveball response
 
 ## New Content The Existing Deck Does Not Yet Cover
 
@@ -59,6 +59,7 @@ The revised deck should:
 - a dedicated risks and objections slide
 - the corrected budget frame
 - the explicit streetcar-vs-bus sentence
+- a real curveball slide with Spanish-first KCK vote support, produce routing, and absorbed budget notes
 
 ## Production Notes
 

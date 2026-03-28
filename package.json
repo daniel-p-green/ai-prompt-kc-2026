@@ -4,12 +4,25 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "vite build",
     "arrivals:fetch": "node scripts/fetch_kc_streetcar_arrivals.mjs",
     "deck:build": "node scripts/build_oracle_deck.mjs",
+    "dev": "vite",
+    "preview": "vite preview",
     "site:serve": "python3 -m http.server 4173 --directory .",
-    "test:arrivals": "node --test scripts/fetch_kc_streetcar_arrivals.test.mjs"
+    "test": "npm run test:arrivals && npm run test:tracker && npm run test:streetcart",
+    "test:arrivals": "node --test scripts/fetch_kc_streetcar_arrivals.test.mjs",
+    "test:streetcart": "node --test scripts/streetcart_data_contract.test.mjs",
+    "test:tracker": "node --test src/lib/tracker.test.mjs",
+    "tracker:data": "node scripts/build_streetcar_tracker_data.mjs"
   },
   "dependencies": {
-    "pptxgenjs": "^4.0.1"
+    "pptxgenjs": "^4.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.0",
+    "vite": "^7.1.10"
   }
 }

@@ -108,6 +108,39 @@ If a slide needs only four names, use:
 
 Mention After the Harvest KC in curveball or produce-response content.
 
+## Curveball Response Rules
+
+### Locked curveball facts
+
+| Fact | Locked value | Use |
+|---|---|---|
+| Community-vote ZIPs | `66101` and `66105` | Judge defense, Oracle curveball slide, KCK outreach copy |
+| Vote window | `14 days` | Community-vote response framing |
+| Produce surge | `1,000 pounds` in a `48-hour` perishables window | Produce-response framing |
+| KCK bracket identity | `KCK Wildcats` | Leaderboard and volunteer mobilization copy |
+| Internal vote-support reallocation | `$8K` | Curveball budget note only |
+| Emergency produce move cost | `~$190` | Curveball budget note only |
+
+### Proposed operating tactics
+
+These are response tactics, not new company-defining facts:
+
+| Tactic | Role in the package |
+|---|---|
+| El Centro Academy | Trusted anchor for `66101` parent-line outreach and Spanish-first copy |
+| Cross-Lines Community Outreach | KCK cold-chain and same-day produce handoff anchor |
+| Guadalupe Centers | Bilingual pantry-hour outreach and overflow produce partner |
+| Della Lamb Community Services | Overflow perishables partner for short-hold refrigerator capacity |
+| After the Harvest KC routes | Mobile touchpoint for community-vote canvassing and produce routing support |
+
+### Curveball framing rules
+
+- Treat the two curveballs as proof of the same architecture, not two separate mini-programs.
+- Keep produce timing abstract as a `48-hour` window; use `Day 0`, `Day 1`, and `Day 2` instead of conflicting weekday/date references.
+- Keep El Centro Academy as a curveball-specific trusted anchor, not a newly locked core pilot partner.
+- Keep the top-line contract allocation unchanged; curveball costs are absorbed inside existing outreach, stipend, food top-up, and contingency lines.
+- Use Spanish-first, English-second copy only in the curveball-specific vote materials and related KCK outreach surfaces.
+
 ## Locked KPI Set
 
 ### Primary KPI scorecard
@@ -149,10 +182,17 @@ Mention After the Harvest KC in curveball or produce-response content.
 | Contingency and renewal runway | `$95,000` |
 | **Total contract allocation** | **`$500,000`** |
 
+### Curveball budget note
+
+- Community-vote support reallocation: `$8K`
+- Emergency produce distribution cost: `~$190`
+- Presentation rule: show both as absorbed inside the existing contract, not as a new topline ask
+
 ### Staffing model
 
 - `1` program lead
 - `2` community liaisons
+- at least `1` community liaison should be bilingual and own the `66101` / `66105` vote-support lane
 - partner-site leads through stipends, not full payroll expansion
 - volunteer team captains for bracket verification and turnout
 

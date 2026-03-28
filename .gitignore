@@ -1,4 +1,6 @@
 .DS_Store
+.cursor/
+dist/
 node_modules/
 tmp/
 docs/reference/kc-streetcar/downloads/

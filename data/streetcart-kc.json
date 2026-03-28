@@ -173,7 +173,8 @@
     { "name": "Royals Rally", "points": 233, "verified": 88, "status": "Semifinal" },
     { "name": "KU Jayhawk Service", "points": 214, "verified": 80, "status": "Quarterfinal" },
     { "name": "Church League South", "points": 196, "verified": 73, "status": "Quarterfinal" },
-    { "name": "Crossroads Crew", "points": 174, "verified": 66, "status": "Wildcard" }
+    { "name": "Crossroads Crew", "points": 174, "verified": 66, "status": "Wildcard" },
+    { "name": "KCK Wildcats", "points": 168, "verified": 61, "status": "Wildcard" }
   ],
   "residentExample": {
     "name": "Familia Ramirez",
@@ -189,7 +190,77 @@
     "Deck, Muse brief, and thin live site were kept on one fact base so judges can inspect the same pilot three different ways."
   ],
   "curveballModule": {
-    "title": "Curveball-ready operating lever",
-    "body": "StreetCart KC can reassign one hub slot to produce-bag distribution or community vote support without changing the core experience."
+    "title": "Two problems. Two plans. Same architecture.",
+    "body": "StreetCart KC shifts outreach, partner routing, and volunteer dispatch without changing the streetcar-led, pickup-first, partner-supported pilot.",
+    "communityVote": {
+      "title": "Community vote in 66101 + 66105",
+      "window": "14 days",
+      "summary": "Use Spanish-first, trust-based outreach through El Centro Academy parents, Cross-Lines, Guadalupe Centers, and After the Harvest route touchpoints to turn resident support into proof of demand.",
+      "zips": ["66101", "66105"],
+      "anchors": [
+        "El Centro Academy pickup line",
+        "Cross-Lines Community Outreach",
+        "Guadalupe Centers pantry hours",
+        "After the Harvest KC route touchpoints"
+      ],
+      "tactics": [
+        "Days 1-3: embed with trusted anchors, not downtown institutions",
+        "Days 4-10: run Voto y Verdura pop-ups with produce bags and support forms",
+        "Days 11-13: canvass the densest blocks with bilingual two-person teams"
+      ],
+      "designRules": [
+        "Spanish-first materials with English secondary",
+        "Bilingual hotline or text line, no app or QR dependency",
+        "Community canvassers and a KCK-specific bracket identity"
+      ],
+      "hotlineLabel": "Linea bilingue / Bilingual hotline",
+      "bracketTeam": "KCK Wildcats"
+    },
+    "produceSurge": {
+      "title": "1,000 lbs in a 48-hour perishables window",
+      "window": "48 hours",
+      "summary": "Cold storage is the binding constraint, so route produce to partners that can hold or move perishables immediately and treat the donation as a preseason scrimmage for volunteer dispatch.",
+      "totalLbs": 1000,
+      "allocations": [
+        {
+          "destination": "Cross-Lines Community Outreach",
+          "lbs": 400,
+          "reason": "Serves 66101 and 66105 while supporting the community-vote ZIPs",
+          "coldChain": "Walk-in cooler on site"
+        },
+        {
+          "destination": "Guadalupe Centers",
+          "lbs": 200,
+          "reason": "Spanish-first pantry with next-day distribution fit",
+          "coldChain": "Fridge, same-day or next-day turnover"
+        },
+        {
+          "destination": "Della Lamb Community Services",
+          "lbs": 150,
+          "reason": "Refugee-services partner that can absorb Northeast demand",
+          "coldChain": "Fridge for short hold"
+        },
+        {
+          "destination": "Harvesters Community Food Network",
+          "lbs": 250,
+          "reason": "Industrial reserve that can route to 64127 and 64130 after the weekend",
+          "coldChain": "Industrial cold storage"
+        }
+      ],
+      "dispatchSteps": [
+        "Day 0: pick up, weigh, bag, and drop to cold-chain partners",
+        "Day 1: release same-day pop-up or partner distributions where space exists",
+        "Day 2: clear remaining stock through scheduled partner routes"
+      ],
+      "volunteerCall": "Emergency food run. First volunteers to show up move the produce and bank bonus points before the bracket officially launches.",
+      "cost": "~$190",
+      "costDetail": "Fuel, ice, bags, and modest driver reimbursement only."
+    },
+    "budgetImpact": {
+      "voteSupport": "$8K internal reallocation",
+      "produceMove": "~$190 emergency move",
+      "detail": "Top-line $500K budget stays intact; the curveball is absorbed inside outreach, food top-up, stipends, and contingency."
+    },
+    "architectureProof": "The same decentralized, partner-based operating model handles resident trust and produce triage without changing the pilot thesis."
   }
 }

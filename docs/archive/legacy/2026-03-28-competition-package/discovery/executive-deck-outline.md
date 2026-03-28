@@ -4,7 +4,7 @@ Date: 2026-03-28
 Repository: ai-prompt-kc-2026
 Concept: StreetCart KC
 Audience: judges, city stakeholders, and operators
-Source of truth: `docs/product/oracle-muse-fact-base.md`
+Source of truth: `docs/archive/legacy/2026-03-28-competition-package/product/oracle-muse-fact-base.md`
 
 ## Slide 1: Thesis
 
@@ -152,25 +152,7 @@ If the city gets visible household outcomes, repeat partner participation, and a
 **Visual:**  
 Today / 60-day proof / renewal path structure
 
-## Slide 9: Risks And Objections
-
-**Judge question:** What are the obvious reasons this could be dismissed?
-
-**Title:** The Hard Questions Already Have Answers
-
-**Answer:**  
-The deck should answer the four main objections directly.
-
-**Must show:**
-- this is branding, not operations
-- the streetcar cannot carry food
-- why not just use buses
-- why is this better than pantry outreach today
-
-**Visual:**  
-Four objection cards with one-sentence answer each
-
-## Slide 10: AI Mastery And Evidence Of Work
+## Slide 9: AI Mastery And Evidence Of Work
 
 **Judge question:** Did this team actually use AI well?
 
@@ -188,18 +170,40 @@ Show the repo-native evidence trail:
 **Visual:**  
 Simple evidence ladder or artifact strip
 
-## Slide 11: Curveball Placeholder
+## Slide 10: Risks And Objections
+
+**Judge question:** What are the obvious reasons this could be dismissed?
+
+**Title:** The Hard Questions Already Have Answers
+
+**Answer:**  
+The deck should answer the four main objections directly.
+
+**Must show:**
+- this is branding, not operations
+- the streetcar cannot carry food
+- why not just use buses
+- why is this better than pantry outreach today
+
+**Visual:**  
+Four objection cards with one-sentence answer each
+
+## Slide 11: Curveball Response
 
 **Judge question:** Can this model absorb the curveball without breaking?
 
 **Title:** Curveball Response
 
 **Answer:**  
-Keep this slide reserved, but structure it in advance around:
+Show both responses on one slide and tie them back to the same pilot architecture.
 
-- Spanish-language outreach in the active zone
-- two-zone vote support in `14` days
-- `1,000` pounds of produce in `48` hours
+**Must show:**
+- `66101` and `66105` resident support in `14` days
+- Spanish-first outreach through trusted anchors
+- `1,000` pounds of produce in a `48-hour` perishables window
+- `KCK Wildcats`
+- `$8K` vote-support reallocation and `~$190` emergency produce move
+- one line proving the architecture did not change
 
 **Visual:**  
-Three-column placeholder with editable callout boxes
+Left vote-response panel, right produce-routing panel, bottom proof strip
