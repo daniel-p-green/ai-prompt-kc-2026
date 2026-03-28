@@ -1,7 +1,7 @@
 # PRD: StreetCart KC Architect Proof
 
 Date: 2026-03-28  
-Owner: Team Codex KC  
+Owner: AICodex  
 Path note: this file keeps its old filename for repo stability, but the active product brief is now the StreetCart KC architect proof inside the final Oracle, Muse, and Architect package
 
 ## Product Summary

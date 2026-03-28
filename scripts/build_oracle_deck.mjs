@@ -18,7 +18,7 @@ const curveballProduce = curveball.produceSurge;
 const pptx = new PptxGenJS();
 pptx.layout = "LAYOUT_WIDE";
 pptx.author = "Codex";
-pptx.company = "Team Codex KC";
+pptx.company = "AICodex";
 pptx.subject = "StreetCart KC Oracle submission";
 pptx.title = "StreetCart KC";
 pptx.lang = "en-US";
@@ -58,7 +58,7 @@ const addSlideBase = (slide, opts = {}) => {
     bold: true,
     color: bg === COLORS.ink ? COLORS.cream : COLORS.red
   });
-  slide.addText("Team Codex KC  •  Oracle Track", {
+  slide.addText("AICodex  •  Oracle Track", {
     x: 10.0,
     y: 0.2,
     w: 2.8,
@@ -277,7 +277,7 @@ data.problemProof.forEach((metric, index) => {
     }
   );
 });
-slide1.addText("Team Codex KC  •  Oracle Track  •  60-day pilot plan", {
+slide1.addText("AICodex  •  Oracle Track  •  60-day pilot plan", {
   x: 0.72,
   y: 6.92,
   w: 5.2,

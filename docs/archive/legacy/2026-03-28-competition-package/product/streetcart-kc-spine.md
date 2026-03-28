@@ -2,7 +2,7 @@
 
 Date: 2026-03-28
 Repository: ai-prompt-kc-2026
-Team: Team Codex KC
+Team: AICodex
 
 ## One-Sentence Thesis
 

@@ -1,5 +1,5 @@
 # StreetCart KC: Master Deliverable Spine
-## AI Prompt Championship | Team Codex KC | March 28, 2026
+## AI Prompt Championship | AICodex | March 28, 2026
 ## STATUS: POST-CURVEBALL | SUBMISSIONS DUE 2:30 PM
 
 ---

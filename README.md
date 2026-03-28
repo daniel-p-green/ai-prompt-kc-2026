@@ -2,7 +2,7 @@
 
 ![StreetCart KC banner](docs/images/streetcart-banner.jpg)
 
-StreetCart KC is Team Codex KC's final 2026 AI Prompt Championship submission set across all three tracks. The concept is a streetcar-led, partner-operated food-access pilot for Kansas City: the streetcar corridor is the visible civic spine, while pantry and nonprofit partners handle neighborhood fulfillment into priority ZIP codes.
+StreetCart KC is AICodex's final 2026 AI Prompt Championship submission set across all three tracks. The concept is a streetcar-led, partner-operated food-access pilot for Kansas City: the streetcar corridor is the visible civic spine, while pantry and nonprofit partners handle neighborhood fulfillment into priority ZIP codes.
 
 [![Oracle Final Submission](docs/images/badges/oracle-final.svg)](https://ai-prompt-kc-2026.vercel.app/)
 [![Muse Final Submission](docs/images/badges/muse-final.svg)](https://www.youtube.com/watch?v=AE5dciNphNA)
