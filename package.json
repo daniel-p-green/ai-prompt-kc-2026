@@ -1,0 +1,41 @@
+{
+  "name": "streetcart-kc",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "build": "vite build",
+    "arrivals:fetch": "node scripts/fetch_kc_streetcar_arrivals.mjs",
+    "deck:build": "node scripts/build_oracle_deck.mjs",
+    "dev": "vite",
+    "preview": "vite preview",
+    "site:serve": "python3 -m http.server 4173 --directory .",
+    "test": "npm run test:arrivals && npm run test:tracker && npm run test:dashboard && npm run test:url-state && npm run test:streetcart && npm run test:decks",
+    "test:arrivals": "node --test scripts/fetch_kc_streetcar_arrivals.test.mjs",
+    "test:dashboard": "node --test src/lib/streetcart-dashboard.test.mjs",
+    "test:streetcart": "node --test scripts/streetcart_data_contract.test.mjs",
+    "test:decks": "node --test scripts/three_decks_structure.test.mjs",
+    "test:tracker": "node --test src/lib/tracker.test.mjs",
+    "test:url-state": "node --test src/lib/dashboard-url-state.test.mjs",
+    "tracker:data": "node scripts/build_streetcar_tracker_data.mjs",
+    "video:render": "npm run video:render:desktop && npm run video:render:mobile",
+    "video:render:desktop": "remotion render remotion/index.jsx DesktopWalkthrough renders/streetcart-desktop-demo.mp4",
+    "video:render:mobile": "remotion render remotion/index.jsx MobileWalkthrough renders/streetcart-mobile-demo.mp4",
+    "video:studio": "remotion studio remotion/index.jsx"
+  },
+  "dependencies": {
+    "pptxgenjs": "^4.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@remotion/cli": "^4.0.441",
+    "@remotion/google-fonts": "^4.0.441",
+    "@vitejs/plugin-react": "^5.1.0",
+    "remotion": "^4.0.441",
+    "vite": "^7.1.10"
+  }
+}

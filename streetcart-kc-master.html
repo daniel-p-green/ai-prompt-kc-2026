@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StreetCart KC: Master Deck Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --base: #f8f9ff;
+      --white: #ffffff;
+      --low-tint: #eef4ff;
+      --primary: #006196;
+      --rail: #0693e3;
+      --text: #001d36;
+      --hero-start: #006196;
+      --hero-end: #007abc;
+      --shadow: 0 24px 60px rgba(0, 53, 87, 0.12);
+      --radius: 2rem;
+      --title-size: clamp(2.1rem, 5vw, 4.7rem);
+      --h2-size: clamp(1.35rem, 2.8vw, 2.3rem);
+      --body-size: clamp(0.88rem, 1.1vw, 1rem);
+      --small-size: clamp(0.72rem, 0.9vw, 0.82rem);
+      --pad: clamp(1rem, 3vw, 2.5rem);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: linear-gradient(180deg, #f8f9ff 0%, #eef4ff 100%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: var(--pad);
+    }
+
+    .page {
+      display: grid;
+      gap: 1.25rem;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--hero-start), var(--hero-end));
+      color: var(--white);
+      border-radius: calc(var(--radius) + 0.5rem);
+      padding: clamp(1.4rem, 3vw, 2.5rem);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 1rem 1rem auto 1rem;
+      height: 0.5rem;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 999px;
+    }
+
+    .eyebrow,
+    .meta,
+    .label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: var(--small-size);
+      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      line-height: 0.95;
+    }
+
+    h1 {
+      font-size: var(--title-size);
+      max-width: 10ch;
+      margin-top: 1.2rem;
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      font-size: clamp(1rem, 1.35vw, 1.2rem);
+      line-height: 1.55;
+      max-width: 52ch;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(320px, 420px) 1fr;
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .panel,
+    .viewer-shell {
+      background: rgba(255, 255, 255, 0.84);
+      backdrop-filter: blur(18px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .panel {
+      padding: 1.1rem;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .deck-button {
+      border: 0;
+      width: 100%;
+      text-align: left;
+      padding: 1.1rem;
+      border-radius: 1.4rem;
+      background: var(--white);
+      color: var(--text);
+      cursor: pointer;
+      display: grid;
+      gap: 0.55rem;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      box-shadow: 0 12px 28px rgba(0, 53, 87, 0.08);
+    }
+
+    .deck-button:hover,
+    .deck-button:focus-visible {
+      transform: translateY(-2px);
+      outline: none;
+      box-shadow: 0 16px 32px rgba(0, 53, 87, 0.14);
+    }
+
+    .deck-button.active {
+      background: linear-gradient(180deg, #ffffff, #edf6ff);
+      box-shadow: 0 0 0 3px rgba(6, 147, 227, 0.18), 0 18px 36px rgba(0, 53, 87, 0.14);
+    }
+
+    .deck-topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .deck-chip {
+      padding: 0.42rem 0.72rem;
+      border-radius: 999px;
+      background: var(--low-tint);
+      color: var(--primary);
+      font-size: var(--small-size);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .deck-button h3 {
+      font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    }
+
+    .deck-button p {
+      font-size: var(--body-size);
+      line-height: 1.5;
+      color: rgba(0, 29, 54, 0.75);
+    }
+
+    .deck-links {
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    .deck-links a {
+      text-decoration: none;
+      color: var(--primary);
+      background: var(--low-tint);
+      border-radius: 999px;
+      padding: 0.55rem 0.85rem;
+      font-size: var(--small-size);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .viewer-shell {
+      padding: 1rem;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .viewer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.2rem 0.2rem 0 0.2rem;
+    }
+
+    .viewer-header h2 {
+      font-size: var(--h2-size);
+    }
+
+    .viewer-frame {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 1.4rem;
+      background: var(--white);
+      box-shadow: inset 0 0 0 1px rgba(0, 29, 54, 0.06);
+    }
+
+    .viewer-note {
+      font-size: var(--small-size);
+      color: rgba(0, 29, 54, 0.62);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 1080px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">StreetCart KC Master Hub</div>
+      <h1>From Rail Line to Life Line</h1>
+      <p>All three judge-facing decks in one place. Switch between the business case, go-to-market argument, and platform architecture without leaving the page.</p>
+    </section>
+
+    <section class="layout">
+      <aside class="panel" aria-label="Deck selector">
+        <button class="deck-button active" type="button" data-src="streetcart-kc-oracle.html" data-title="The Oracle" data-subtitle="60-Day Business Plan">
+          <div class="deck-topline">
+            <span class="deck-chip">Business</span>
+            <span class="label">5 slides</span>
+          </div>
+          <h3>The Oracle</h3>
+          <p>Budget, unit economics, shock absorption, and renewal logic. This is the math-forward version.</p>
+          <div class="deck-links">
+            <a href="streetcart-kc-oracle.html" target="_blank" rel="noreferrer">Open deck</a>
+          </div>
+        </button>
+
+        <button class="deck-button" type="button" data-src="streetcart-kc-muse.html" data-title="The Muse" data-subtitle="Go-to-Market &amp; Brand">
+          <div class="deck-topline">
+            <span class="deck-chip">Marketing</span>
+            <span class="label">5 slides</span>
+          </div>
+          <h3>The Muse</h3>
+          <p>Audience fit, brand system, tournament campaign logic, and the bilingual launch story.</p>
+          <div class="deck-links">
+            <a href="streetcart-kc-muse.html" target="_blank" rel="noreferrer">Open deck</a>
+          </div>
+        </button>
+
+        <button class="deck-button" type="button" data-src="streetcart-kc-architect.html" data-title="The Architect" data-subtitle="Platform &amp; Live Dashboard">
+          <div class="deck-topline">
+            <span class="deck-chip">Engineering</span>
+            <span class="label">5 slides</span>
+          </div>
+          <h3>The Architect</h3>
+          <p>System layers, unified dashboard surfaces, operational telemetry, and resilience under curveballs.</p>
+          <div class="deck-links">
+            <a href="streetcart-kc-architect.html" target="_blank" rel="noreferrer">Open deck</a>
+          </div>
+        </button>
+      </aside>
+
+      <section class="viewer-shell" aria-label="Deck viewer">
+        <div class="viewer-header">
+          <div>
+            <div class="eyebrow">Active deck</div>
+            <h2 id="viewer-title">The Oracle</h2>
+          </div>
+          <div class="meta" id="viewer-subtitle">60-Day Business Plan</div>
+        </div>
+        <iframe
+          id="deck-frame"
+          class="viewer-frame"
+          title="StreetCart KC deck viewer"
+          src="streetcart-kc-oracle.html"
+          loading="eager"
+        ></iframe>
+        <p class="viewer-note">Use the selector on the left to swap decks inline. Open any deck in its own tab if you want the full standalone presentation controls.</p>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const buttons = [...document.querySelectorAll(".deck-button")];
+    const frame = document.getElementById("deck-frame");
+    const title = document.getElementById("viewer-title");
+    const subtitle = document.getElementById("viewer-subtitle");
+
+    const setActiveDeck = (button) => {
+      buttons.forEach((item) => item.classList.toggle("active", item === button));
+      frame.src = button.dataset.src;
+      title.textContent = button.dataset.title;
+      subtitle.textContent = button.dataset.subtitle;
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        const clickedLink = event.target.closest("a");
+        if (clickedLink) {
+          return;
+        }
+
+        setActiveDeck(button);
+      });
+    });
+  </script>
+</body>
+</html>

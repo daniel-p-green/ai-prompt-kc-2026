@@ -12,8 +12,8 @@
 ## Project Snapshot
 
 - Repository: ai-prompt-kc-2026
-- Current state: docs-only kickoff repo; application code and package scripts are not initialized yet
-- Recommended MVP stack: Next.js, TypeScript, Postgres, and an SMS provider
+- Current state: working docs + frontend proof repo with a static StreetCart site, a React/Vite tracker page, build scripts, and tests
+- Long-term stack direction: `Next.js`, `TypeScript`, `Postgres`, and an SMS provider remain future-state options, not the current runtime
 
 ## Kickoff Sequence
 
@@ -33,8 +33,8 @@
 - `requesting-code-review` before merge or handoff
 
 4. Verification is required before completion:
-- Current repo state: no `dev`, `test`, `lint`, or `build` scripts exist yet
-- Once the app is scaffolded, standardize on project commands and run them before claiming success
+- Current repo state: `dev`, `build`, `preview`, and `test` exist; `lint` does not
+- Run the relevant real commands before claiming success
 - Include a short risk summary with 3-5 bullets
 
 5. End each task with a brief retrospective:
@@ -42,10 +42,14 @@
 
 ## Commands
 
-- Dev: `Not configured yet`
-- Test: `Not configured yet`
+- Dev: `npm run dev`
+- Test: `npm run test`
 - Lint: `Not configured yet`
-- Build: `Not configured yet`
+- Build: `npm run build`
+- Preview: `npm run preview`
+- Tracker data refresh: `npm run tracker:data`
+- Live arrivals refresh: `npm run arrivals:fetch`
+- Oracle deck rebuild: `npm run deck:build`
 
 ## Guardrails
 
@@ -53,3 +57,4 @@
 - Do not ship without updated tests
 - Document assumptions and open questions in the relevant doc before coding
 - Keep resident data collection minimal and explicit
+- Treat `docs/archive/legacy/` as historical context, not current requirements

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StreetCar KC: Feeding the Block</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed": "#ffdad8",
+              "on-tertiary": "#ffffff",
+              "on-background": "#191c1d",
+              "tertiary-fixed-dim": "#ffb3b1",
+              "surface-variant": "#e1e3e4",
+              "surface-container": "#edeeef",
+              "surface-dim": "#d9dadb",
+              "outline-variant": "#c0c7d3",
+              "tertiary-container": "#e51a38",
+              "outline": "#707883",
+              "inverse-on-surface": "#f0f1f2",
+              "secondary-container": "#84c0ff",
+              "on-secondary-fixed-variant": "#004a7a",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#92001d",
+              "on-primary-fixed-variant": "#00497c",
+              "on-tertiary-fixed": "#410007",
+              "surface-tint": "#0061a2",
+              "surface-container-highest": "#e1e3e4",
+              "background": "#f8f9fa",
+              "surface-container-high": "#e7e8e9",
+              "inverse-surface": "#2e3132",
+              "inverse-primary": "#9dcaff",
+              "tertiary": "#bb0027",
+              "on-primary-fixed": "#001d35",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#9bcbff",
+              "secondary-fixed": "#d0e4ff",
+              "on-error": "#ffffff",
+              "surface": "#f8f9fa",
+              "primary": "#005f9e",
+              "on-secondary-fixed": "#001d34",
+              "error": "#ba1a1a",
+              "on-surface": "#191c1d",
+              "on-primary-container": "#fdfcff",
+              "primary-container": "#0078c7",
+              "primary-fixed": "#d1e4ff",
+              "on-secondary-container": "#004e81",
+              "error-container": "#ffdad6",
+              "secondary": "#19629a",
+              "on-surface-variant": "#404752",
+              "on-tertiary-container": "#fffbff",
+              "surface-container-low": "#f3f4f5",
+              "surface-bright": "#f8f9fa",
+              "primary-fixed-dim": "#9dcaff",
+              "on-primary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f8f9fa] dark:bg-[#121212] shadow-[0px_0px_0px_4px_rgba(0,95,158,0.1)]">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-full">
+<div class="text-xl font-black text-[#005f9e] dark:text-[#0082D6] tracking-tighter uppercase font-['Manrope']">
+                STREETCAR KC
+            </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-[#005f9e] dark:text-[#0082D6] border-b-4 border-[#005f9e] dark:border-[#0082D6] pb-1 font-['Manrope'] tracking-tighter font-bold uppercase" href="#">Executive Summary</a>
+<a class="text-[#5f6368] dark:text-[#9aa0a6] hover:text-[#005f9e] font-['Manrope'] tracking-tighter font-bold uppercase transition-colors" href="#">Route Map</a>
+<a class="text-[#5f6368] dark:text-[#9aa0a6] hover:text-[#005f9e] font-['Manrope'] tracking-tighter font-bold uppercase transition-colors" href="#">Fleet Status</a>
+<a class="text-[#5f6368] dark:text-[#9aa0a6] hover:text-[#005f9e] font-['Manrope'] tracking-tighter font-bold uppercase transition-colors" href="#">Budget Analysis</a>
+</nav>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#005f9e] cursor-pointer hover:bg-[#f3f4f5] p-2 transition-colors">account_balance</span>
+<span class="material-symbols-outlined text-[#005f9e] cursor-pointer hover:bg-[#f3f4f5] p-2 transition-colors">monitoring</span>
+</div>
+</div>
+<div class="bg-[#f3f4f5] dark:bg-[#1a1a1a] h-[2px] w-full"></div>
+</header>
+<!-- Sidebar (Hidden on Mobile) -->
+<aside class="hidden lg:flex flex-col h-screen w-64 fixed left-0 top-0 bg-[#005f9e] dark:bg-[#002d4d] py-8 z-40">
+<div class="px-6 mb-10">
+<div class="text-white font-['Manrope'] font-bold text-lg">Project Alpha</div>
+<div class="text-white/60 text-xs font-medium uppercase tracking-widest">Municipal Infrastructure</div>
+</div>
+<nav class="flex flex-col flex-grow">
+<a class="bg-white/10 border-l-4 border-white text-white font-bold px-4 py-3 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-['Inter'] text-sm font-medium">Executive Summary</span>
+</a>
+<a class="text-white/70 hover:bg-white/5 px-4 py-3 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-['Inter'] text-sm font-medium">Route Map</span>
+</a>
+<a class="text-white/70 hover:bg-white/5 px-4 py-3 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined">directions_railway</span>
+<span class="font-['Inter'] text-sm font-medium">Fleet Status</span>
+</a>
+<a class="text-white/70 hover:bg-white/5 px-4 py-3 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Inter'] text-sm font-medium">Budget Analysis</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 lg:pl-64 pb-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8 lg:px-12">
+<!-- Hero Section: Editorial Asymmetry -->
+<section class="grid grid-cols-12 gap-8 mb-20 items-start">
+<div class="col-span-12 lg:col-start-4 lg:col-span-9">
+<h1 class="text-primary font-headline text-[3.5rem] leading-[0.9] font-extrabold tracking-tighter mb-6 uppercase">
+                        Feeding the Block <br/>through the <span class="text-tertiary">Kinetic Spine.</span>
+</h1>
+<p class="text-on-surface-variant font-body text-xl max-w-2xl leading-relaxed">
+                        Converting Kansas City's fare-free streetcar corridor into a gamified food access backbone.
+                    </p>
+</div>
+</section>
+<!-- The Problem: KPI Scoreboard Style -->
+<section class="mb-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="col-span-1 md:col-span-1 bg-surface-container-low p-8 flex flex-col justify-between h-64 border-l-8 border-tertiary">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-outline">Critical Impact</span>
+<h2 class="text-on-surface font-headline text-5xl font-extrabold mt-2">4</h2>
+</div>
+<p class="text-sm font-body font-medium text-on-surface-variant uppercase">Grocery Closures in the Downtown Core</p>
+</div>
+<div class="col-span-1 md:col-span-1 bg-surface-container-low p-8 flex flex-col justify-between h-64">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-outline">Pop. Impacted</span>
+<h2 class="text-on-surface font-headline text-5xl font-extrabold mt-2">46K+</h2>
+</div>
+<p class="text-sm font-body font-medium text-on-surface-variant uppercase">Residents in Active Food Deserts</p>
+</div>
+<div class="col-span-1 md:col-span-1 bg-inverse-surface p-8 flex flex-col justify-between h-64">
+<div class="text-inverse-on-surface">
+<span class="text-xs font-bold uppercase tracking-widest opacity-60">Status</span>
+<h2 class="font-headline text-5xl font-extrabold mt-2 italic text-tertiary">URGENT</h2>
+</div>
+<p class="text-sm font-body font-medium text-inverse-on-surface/80 uppercase">Infrastructure Intervention Required</p>
+</div>
+</div>
+</section>
+<!-- 3-Layer Architecture: Bento Grid -->
+<section class="grid grid-cols-12 grid-rows-2 gap-6 h-[700px]">
+<!-- Spine: Primary Technical Layer -->
+<div class="col-span-12 lg:col-span-8 row-span-1 bg-surface-container-lowest shadow-[0px_0px_0px_4px_rgba(0,95,158,0.1)] p-10 flex flex-col justify-end relative overflow-hidden group">
+<div class="absolute inset-0 z-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1555109307-f7d9da25c244?auto=format&amp;fit=crop&amp;q=80&amp;w=1000')] bg-cover" data-alt="high contrast long exposure of city streetcar tracks moving through urban architecture at night with blue lighting"></div>
+<div class="relative z-10">
+<span class="bg-primary text-white text-[10px] px-2 py-1 font-bold tracking-widest uppercase mb-4 inline-block">Layer 01</span>
+<h3 class="text-primary font-headline text-4xl font-extrabold tracking-tighter uppercase mb-2">The Spine</h3>
+<p class="text-on-surface-variant font-body max-w-lg">The fare-free streetcar acts as the high-velocity distribution rail, moving fresh goods through the city's central corridor with zero-cost transit for the end-user.</p>
+</div>
+</div>
+<!-- Tournament: Gamified Engagement -->
+<div class="col-span-12 lg:col-span-4 row-span-1 bg-inverse-surface text-inverse-on-surface p-10 flex flex-col justify-between border-l-4 border-tertiary">
+<div>
+<span class="bg-tertiary text-white text-[10px] px-2 py-1 font-bold tracking-widest uppercase mb-4 inline-block">Layer 02</span>
+<h3 class="font-headline text-3xl font-extrabold tracking-tighter uppercase mb-4">The Tournament</h3>
+<p class="font-body text-sm opacity-80 leading-relaxed">Gamified food access brackets. Neighborhoods compete for 'Harvest Points' to unlock subsidized delivery windows and artisan market pop-ups.</p>
+</div>
+<div class="flex items-center gap-4 mt-8">
+<div class="w-12 h-1 bg-tertiary"></div>
+<span class="text-[10px] font-bold tracking-tighter uppercase">Active Brackets: 12 Stations</span>
+</div>
+</div>
+<!-- Last Mile: Distribution -->
+<div class="col-span-12 lg:col-span-12 row-span-1 bg-surface-container-high p-10 flex flex-col lg:flex-row gap-12 items-center">
+<div class="flex-1">
+<span class="bg-secondary text-white text-[10px] px-2 py-1 font-bold tracking-widest uppercase mb-4 inline-block">Layer 03</span>
+<h3 class="text-secondary font-headline text-4xl font-extrabold tracking-tighter uppercase mb-2">The Last Mile</h3>
+<p class="text-on-surface-variant font-body max-w-xl">Localized hub-and-spoke delivery using electric micro-transit and community-led lockers at every streetcar stop to ensure food reaches the kitchen table.</p>
+</div>
+<div class="w-full lg:w-1/3 aspect-video bg-surface-container-lowest flex items-center justify-center border-2 border-dashed border-outline-variant">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-outline mb-2">map</span>
+<div class="text-[10px] font-bold text-outline uppercase tracking-widest">Interactive Route Visualization</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full relative bg-[#f3f4f5] dark:bg-[#1a1a1a]">
+<div class="flex justify-between items-center px-12 py-6 border-t border-[#e1e3e4] dark:border-[#2e3132] lg:pl-72">
+<div class="font-['Inter'] text-[10px] tracking-widest uppercase font-semibold text-[#5f6368] dark:text-[#9aa0a6]">
+                © 2024 KANSAS CITY MUNICIPAL UTILITY BOARD. ALL RIGHTS RESERVED.
+            </div>
+<div class="flex gap-6">
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase font-semibold text-[#5f6368] dark:text-[#9aa0a6] hover:text-[#005f9e] transition-colors" href="#">Public Record</a>
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase font-semibold text-[#5f6368] dark:text-[#9aa0a6] hover:text-[#005f9e] transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-[10px] tracking-widest uppercase font-semibold text-[#5f6368] dark:text-[#9aa0a6] hover:text-[#005f9e] transition-colors" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+<!-- FAB Suppression: Contextual Check - Suppressed for Pitch Slide Focus -->
+</body></html>

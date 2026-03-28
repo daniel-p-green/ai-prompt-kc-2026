@@ -1,0 +1,280 @@
+# Media Releases
+
+Source: https://kcstreetcar.org/news-events/media/
+
+## For media questions, please contact Donna Mandelbaum, Communications & Marketing with the KC Streetcar Authority, at 816-627-2526.
+
+- January 22, 2026: Community Invited to Attend First 18th & Vine Streetcar Study Public Meeting
+- January 19, 2026: Calling All Kansas City Artists! Applications for the 2026 Art in the Loop Program Now Open!
+- December 19, 2025: KC Streetcar Holiday Hours
+- December 17, 2025: Testing Begins on the KC Streetcar Riverfront Extension Project
+- December 10, 2025: KC Streetcar Ridership Soars After Main Street Extension Opened
+- December 3, 2025: KC2026 and KC Streetcar Bring FIFA World Cup 26 Excitement to the Tracks
+- November 24, 2025: KC Streetcar Holiday Jam Line Up
+- November 18, 2025: New End of Line Streetcar Stop Coming to the Riverfront in 2026
+- November 12, 2025: Stay In Your Lane: A Music and Video Anthem
+- November 4, 2025: KC Streetcar Holiday Jam Call for Musicians
+- October 28, 2025: Trick-or-Treat with the KC Streetcar
+- October 23, 2025: MADE MOBB x KC Streetcar Collaboration
+- October 20, 2025: Main Street Extension Grand Opening Details
+- September 26, 2025: Pink Pony Express
+- September 24, 2025: One Month to Go to the Main Street Extension Grand Opening
+- September 2, 2025: Temporary KC Streetcar Service Suspension for One Week
+- August 21, 2025: All Aboard For Simulated Streetcar Testing
+- July 24, 2025: Next Step: UMKC! KC Streetcar Main Street Extension Rides Start This Fall
+- July 11, 2025: All Aboard the Art in the Loop Ride
+- June 27, 2025: July 4 Hours and Service
+- June 24, 2025: KC Current Long-Term Partnership
+- June 23, 2025: Pride Ride & City Market Jam
+- June 5, 2025: Call Someone You Love Phone Booth Pop Up
+- May 30, 2025: Art in the Loop Kick-Off Announcement 2025
+- April 16, 2025: Riverfront Extension Completes Track Work
+- March 7, 2025: KC Streetcar Adds Service Ahead of Busy Spring Season
+- January 27, 2025: Temporary Service Suspension due to Riverfront Extension Construction
+- January 24, 2025: 2025 Call for Artists
+- January 22, 2025: Streetcar Testing on the Main Street Extension Begins!
+- January 3, 2025: Winter Weather Readiness
+- December 12, 2024: KC Streetcar 814 is here, Completing the Fleet
+- November 27, 2024: Tracks on the Tracks: A Silent Concert on the Kemper Museum Streetcar
+- November 25, 2024: KC Streetcar #807 is Passenger Ready
+- November 22, 2024: The KC Streetcar 2024 Holiday Jam Line Up
+- November 21, 2024: KC Streetcar 813 is Here…only one more to go!
+- November 19, 2024: Ride the KC Streetcar this Thanksgiving Weekend
+- November 5, 2024: KC Streetcar 812 is Here!
+- November 1, 2024: CPKC Partners with KC Streetcar on Festive Holiday Streetcar
+- October 30, 2024: Art Walk + Ride This Saturday!
+- October 22, 2024: Downtown KC Streetcar Service is Back!
+- October 17, 2024: KC Streetcar 811 is Here!
+- October 5, 2024: Calling All Musicians for the KC Streetcar Holiday Jam
+- September 25, 2024: Traffic Around Crossroads to Look Differently During Milestone Construction
+- September 17, 2024: KC Streetcar #810 is here!
+- September 16, 2024: KC Streetcar Prepares for Main Street Extension Tie-in
+- August 27, 2024: Labor Day Hours and Service
+- August 19, 2024: KC Streetcar Heading South and Making History
+- August 8, 2024: NorthRail Streetcar Study Prepares for Next Phase
+- August 2, 2024: 816 Day B-I-N-G-O!
+- August 1, 2024: KC Streetcar 809 Has Arrived!
+- July 17, 2024: 2nd Round of Streetcar Shelters to be Installed This Week
+- July 12, 2024: Art in the Loop KC Streetcar Celebration and Ride
+- July 5, 2024: Welding Connections on Both Streetcar Extension Projects
+- June 28, 2024: First Ever Kemper Art Museum Streetcar
+- June 25, 2024: KC Streetcar Shelters are Sprouting up on the Main Street Extension
+- June 17, 2024: Pride Ride & City Market Jam
+- June 7, 2024: 2024 Art in the Loop Artists Announced!
+- May 29, 2024: Wild New Streetcar Wrap Coming Friday!
+- April 24, 2024: KC Streetcar Temporary Art Installation is the First of its Kind
+- April 16, 2024: KC Streetcar Reports Surging Ridership Ahead of Busy Season
+- March 27, 2024: KC Streetcar Authority Releases 2023 Rider Satisfaction Survey Results
+- March 7, 2024: KC Current Unveils New Streetcar on International Women’s Day
+- February 27, 2024: Sporting KC to Unveil a Striking New KC Streetcar Wrap
+- February 22, 2024: Next Stop: The Kansas City Riverfront
+- February 20, 2024: Calling KC Visual and Performance Artists – Apply for 2024 Art in the Loop
+- February 15, 2024: RideKC Official Statement Regarding Parade Day Tragedy
+- February 8, 2024: KC’s Newest Streetcar, #807, Started Test Runs This Week
+- February 1, 2024: Kansas City to Welcome KC Streetcar #807 Into Town February 2
+- January 11, 2024: Downtown State of Mind Streetcar: A Partnership with the Power & Light District
+- January 8, 2024: KC Streetcar Preps for Winter Weather
+- November 21, 2023: KC Streetcar Holiday Jam Brings Live Music Series on Board
+- November 14, 2023: The Discover the Library Streetcar Makes Its Debut
+- November 3, 2023: Virtual Public Meeting Slated for East-West Transit Study
+- October 23, 2023: The KC Streetcar is Going Trick-or-Treating
+- October 10, 2023: Worlds of Fun Halloween HAUNT Streetcar Takeover
+- October 3, 2023: Calling All KC Musicians: It’s Time to Holiday Jam
+- September 15, 2023: Black Boy Joy Yoga Series
+- September 8, 2023: Art in the Loop Art Walk & Ride
+- August 31, 2023: KC Streetcar Unveils the Dream Streetcar
+- August 24, 2023: KC Streetcar Labor Day Weekend Hours
+- August 11, 2023: 816 Day in Downtown KC
+- August 3, 2023: 816 Day B-I-N-G-O!
+- July 20, 2023: KC Streetcar Service is Back!
+- July 18, 2023: Flower Power at the River Market West Streetcar Stop
+- July 7, 2023: Media Alert: Track Statement #3
+- July 5, 2023: Media Alert: Track Statement #2
+- July 4, 2023: Media Alert: Track Statement #1
+- June 27, 2023: KC Streetcar July 4th Holiday Hours
+- June 20, 2023: Art in the Loop Kick Off Events
+- June 15, 2023: Art in the Loop Announces 2023 Visual Artists
+- May 30, 2023: When Old Track Meets New Rail
+- May 25, 2023: Memorial Day KC Streetcar Hours and Service
+- May 9, 2023: Calling All Kansas City Performance Artists!
+- May 5, 2023: Happy 7th Birthday, KC Streetcar!
+- April 6, 2023: Kansas City Rolls Out KC Streetcar Wraps in Advance of the NFL Draft
+- March 29, 2023: Kansas City to Celebrate the 50th Anniversary of Worlds of Fun in a Big Way
+- March 2, 2023: Special Delivery: Rail Arrives at the KC Riverfront
+- February 28, 2023: KC Streetcar Performs Full Scale Emergency Exercise
+- February 25, 2023: Downtown KC Streetcar Night Work To Start On Sunday
+- February 17, 2023: Calling All Kansas City Visual Artists
+- February 8, 2023: Chiefs KC Streetcar Red Friday Rally
+- January 31, 2023: RideKC East-West Transit Study Progresses Forward
+- January 18, 2023: Weeknights Just Got Later
+- December 1, 2022: The KC Streetcar Riverfront Extension is on the Move!
+- November 21, 2022: The KC Streetcar Holiday Jam is Back!
+- November 17, 2022: KC Streetcar Adjusts Hours for the Thanksgiving Holiday
+- October 25, 2022: The KC Streetcar Goes Trick-or-Treating
+- October 19, 2022: Calling All Musicians! The KC Streetcar Holiday Jam is Back!
+- September 26, 2022: Public Meetings Slated for RideKC East-West Transit Study
+- September 7, 2022: KC Streetcar Temporary Change in Hours
+- September 1, 2022: KC Streetcar Labor Day Hours
+- August 26, 2022: Creating Sacred Spaces at the City Market Streetcar Stop
+- August 3, 2022: 816 Day Downtown B-I-N-G-O!
+- July 19, 2022: KC Streetcar to Host First Ever Ride & Read Along This Friday
+- June 24, 2022: KC Streetcar to Extend Service for the July Fourth Weekend
+- June 20, 2022: NorthRail Streetcar Study Public Open House
+- June 15, 2022: KC Streetcar Kicks Off Another Summer of Art
+- May 3, 2022: The KC Streetcar Turns 6!
+- April 18, 2022: The Boulevardia Streetcar Experience
+- April 6, 2022: $351M KC Streetcar Expansion Officially Breaks Ground
+- March 28, 2022: Kansas City Schedules KC Streetcar Main Street Extension Groundbreaking & Rail Signing Ceremony
+- March 23, 2022: KC Streetcar Sets Gold Standard In Security
+- March 14, 2022; KC Streetcar Main Street Extension Open House Meeting
+- March 3, 2022: KC Cauldron Streetcar Reveal
+- February 25, 2022: New Late Night Hours for the KC Streetcar
+- February 8, 2022: Trolley Track Trail Work Begins
+- February 1, 2022: Winter Weather
+- January 24, 2022: KC Streetcar Call For Art for Black History & Women’s History Months
+- January 23, 2022: Rail Welding Begins for KC Streetcar Main Street Extension
+- January 4, 2022: Rail On Track For Delivery for KC Streetcar Main Street Extension
+- December 28, 2021: Study Begins To Take The KC Streetcar Over the River (NorthRail)
+- December 23, 2021: 2021 Ridership hits 1,000,000
+- November 19, 2021: Kansas City: Get Ready To Ride The Current
+- November 10, 2021: RideKC & KC Streetcar Issue Request for Proposals for East-West Transit Study
+- October 12, 2021: KC Streetcar On Board with KC 2026 World Cup Bid
+- October 1, 2021: RideKC To Embark On East-West High Capacity Transit/Streetcar Study
+- August 9, 2021: 816 Day B-I-N-G-O
+- August 6, 2021: Night time Track Work Continues Downtown
+- July 30, 2021: Night time Track Work
+- July 7, 2021: KC Streetcar Authority Hires Planning & Operations Manager
+- July 3, 2021: KC Streetcar Kicks Off Another Summer of Art
+- June 29, 2021: KC Streetcar To Extend Service For July Fourth Weekend
+- June 24, 2021: KC Jazz Streetcar Rolls Out For Debut
+- May 28, 2021: Sporting Blue Friday
+- May 4, 2021: KC Streetcar Implements Phase 2 of Covid-19 Reactivation Plan
+- April 28, 2021: Wrapped To Win: Meet the Latest Sporting KC Streetcar
+- April 26, 2021: Call For Kansas City Artists
+- April 1, 2021: Learn More About the KC Streetcar Main St. Extension
+- March 17, 2021: KC Streetcar Extends Weekend Hours
+- February 28, 2021: Storytelling on the Streetcar: Celebrating Black Culture
+- January 8, 2021: I t’s Official: The FTA Signs the Full Funding Grant Agreement for the KC Streetcar Main Street Extension
+- January 6, 2020: Media Alert: FTA Funding Announcement
+- December 28, 2021: Study Begins to Take the KC Streetcar Over the River (NorthRail)
+- December 9, 2020: The KC Streetcar Main Street Extension Receives FTA Support for Full Federal Funding
+- November 6, 2020: Wrapped With Heart: A KC Streetcar Salute to the Negro Leagues
+- September 10, 2020: The KC Streetcar Is Rolling to the River
+- August 26, 2020: KC Streetcar Main Street Extension Receives Federal Funding
+- May 26, 2020: KC Streetcar Main Street Extension Gets Green Light From Feds
+- May 12, 2020: The KC Streetcar Adjusts Hours & Service in Support of Kansas City’s Reopening
+- May 7, 2020: KC Streetcar COVID-19 Reactivation Plan
+- May 7, 2020: 2020 Art in the Loop Artists Announced
+- April 17, 2020: KC Streetcar Team Selects Construction Manager at Risk
+- March 24, 2020: The KC Streetcar Adjusts Service in Response to the Coronavirus
+- March 24, 2020: KC Streetcar Response to Coronavirus: March 24, 2020
+- March 19, 2020: KC Streetcar Reduces Hours in Response to Coronavirus
+- March 16, 2020: KC Streetcar Response to Coronavirus – Update
+- March 12, 2020: KC Streetcar Response to Coronavirus
+- February 27, 2020: KC Streetcar Kicks Off Sporting KC Season
+- February 8, 2020: Art in the Loop Call For Artists
+- February 5, 2020: KC Chiefs Superbowl Parade
+- January 28, 2020: Super Bowl Red Friday Ride
+- January 24, 2020: KC Streetcar ridership and Customer Satisfaction On the Rise
+- January 6, 2020: Red Friday Ride
+- November 25, 2019: KC Streetcar Holiday Jam Lineup
+- November 4, 2019: Thundergong! Takes Over 90.9 The Bridge Live from the KC Streetcar
+- October 30, 2019: Trick or Treat, The KC Streetcar Fleet is Complete!
+- October 25, 2019: KC Streetcar is Expanding Saturday Service Starting Nov. 2
+- October 14, 2019: Russell Stover and KC Streetcar Team Up for Some Halloween Fun
+- September 12, 2019: Main Street Extension Marks Major Milestone
+- September 6, 2019: KC Streetcar #806 Route Testing Begins Sunday Night
+- September 3, 2019: KC Streetcar Celebrates Red Friday
+- August 15, 2019: KC Streetcar #806 Lands in Kansas City on August 19
+- July 19, 2019: KC Streetcar Team to Conduct Emergency Exercise
+- June 11, 2019: North Loop Southbound Stop to Close Temporarily
+- May 29, 2019: KC Streetcar 805 Begins Route Testing
+- May 21, 2019: Pride + RideKC = PrideKC
+- May 9, 2019: Kansas City Welcomes #805 to the KC Streetcar Family
+- May 6, 2019: Happy 3rd Birthday, KC Streetcar!
+- April 29, 2019: Construction to begin on 7th & Main North Loop Streetcar Stops
+- April 11, 2019: Progress Continues on the KC Streetcar Main Street Extension
+- April 1, 2019: KC Poetry on the Move – Winners Announced
+- March 25, 2019: Main Street Extension Receives Positive FTA Rating
+- March 6, 2019: KC Poetry on the Move
+- February 20, 2019: Storytelling on the Streetcar Line
+- February 18, 2019: Main St Extension Public Meeting
+- January 15, 2019: KC Streetcar to the Riverfront – Public Meeting
+- January 10, 2019: Rolling with the Chiefs
+- January 4, 2019: KC Streetcar Ridership Soars in 2018
+- November 9, 2018: KC Streetcar Gets Ready to Jam for the Holidays
+- September 24, 2018: Calling KC Musicians: It’s Time To Jam on the KC Streetcar
+- September 18, 2018: The KC Streetcar Marks Its 5 Millionth Ride
+- September 11, 2018: KC Streetcar Main Street Extension Project Advances Federal Funding Request
+- August 20, 2018: Project Team Advances Track Alignment for KC Streetcar Main Street Extension to UMKC
+- August 15, 2018: Kansas City’s Newest Holiday: 816 Day
+- July 13, 2018: KC Streetcar Summer Ridership Hits An All Time High
+- June 20, 2018: Voters Say Yes to a KC Streetcar Extension on Main Street
+- June 1, 2018: KC Streetcar & Art in the Loop Kick Off A Summer of Art
+- May 31, 2018: KC Streetcar Headed South: Second Public Meeting to be held June 5
+- May 17, 2018: Project Team Refines Proposed Stop Locations for KC Streetcar Main St Extension
+- May 15, 2018: 2018 KC Streetcar Summer Music Series Musicians Announced
+- May 7, 2018: The KC Streetcar Marks Its Second Anniversary
+- April 20, 2018: KC Streetcar Kicks Off Another Summer of Art
+- April 3, 2018: KC Streetcar Headed South
+- March 3, 2018: Calling All Musicians! Summer Jams on the KC Streetcar
+- February 14, 2018: KC Streetcar Increases Frequency, Shortens Wait Times
+- January 19, 2018: Ride KC Looks at Possible Public-Private Partnership Methods for KC Streetcar Extension
+- January 5, 2018: Ride KC Receives FTA Green Light to Enter Project Development for the Main Street Extension
+- November 29, 2017: The KC Streetcar is Ready to Jam for the Holidays
+- October 24, 2017: KC Streetcar Project Receives Global Light Rail Award
+- September 28, 2017: Rolling To The River
+- August 7, 2017: KC Streetcar Partnership Launches Planning for Streetcar Extension to UMKC
+- June 29, 2017: KC Streetcar Authority To Purchase More Streetcars
+- May 15, 2017: Team Selected to Study Southern Streetcar Extension
+- May 2, 2017: The KC Streetcar Turns One!
+- April 20, 2017: 2017 Art In the Loop Artists & Music Series Announced
+- April 6, 2017: KC Streetcar Authority Launches Southern Streetcar Extension
+- April 4, 2017: KC Streetcar Extends Sunday Service Hours
+- January 26, 2017: KC Streetcar a Win for Downtown Business
+- January 12, 2017: KC Streetcar Authority Encourages Riders to Stay Connected with Text Alerts
+- December 16, 2016: Team Selected to Study Streetcar Expansion and Multi-Modal Connections to Berkley Riverfront
+- December 12, 2016: KC Streetcar Project Receives Regional and Local Honors
+- October 7, 2016: Thanks a Million, Kansas City!
+- September 27, 2016: Singleton Yard Designated as LEED Gold Building
+- September 14, 2016: Significant Sales Tax Growth Reported in Downtown KC Streetcar TDD
+- September 7, 2016: KC Streetcar Project Receives Envision Platinum Sustainable Award
+- August 10, 2016: KC Streetcar Art On The Line Installations Complete
+- May 1, 2016: Sprint Sponsors Streetcars
+- April 22, 2016: Streetcar Grand Opening logistics announcement
+- February 25, 2016: KC Announces Opening Date
+- February 9, 2016: Kansas City Performs Full Scale Emergency Exercise
+- January 29, 2016: Last Friday Kansas City Streetcar Art Exhibition
+- December 7, 2015: Kansas City Welcomes KC Streetcar Vehicle #2
+- December 3, 2015: KC Streetcar Wins $20,000 Safety Grant
+- November 11, 2015: The KC Streetcar Undergoes First Powered Test on Main Street
+- November 5, 2015: The KC Streetcar Heads Out On Main Street
+- October 29, 2015: The KC Streetcar Is Coming Home
+- October 19, 2015: KC Streetcar Fires Up the Overhead Wires
+- October 15, 2015: KC Streetcar Authority Moves to its new home
+- October 2, 2015: KC Streetcar Authority Executes Operations & Maintenance Agreement with Herzog Transit Services
+- August 27, 2015: KC Streetcar partners with KCATA for regional transit support and services
+- August 3, 2015: Respect the Rail: KC Streetcar Safety Campaign
+- July 28, 2015: River Market Rail Rally
+- July 8, 2015: KC Streetcar Authority Hires Communications Coordinator
+- May 8, 2015: Streetcar Construction on Track
+- April 22, 2015: Party at the Platform
+- April 1, 2015: Track Work in the Crossroads Arts District Complete . Charts of Progress .
+- March 9, 2015: Delaware Street Reopens on Schedule with Back-in Angle Parking Diagram Here . “How to Video” here.
+- March 3, 2015: KC Streetcar Authority Launches Community Licensing Program
+- February 6, 2015: Delaware Street Closure During Track Work.
+- January 23, 2015: Singleton Yard to Take New Form
+- October 10, 2014 Streetcar Authority Approves 10-Minute Schedule
+- August 14, 2014: KC Streetcar Launches Brand
+- August 5, 2014: Track Construction Begins
+- July 24, 2014: Construction Begins on Singleton Yard Vehicle Maintenance Facility
+- June 20, 2014: River Market Sewer Work Begins
+- June 5, 2014: 10th Street Traffic Flow Changes
+- May 28, 2014: Rail Welding Begins
+- May 16, 2014: Groundbreaking Advisory
+- April 10, 2014: Kansas City Streetcar Rail on Track for Delivery
+- January 9, 2014: Three Open Houses to Discuss Construction Impacts of KC Downtown Streetcar
+- Resources/Archives
+- Contact
+- Track Access
+- Hours of Operation

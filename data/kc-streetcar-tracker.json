@@ -1,0 +1,2542 @@
+{
+  "updatedAt": "2026-03-28T17:51:06.857Z",
+  "brand": {
+    "name": "KC Streetcar",
+    "colors": {
+      "blue": "#0081C6",
+      "navy": "#004987",
+      "route": "#0693E3"
+    }
+  },
+  "route": {
+    "id": "601",
+    "shortName": "STCR",
+    "longName": "KC Streetcar",
+    "color": "#0693E3",
+    "textColor": "#FFFFFF"
+  },
+  "sources": {
+    "brand": "https://kcstreetcar.org/",
+    "arrivals": "https://arrivals.kcstreetcar.org/rmn",
+    "gtfs": "http://www.kc-metro.com/gtf/google_transit.zip",
+    "foodAccess": "https://overpass.kumi.systems/api/interpreter"
+  },
+  "stopGroups": [
+    {
+      "id": "river-market-north-stop",
+      "label": "River Market North Stop",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/rmn",
+      "centroid": {
+        "lat": 39.110246,
+        "lon": -94.581659
+      },
+      "order": 0,
+      "directions": [
+        {
+          "code": "rmn",
+          "label": "Southbound",
+          "stopName": "RIVER MARKET (3RD & GRAND)",
+          "gtfsStopId": "1600",
+          "directionId": 1,
+          "location": {
+            "lat": 39.110246,
+            "lon": -94.581659
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-way-310602797",
+          "name": "Chinatown Food Market",
+          "category": "grocery",
+          "address": "202 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.05,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529292",
+          "name": "Crossland International Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.06,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-321745922",
+          "name": "Hung Vuong Market",
+          "category": "grocery",
+          "address": "303 Grand Boulevard, Kansas City, MO",
+          "distanceMiles": 0.06,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529290",
+          "name": "Corollo's Gourmet Grocery & Deli",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.07,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-132571954",
+          "name": "City Market",
+          "category": "farmers_market",
+          "address": null,
+          "distanceMiles": 0.07,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529284",
+          "name": "Global Produce",
+          "category": "grocery",
+          "address": "419 Main Street, Kansas City, MO",
+          "distanceMiles": 0.1,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529288",
+          "name": "Christina's Produce",
+          "category": "grocery",
+          "address": "413 Main Street, Kansas City, MO",
+          "distanceMiles": 0.11,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-423692900",
+          "name": "Nature's Own Health Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.13,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-365374142",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": "631 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.3,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12410983935",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.35,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5218785769",
+          "name": "In & Out",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.59,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-538354566",
+          "name": "Favtrip Downtown",
+          "category": "food_retailer",
+          "address": "500 East 10th Street, Kansas City, MO, 64106",
+          "distanceMiles": 0.59,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217188965",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.65,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12399041568",
+          "name": "Break Time",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.71,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217204501",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.72,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-2915807116",
+          "name": "Cosentino's Downtown Market",
+          "category": "grocery",
+          "address": "10 East 13th Street, Kansas City, 64106-2924",
+          "distanceMiles": 0.8,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "grocery": 8,
+        "farmers_market": 1,
+        "food_retailer": 7
+      }
+    },
+    {
+      "id": "river-market-west-stop",
+      "label": "River Market West Stop",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/rmw",
+      "centroid": {
+        "lat": 39.108848,
+        "lon": -94.584417
+      },
+      "order": 1,
+      "directions": [
+        {
+          "code": "rmw",
+          "label": "Southbound",
+          "stopName": "RIVER MARKET WEST (4TH & DELWARE)",
+          "gtfsStopId": "1601",
+          "directionId": 1,
+          "location": {
+            "lat": 39.108848,
+            "lon": -94.584417
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-node-4987529284",
+          "name": "Global Produce",
+          "category": "grocery",
+          "address": "419 Main Street, Kansas City, MO",
+          "distanceMiles": 0.08,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529288",
+          "name": "Christina's Produce",
+          "category": "grocery",
+          "address": "413 Main Street, Kansas City, MO",
+          "distanceMiles": 0.09,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529290",
+          "name": "Corollo's Gourmet Grocery & Deli",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.1,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529292",
+          "name": "Crossland International Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.12,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-132571954",
+          "name": "City Market",
+          "category": "farmers_market",
+          "address": null,
+          "distanceMiles": 0.12,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12410983935",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.19,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-310602797",
+          "name": "Chinatown Food Market",
+          "category": "grocery",
+          "address": "202 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.22,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-321745922",
+          "name": "Hung Vuong Market",
+          "category": "grocery",
+          "address": "303 Grand Boulevard, Kansas City, MO",
+          "distanceMiles": 0.22,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-423692900",
+          "name": "Nature's Own Health Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.25,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-365374142",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": "631 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.3,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5218785769",
+          "name": "In & Out",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.49,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217188965",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.59,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-538354566",
+          "name": "Favtrip Downtown",
+          "category": "food_retailer",
+          "address": "500 East 10th Street, Kansas City, MO, 64106",
+          "distanceMiles": 0.59,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217204501",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.6,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12399041568",
+          "name": "Break Time",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.67,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-2915807116",
+          "name": "Cosentino's Downtown Market",
+          "category": "grocery",
+          "address": "10 East 13th Street, Kansas City, 64106-2924",
+          "distanceMiles": 0.7,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343045",
+          "name": "Suzy's Deli",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 1,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "grocery": 8,
+        "farmers_market": 1,
+        "food_retailer": 8
+      }
+    },
+    {
+      "id": "city-market-stop",
+      "label": "City Market Stop",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/cmk",
+      "centroid": {
+        "lat": 39.108477,
+        "lon": -94.581756
+      },
+      "order": 2,
+      "directions": [
+        {
+          "code": "cmk",
+          "label": "Northbound",
+          "stopName": "CITY MARKET (5TH & WALNUT ST)",
+          "gtfsStopId": "1615",
+          "directionId": 0,
+          "location": {
+            "lat": 39.108477,
+            "lon": -94.581756
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-way-132571954",
+          "name": "City Market",
+          "category": "farmers_market",
+          "address": null,
+          "distanceMiles": 0.06,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529288",
+          "name": "Christina's Produce",
+          "category": "grocery",
+          "address": "413 Main Street, Kansas City, MO",
+          "distanceMiles": 0.06,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529284",
+          "name": "Global Produce",
+          "category": "grocery",
+          "address": "419 Main Street, Kansas City, MO",
+          "distanceMiles": 0.08,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529292",
+          "name": "Crossland International Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.1,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529290",
+          "name": "Corollo's Gourmet Grocery & Deli",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.11,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-423692900",
+          "name": "Nature's Own Health Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.12,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-321745922",
+          "name": "Hung Vuong Market",
+          "category": "grocery",
+          "address": "303 Grand Boulevard, Kansas City, MO",
+          "distanceMiles": 0.13,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-310602797",
+          "name": "Chinatown Food Market",
+          "category": "grocery",
+          "address": "202 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.17,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-365374142",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": "631 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.19,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12410983935",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.26,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5218785769",
+          "name": "In & Out",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.47,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-538354566",
+          "name": "Favtrip Downtown",
+          "category": "food_retailer",
+          "address": "500 East 10th Street, Kansas City, MO, 64106",
+          "distanceMiles": 0.48,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217188965",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.53,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12399041568",
+          "name": "Break Time",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.6,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217204501",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.6,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-2915807116",
+          "name": "Cosentino's Downtown Market",
+          "category": "grocery",
+          "address": "10 East 13th Street, Kansas City, 64106-2924",
+          "distanceMiles": 0.68,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343045",
+          "name": "Suzy's Deli",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.96,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-865010964",
+          "name": "Amoco",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.97,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "farmers_market": 1,
+        "grocery": 8,
+        "food_retailer": 9
+      }
+    },
+    {
+      "id": "north-loop-stops",
+      "label": "North Loop Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/nlnnls",
+      "centroid": {
+        "lat": 39.1054175,
+        "lon": -94.583195
+      },
+      "order": 3,
+      "directions": [
+        {
+          "code": "nln",
+          "label": "Northbound",
+          "stopName": "NORTH LOOP (7TH & MAIN ST)",
+          "gtfsStopId": "1614",
+          "directionId": 0,
+          "location": {
+            "lat": 39.105408,
+            "lon": -94.583218
+          }
+        },
+        {
+          "code": "nls",
+          "label": "Southbound",
+          "stopName": "NORTH LOOP (7TH & MAIN ST)",
+          "gtfsStopId": "1602",
+          "directionId": 1,
+          "location": {
+            "lat": 39.105427,
+            "lon": -94.583172
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-node-12410983935",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.14,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-365374142",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": "631 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.17,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529288",
+          "name": "Christina's Produce",
+          "category": "grocery",
+          "address": "413 Main Street, Kansas City, MO",
+          "distanceMiles": 0.24,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5218785769",
+          "name": "In & Out",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.25,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529284",
+          "name": "Global Produce",
+          "category": "grocery",
+          "address": "419 Main Street, Kansas City, MO",
+          "distanceMiles": 0.26,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-132571954",
+          "name": "City Market",
+          "category": "farmers_market",
+          "address": null,
+          "distanceMiles": 0.27,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529290",
+          "name": "Corollo's Gourmet Grocery & Deli",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.3,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529292",
+          "name": "Crossland International Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.31,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-423692900",
+          "name": "Nature's Own Health Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.32,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217188965",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.34,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-321745922",
+          "name": "Hung Vuong Market",
+          "category": "grocery",
+          "address": "303 Grand Boulevard, Kansas City, MO",
+          "distanceMiles": 0.35,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217204501",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.38,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-538354566",
+          "name": "Favtrip Downtown",
+          "category": "food_retailer",
+          "address": "500 East 10th Street, Kansas City, MO, 64106",
+          "distanceMiles": 0.39,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-310602797",
+          "name": "Chinatown Food Market",
+          "category": "grocery",
+          "address": "202 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.4,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12399041568",
+          "name": "Break Time",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.43,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-2915807116",
+          "name": "Cosentino's Downtown Market",
+          "category": "grocery",
+          "address": "10 East 13th Street, Kansas City, 64106-2924",
+          "distanceMiles": 0.46,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343045",
+          "name": "Suzy's Deli",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.76,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-304159638",
+          "name": "Windstar",
+          "category": "food_retailer",
+          "address": "1704 Grand Boulevard, Kansas City, MO, 64108",
+          "distanceMiles": 0.86,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343043",
+          "name": "Grinders West",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 1,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "food_retailer": 10,
+        "grocery": 8,
+        "farmers_market": 1
+      }
+    },
+    {
+      "id": "library-stops",
+      "label": "Library Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/lbnlbs",
+      "centroid": {
+        "lat": 39.103206,
+        "lon": -94.5830875
+      },
+      "order": 4,
+      "directions": [
+        {
+          "code": "lbn",
+          "label": "Northbound",
+          "stopName": "LIBRARY (9TH & MAIN ST)",
+          "gtfsStopId": "1613",
+          "directionId": 0,
+          "location": {
+            "lat": 39.103362,
+            "lon": -94.583036
+          }
+        },
+        {
+          "code": "lbs",
+          "label": "Southbound",
+          "stopName": "LIBRARY (9TH & MAIN ST)",
+          "gtfsStopId": "1603",
+          "directionId": 1,
+          "location": {
+            "lat": 39.10305,
+            "lon": -94.583139
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-node-5218785769",
+          "name": "In & Out",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.1,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217188965",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.21,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217204501",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.24,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12410983935",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.25,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-365374142",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": "631 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.25,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-2915807116",
+          "name": "Cosentino's Downtown Market",
+          "category": "grocery",
+          "address": "10 East 13th Street, Kansas City, 64106-2924",
+          "distanceMiles": 0.31,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12399041568",
+          "name": "Break Time",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.31,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-538354566",
+          "name": "Favtrip Downtown",
+          "category": "food_retailer",
+          "address": "500 East 10th Street, Kansas City, MO, 64106",
+          "distanceMiles": 0.34,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529288",
+          "name": "Christina's Produce",
+          "category": "grocery",
+          "address": "413 Main Street, Kansas City, MO",
+          "distanceMiles": 0.39,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529284",
+          "name": "Global Produce",
+          "category": "grocery",
+          "address": "419 Main Street, Kansas City, MO",
+          "distanceMiles": 0.42,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-132571954",
+          "name": "City Market",
+          "category": "farmers_market",
+          "address": null,
+          "distanceMiles": 0.42,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-423692900",
+          "name": "Nature's Own Health Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.45,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529290",
+          "name": "Corollo's Gourmet Grocery & Deli",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.45,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529292",
+          "name": "Crossland International Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.46,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-321745922",
+          "name": "Hung Vuong Market",
+          "category": "grocery",
+          "address": "303 Grand Boulevard, Kansas City, MO",
+          "distanceMiles": 0.49,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-310602797",
+          "name": "Chinatown Food Market",
+          "category": "grocery",
+          "address": "202 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.54,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343045",
+          "name": "Suzy's Deli",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.6,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-304159638",
+          "name": "Windstar",
+          "category": "food_retailer",
+          "address": "1704 Grand Boulevard, Kansas City, MO, 64108",
+          "distanceMiles": 0.71,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343043",
+          "name": "Grinders West",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.85,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-10548281043",
+          "name": "Community Groceries",
+          "category": "grocery",
+          "address": "640 East 18th Street, Kansas City, MO, 64108",
+          "distanceMiles": 0.89,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "food_retailer": 10,
+        "grocery": 9,
+        "farmers_market": 1
+      }
+    },
+    {
+      "id": "metro-center-stops",
+      "label": "Metro Center Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/mcnmcs",
+      "centroid": {
+        "lat": 39.099976999999996,
+        "lon": -94.5831785
+      },
+      "order": 5,
+      "directions": [
+        {
+          "code": "mcn",
+          "label": "Northbound",
+          "stopName": "METRO CENTER (12TH & MAIN ST)",
+          "gtfsStopId": "1612",
+          "directionId": 0,
+          "location": {
+            "lat": 39.100125,
+            "lon": -94.583101
+          }
+        },
+        {
+          "code": "mcs",
+          "label": "Southbound",
+          "stopName": "METRO CENTER (12TH & MAIN ST)",
+          "gtfsStopId": "1604",
+          "directionId": 1,
+          "location": {
+            "lat": 39.099829,
+            "lon": -94.583256
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-node-2915807116",
+          "name": "Cosentino's Downtown Market",
+          "category": "grocery",
+          "address": "10 East 13th Street, Kansas City, 64106-2924",
+          "distanceMiles": 0.09,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217204501",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.12,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5218785769",
+          "name": "In & Out",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.13,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217188965",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.16,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12399041568",
+          "name": "Break Time",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.24,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-538354566",
+          "name": "Favtrip Downtown",
+          "category": "food_retailer",
+          "address": "500 East 10th Street, Kansas City, MO, 64106",
+          "distanceMiles": 0.38,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343045",
+          "name": "Suzy's Deli",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.39,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12410983935",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.45,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-365374142",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": "631 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.45,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-304159638",
+          "name": "Windstar",
+          "category": "food_retailer",
+          "address": "1704 Grand Boulevard, Kansas City, MO, 64108",
+          "distanceMiles": 0.49,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529288",
+          "name": "Christina's Produce",
+          "category": "grocery",
+          "address": "413 Main Street, Kansas City, MO",
+          "distanceMiles": 0.62,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529284",
+          "name": "Global Produce",
+          "category": "grocery",
+          "address": "419 Main Street, Kansas City, MO",
+          "distanceMiles": 0.64,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-132571954",
+          "name": "City Market",
+          "category": "farmers_market",
+          "address": null,
+          "distanceMiles": 0.64,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343043",
+          "name": "Grinders West",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.64,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-423692900",
+          "name": "Nature's Own Health Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.66,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529290",
+          "name": "Corollo's Gourmet Grocery & Deli",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.68,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529292",
+          "name": "Crossland International Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.68,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-10548281043",
+          "name": "Community Groceries",
+          "category": "grocery",
+          "address": "640 East 18th Street, Kansas City, MO, 64108",
+          "distanceMiles": 0.7,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-321745922",
+          "name": "Hung Vuong Market",
+          "category": "grocery",
+          "address": "303 Grand Boulevard, Kansas City, MO",
+          "distanceMiles": 0.71,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-310602797",
+          "name": "Chinatown Food Market",
+          "category": "grocery",
+          "address": "202 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.77,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-2903118594",
+          "name": "Guy's Broadway Bodega",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.93,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "grocery": 9,
+        "food_retailer": 11,
+        "farmers_market": 1
+      }
+    },
+    {
+      "id": "power-light-stops",
+      "label": "Power & Light Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/plnpls",
+      "centroid": {
+        "lat": 39.096999,
+        "lon": -94.5833235
+      },
+      "order": 6,
+      "directions": [
+        {
+          "code": "pln",
+          "label": "Northbound",
+          "stopName": "POWER & LIGHT (14TH & MAIN ST)",
+          "gtfsStopId": "1611",
+          "directionId": 0,
+          "location": {
+            "lat": 39.097126,
+            "lon": -94.583248
+          }
+        },
+        {
+          "code": "pls",
+          "label": "Southbound",
+          "stopName": "POWER & LIGHT (14TH & MAIN ST)",
+          "gtfsStopId": "1605",
+          "directionId": 1,
+          "location": {
+            "lat": 39.096872,
+            "lon": -94.583399
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-node-2915807116",
+          "name": "Cosentino's Downtown Market",
+          "category": "grocery",
+          "address": "10 East 13th Street, Kansas City, 64106-2924",
+          "distanceMiles": 0.12,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343045",
+          "name": "Suzy's Deli",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.21,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217204501",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.25,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-304159638",
+          "name": "Windstar",
+          "category": "food_retailer",
+          "address": "1704 Grand Boulevard, Kansas City, MO, 64108",
+          "distanceMiles": 0.29,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217188965",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.31,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12399041568",
+          "name": "Break Time",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.33,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5218785769",
+          "name": "In & Out",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.33,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343043",
+          "name": "Grinders West",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.47,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-538354566",
+          "name": "Favtrip Downtown",
+          "category": "food_retailer",
+          "address": "500 East 10th Street, Kansas City, MO, 64106",
+          "distanceMiles": 0.52,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-10548281043",
+          "name": "Community Groceries",
+          "category": "grocery",
+          "address": "640 East 18th Street, Kansas City, MO, 64108",
+          "distanceMiles": 0.55,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12410983935",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.65,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-365374142",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": "631 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.65,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-2903118594",
+          "name": "Guy's Broadway Bodega",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.73,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529288",
+          "name": "Christina's Produce",
+          "category": "grocery",
+          "address": "413 Main Street, Kansas City, MO",
+          "distanceMiles": 0.82,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529284",
+          "name": "Global Produce",
+          "category": "grocery",
+          "address": "419 Main Street, Kansas City, MO",
+          "distanceMiles": 0.85,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-132571954",
+          "name": "City Market",
+          "category": "farmers_market",
+          "address": null,
+          "distanceMiles": 0.85,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-423692900",
+          "name": "Nature's Own Health Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.86,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529290",
+          "name": "Corollo's Gourmet Grocery & Deli",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.88,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529292",
+          "name": "Crossland International Market",
+          "category": "grocery",
+          "address": null,
+          "distanceMiles": 0.89,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-321745922",
+          "name": "Hung Vuong Market",
+          "category": "grocery",
+          "address": "303 Grand Boulevard, Kansas City, MO",
+          "distanceMiles": 0.91,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-310602797",
+          "name": "Chinatown Food Market",
+          "category": "grocery",
+          "address": "202 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.97,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5355742357",
+          "name": "Paseo Express",
+          "category": "food_retailer",
+          "address": "1500 The Paseo, Kansas City, MO, 64108",
+          "distanceMiles": 0.99,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "grocery": 9,
+        "food_retailer": 12,
+        "farmers_market": 1
+      }
+    },
+    {
+      "id": "kauffman-center-stops",
+      "label": "Kauffman Center Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/kcnkcs",
+      "centroid": {
+        "lat": 39.0945465,
+        "lon": -94.58345249999999
+      },
+      "order": 7,
+      "directions": [
+        {
+          "code": "kcn",
+          "label": "Northbound",
+          "stopName": "KAUFFMAN CENTER (16TH & MAIN ST)",
+          "gtfsStopId": "1610",
+          "directionId": 0,
+          "location": {
+            "lat": 39.094764,
+            "lon": -94.583375
+          }
+        },
+        {
+          "code": "kcs",
+          "label": "Southbound",
+          "stopName": "KAUFFMAN CENTER (16TH & MAIN ST)",
+          "gtfsStopId": "1606",
+          "directionId": 1,
+          "location": {
+            "lat": 39.094329,
+            "lon": -94.58353
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-node-5213343045",
+          "name": "Suzy's Deli",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.13,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-304159638",
+          "name": "Windstar",
+          "category": "food_retailer",
+          "address": "1704 Grand Boulevard, Kansas City, MO, 64108",
+          "distanceMiles": 0.14,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-2915807116",
+          "name": "Cosentino's Downtown Market",
+          "category": "grocery",
+          "address": "10 East 13th Street, Kansas City, 64106-2924",
+          "distanceMiles": 0.29,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343043",
+          "name": "Grinders West",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.35,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217204501",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.41,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-10548281043",
+          "name": "Community Groceries",
+          "category": "grocery",
+          "address": "640 East 18th Street, Kansas City, MO, 64108",
+          "distanceMiles": 0.46,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12399041568",
+          "name": "Break Time",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.46,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217188965",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.47,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5218785769",
+          "name": "In & Out",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.5,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-2903118594",
+          "name": "Guy's Broadway Bodega",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.58,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-538354566",
+          "name": "Favtrip Downtown",
+          "category": "food_retailer",
+          "address": "500 East 10th Street, Kansas City, MO, 64106",
+          "distanceMiles": 0.66,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-365374142",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": "631 Grand Boulevard, Kansas City, MO, 64106",
+          "distanceMiles": 0.81,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12410983935",
+          "name": "Phillips 66",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.81,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "curated-guadalupe-centers",
+          "name": "Guadalupe Centers",
+          "category": "pantry",
+          "address": "1015 Avenida Cesar E. Chavez, Kansas City, MO 64108",
+          "distanceMiles": 0.95,
+          "source": "StreetCart docs + public address geocode"
+        },
+        {
+          "id": "osm-node-5355742357",
+          "name": "Paseo Express",
+          "category": "food_retailer",
+          "address": "1500 The Paseo, Kansas City, MO, 64108",
+          "distanceMiles": 0.99,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4987529288",
+          "name": "Christina's Produce",
+          "category": "grocery",
+          "address": "413 Main Street, Kansas City, MO",
+          "distanceMiles": 0.99,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "food_retailer": 12,
+        "grocery": 3,
+        "pantry": 1
+      }
+    },
+    {
+      "id": "crossroads-stops",
+      "label": "Crossroads Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/crncrs",
+      "centroid": {
+        "lat": 39.090431,
+        "lon": -94.58364449999999
+      },
+      "order": 8,
+      "directions": [
+        {
+          "code": "crn",
+          "label": "To River Market",
+          "stopName": "CROSSROADS (19TH & MAIN ST)",
+          "gtfsStopId": "1609",
+          "directionId": 0,
+          "location": {
+            "lat": 39.09058,
+            "lon": -94.583569
+          }
+        },
+        {
+          "code": "crs",
+          "label": "Southbound",
+          "stopName": "CROSSROADS (19TH & MAIN ST)",
+          "gtfsStopId": "1607",
+          "directionId": 1,
+          "location": {
+            "lat": 39.090282,
+            "lon": -94.58372
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-way-304159638",
+          "name": "Windstar",
+          "category": "food_retailer",
+          "address": "1704 Grand Boulevard, Kansas City, MO, 64108",
+          "distanceMiles": 0.2,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343043",
+          "name": "Grinders West",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.3,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343045",
+          "name": "Suzy's Deli",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.32,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-2903118594",
+          "name": "Guy's Broadway Bodega",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.35,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-10548281043",
+          "name": "Community Groceries",
+          "category": "grocery",
+          "address": "640 East 18th Street, Kansas City, MO, 64108",
+          "distanceMiles": 0.44,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-2915807116",
+          "name": "Cosentino's Downtown Market",
+          "category": "grocery",
+          "address": "10 East 13th Street, Kansas City, 64106-2924",
+          "distanceMiles": 0.57,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217204501",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.69,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12399041568",
+          "name": "Break Time",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.72,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5217188965",
+          "name": "Town News",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.75,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "curated-guadalupe-centers",
+          "name": "Guadalupe Centers",
+          "category": "pantry",
+          "address": "1015 Avenida Cesar E. Chavez, Kansas City, MO 64108",
+          "distanceMiles": 0.78,
+          "source": "StreetCart docs + public address geocode"
+        },
+        {
+          "id": "osm-node-5218785769",
+          "name": "In & Out",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.79,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-538354566",
+          "name": "Favtrip Downtown",
+          "category": "food_retailer",
+          "address": "500 East 10th Street, Kansas City, MO, 64106",
+          "distanceMiles": 0.91,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "food_retailer": 9,
+        "grocery": 2,
+        "pantry": 1
+      }
+    },
+    {
+      "id": "union-station-stops",
+      "label": "Union Station Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/usnuss",
+      "centroid": {
+        "lat": 39.085096,
+        "lon": -94.583959
+      },
+      "order": 9,
+      "directions": [
+        {
+          "code": "usn",
+          "label": "Northbound",
+          "stopName": "UNION STATION (PERSHING & MAIN ST)",
+          "gtfsStopId": "1619",
+          "directionId": 0,
+          "location": {
+            "lat": 39.085069,
+            "lon": -94.583924
+          }
+        },
+        {
+          "code": "uss",
+          "label": "Southbound",
+          "stopName": "UNION STATION (PERSHING & MAIN ST)",
+          "gtfsStopId": "1608",
+          "directionId": 1,
+          "location": {
+            "lat": 39.085123,
+            "lon": -94.583994
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-node-2903118594",
+          "name": "Guy's Broadway Bodega",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.3,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343043",
+          "name": "Grinders West",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.54,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-304159638",
+          "name": "Windstar",
+          "category": "food_retailer",
+          "address": "1704 Grand Boulevard, Kansas City, MO, 64108",
+          "distanceMiles": 0.56,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-10548281043",
+          "name": "Community Groceries",
+          "category": "grocery",
+          "address": "640 East 18th Street, Kansas City, MO, 64108",
+          "distanceMiles": 0.64,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343045",
+          "name": "Suzy's Deli",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.68,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "curated-guadalupe-centers",
+          "name": "Guadalupe Centers",
+          "category": "pantry",
+          "address": "1015 Avenida Cesar E. Chavez, Kansas City, MO 64108",
+          "distanceMiles": 0.69,
+          "source": "StreetCart docs + public address geocode"
+        },
+        {
+          "id": "osm-node-10263469933",
+          "name": "Mid 27th Food Mart",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.77,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-2915807116",
+          "name": "Cosentino's Downtown Market",
+          "category": "grocery",
+          "address": "10 East 13th Street, Kansas City, 64106-2924",
+          "distanceMiles": 0.94,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "food_retailer": 5,
+        "grocery": 2,
+        "pantry": 1
+      }
+    },
+    {
+      "id": "wwi-museum-memorial-stops",
+      "label": "WWI Museum & Memorial Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/wwnwws",
+      "centroid": {
+        "lat": 39.0783005,
+        "lon": -94.58456949999999
+      },
+      "order": 10,
+      "directions": [
+        {
+          "code": "wwn",
+          "label": "To River Market",
+          "stopName": "WWI MUSEUM & MEMORIAL (27TH & MAIN ST)",
+          "gtfsStopId": "1811",
+          "directionId": 0,
+          "location": {
+            "lat": 39.07817,
+            "lon": -94.584668
+          }
+        },
+        {
+          "code": "wws",
+          "label": "To UMKC",
+          "stopName": "WW1 MUSEUM & MEMORIAL (27TH & MAIN)",
+          "gtfsStopId": "1620",
+          "directionId": 1,
+          "location": {
+            "lat": 39.078431,
+            "lon": -94.584471
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-node-10263469933",
+          "name": "Mid 27th Food Mart",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.6,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-2903118594",
+          "name": "Guy's Broadway Bodega",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.66,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-170288771",
+          "name": "Linwood Super Foods",
+          "category": "food_retailer",
+          "address": "130 East Linwood Boulevard, Kansas City, MO, 64111",
+          "distanceMiles": 0.67,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-174707513",
+          "name": "7-Eleven",
+          "category": "food_retailer",
+          "address": "3150 Gillham Plaza, Kansas City, MO, 64111",
+          "distanceMiles": 0.7,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "curated-guadalupe-centers",
+          "name": "Guadalupe Centers",
+          "category": "pantry",
+          "address": "1015 Avenida Cesar E. Chavez, Kansas City, MO 64108",
+          "distanceMiles": 0.83,
+          "source": "StreetCart docs + public address geocode"
+        },
+        {
+          "id": "osm-node-4896231295",
+          "name": "Sinclair",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.88,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5213343043",
+          "name": "Grinders West",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.97,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "food_retailer": 6,
+        "pantry": 1
+      }
+    },
+    {
+      "id": "union-hill-stops",
+      "label": "Union Hill Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/uhnuhs",
+      "centroid": {
+        "lat": 39.070653500000006,
+        "lon": -94.58533700000001
+      },
+      "order": 11,
+      "directions": [
+        {
+          "code": "uhn",
+          "label": "To River Market",
+          "stopName": "UNION HILL (31ST & MAIN ST)",
+          "gtfsStopId": "1812",
+          "directionId": 0,
+          "location": {
+            "lat": 39.070883,
+            "lon": -94.585285
+          }
+        },
+        {
+          "code": "uhs",
+          "label": "To UMKC",
+          "stopName": "UNION HILL (31ST & MAIN ST)",
+          "gtfsStopId": "1621",
+          "directionId": 1,
+          "location": {
+            "lat": 39.070424,
+            "lon": -94.585389
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-way-170288771",
+          "name": "Linwood Super Foods",
+          "category": "food_retailer",
+          "address": "130 East Linwood Boulevard, Kansas City, MO, 64111",
+          "distanceMiles": 0.17,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-174707513",
+          "name": "7-Eleven",
+          "category": "food_retailer",
+          "address": "3150 Gillham Plaza, Kansas City, MO, 64111",
+          "distanceMiles": 0.33,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4896231295",
+          "name": "Sinclair",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.66,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-10263469933",
+          "name": "Mid 27th Food Mart",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.8,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12374469708",
+          "name": "Shell",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.84,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-495990640",
+          "name": "Save-A-Lot",
+          "category": "grocery",
+          "address": "3410 Troost Avenue, Kansas City, MO, 64109",
+          "distanceMiles": 0.85,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-626295611",
+          "name": "Faststop",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.99,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "food_retailer": 6,
+        "grocery": 1
+      }
+    },
+    {
+      "id": "armour-stops",
+      "label": "Armour Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/arnars",
+      "centroid": {
+        "lat": 39.0638255,
+        "lon": -94.585618
+      },
+      "order": 12,
+      "directions": [
+        {
+          "code": "arn",
+          "label": "To River Market",
+          "stopName": "ARMOUR (35TH & MAIN ST)",
+          "gtfsStopId": "1813",
+          "directionId": 0,
+          "location": {
+            "lat": 39.063695,
+            "lon": -94.585635
+          }
+        },
+        {
+          "code": "ars",
+          "label": "To UMKC",
+          "stopName": "ARMOUR (35TH & MAIN ST)",
+          "gtfsStopId": "1622",
+          "directionId": 1,
+          "location": {
+            "lat": 39.063956,
+            "lon": -94.585601
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-way-170288771",
+          "name": "Linwood Super Foods",
+          "category": "food_retailer",
+          "address": "130 East Linwood Boulevard, Kansas City, MO, 64111",
+          "distanceMiles": 0.35,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12374469708",
+          "name": "Shell",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.37,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-174707513",
+          "name": "7-Eleven",
+          "category": "food_retailer",
+          "address": "3150 Gillham Plaza, Kansas City, MO, 64111",
+          "distanceMiles": 0.49,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-626295611",
+          "name": "Faststop",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.53,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-1707858749",
+          "name": "It's a Beautiful Day",
+          "category": "farmers_market",
+          "address": "3916 Broadway Boulevard",
+          "distanceMiles": 0.6,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-253822513",
+          "name": "Midtown Market",
+          "category": "grocery",
+          "address": "3967 Main Street, Kansas City, MO, 64111",
+          "distanceMiles": 0.64,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-495990640",
+          "name": "Save-A-Lot",
+          "category": "grocery",
+          "address": "3410 Troost Avenue, Kansas City, MO, 64109",
+          "distanceMiles": 0.73,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-4896231295",
+          "name": "Sinclair",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.77,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-312531976",
+          "name": "Marsh's Sun Fresh Market",
+          "category": "grocery",
+          "address": "4001 Mill Street, Kansas City, MO, 64111",
+          "distanceMiles": 0.81,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "curated-bishop-sullivan-center",
+          "name": "Bishop Sullivan Center",
+          "category": "pantry",
+          "address": "3936 Troost Ave, Kansas City, MO 64110",
+          "distanceMiles": 0.93,
+          "source": "StreetCart docs + public address geocode"
+        }
+      ],
+      "categoryCounts": {
+        "food_retailer": 5,
+        "farmers_market": 1,
+        "grocery": 3,
+        "pantry": 1
+      }
+    },
+    {
+      "id": "westport-stops",
+      "label": "Westport Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/wpnwps",
+      "centroid": {
+        "lat": 39.0565925,
+        "lon": -94.5860785
+      },
+      "order": 13,
+      "directions": [
+        {
+          "code": "wpn",
+          "label": "To River Market",
+          "stopName": "WESTPORT(39TH & MAIN ST)",
+          "gtfsStopId": "1814",
+          "directionId": 0,
+          "location": {
+            "lat": 39.056435,
+            "lon": -94.586067
+          }
+        },
+        {
+          "code": "wps",
+          "label": "To UMKC",
+          "stopName": "WESTPORT (39TH & MAIN ST)",
+          "gtfsStopId": "1623",
+          "directionId": 1,
+          "location": {
+            "lat": 39.05675,
+            "lon": -94.58609
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-node-626295611",
+          "name": "Faststop",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.11,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12374469708",
+          "name": "Shell",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.14,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-253822513",
+          "name": "Midtown Market",
+          "category": "grocery",
+          "address": "3967 Main Street, Kansas City, MO, 64111",
+          "distanceMiles": 0.14,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-1707858749",
+          "name": "It's a Beautiful Day",
+          "category": "farmers_market",
+          "address": "3916 Broadway Boulevard",
+          "distanceMiles": 0.27,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-312531976",
+          "name": "Marsh's Sun Fresh Market",
+          "category": "grocery",
+          "address": "4001 Mill Street, Kansas City, MO, 64111",
+          "distanceMiles": 0.49,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "curated-bishop-sullivan-center",
+          "name": "Bishop Sullivan Center",
+          "category": "pantry",
+          "address": "3936 Troost Ave, Kansas City, MO 64110",
+          "distanceMiles": 0.73,
+          "source": "StreetCart docs + public address geocode"
+        },
+        {
+          "id": "osm-node-10573846734",
+          "name": "Troost Mart",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.81,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-170288771",
+          "name": "Linwood Super Foods",
+          "category": "food_retailer",
+          "address": "130 East Linwood Boulevard, Kansas City, MO, 64111",
+          "distanceMiles": 0.85,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-495990640",
+          "name": "Save-A-Lot",
+          "category": "grocery",
+          "address": "3410 Troost Avenue, Kansas City, MO, 64109",
+          "distanceMiles": 0.91,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-174707513",
+          "name": "7-Eleven",
+          "category": "food_retailer",
+          "address": "3150 Gillham Plaza, Kansas City, MO, 64111",
+          "distanceMiles": 0.93,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-6604823055",
+          "name": "Mr. Z's In & Out Grocery",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.96,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-11447368349",
+          "name": "Community Food Pantry",
+          "category": "pantry",
+          "address": null,
+          "distanceMiles": 1,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "food_retailer": 6,
+        "grocery": 3,
+        "farmers_market": 1,
+        "pantry": 2
+      }
+    },
+    {
+      "id": "southmoreland-stops",
+      "label": "Southmoreland Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/smnsms",
+      "centroid": {
+        "lat": 39.0493735,
+        "lon": -94.5865045
+      },
+      "order": 14,
+      "directions": [
+        {
+          "code": "smn",
+          "label": "To River Market",
+          "stopName": "SOUTHMORELAND (43RD & MAIN ST)",
+          "gtfsStopId": "1815",
+          "directionId": 0,
+          "location": {
+            "lat": 39.049238,
+            "lon": -94.586487
+          }
+        },
+        {
+          "code": "sms",
+          "label": "To UMKC",
+          "stopName": "SOUTHMORELAND (43RD & MAIN ST)",
+          "gtfsStopId": "1627",
+          "directionId": 1,
+          "location": {
+            "lat": 39.049509,
+            "lon": -94.586522
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-way-253822513",
+          "name": "Midtown Market",
+          "category": "grocery",
+          "address": "3967 Main Street, Kansas City, MO, 64111",
+          "distanceMiles": 0.36,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-626295611",
+          "name": "Faststop",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.49,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-1707858749",
+          "name": "It's a Beautiful Day",
+          "category": "farmers_market",
+          "address": "3916 Broadway Boulevard",
+          "distanceMiles": 0.53,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-312531976",
+          "name": "Marsh's Sun Fresh Market",
+          "category": "grocery",
+          "address": "4001 Mill Street, Kansas City, MO, 64111",
+          "distanceMiles": 0.58,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12374469708",
+          "name": "Shell",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.64,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-10573846734",
+          "name": "Troost Mart",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.82,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "curated-bishop-sullivan-center",
+          "name": "Bishop Sullivan Center",
+          "category": "pantry",
+          "address": "3936 Troost Ave, Kansas City, MO 64110",
+          "distanceMiles": 0.83,
+          "source": "StreetCart docs + public address geocode"
+        },
+        {
+          "id": "osm-node-11447368349",
+          "name": "Community Food Pantry",
+          "category": "pantry",
+          "address": null,
+          "distanceMiles": 0.87,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-11447368350",
+          "name": "Mediterranean Market",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.92,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "grocery": 2,
+        "food_retailer": 4,
+        "farmers_market": 1,
+        "pantry": 2
+      }
+    },
+    {
+      "id": "art-museums-stops",
+      "label": "Art Museums Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/amnams",
+      "centroid": {
+        "lat": 39.045685000000006,
+        "lon": -94.5867205
+      },
+      "order": 15,
+      "directions": [
+        {
+          "code": "amn",
+          "label": "To River Market",
+          "stopName": "ART MUSEUMS (45TH & MAIN ST)",
+          "gtfsStopId": "1816",
+          "directionId": 0,
+          "location": {
+            "lat": 39.045554,
+            "lon": -94.586709
+          }
+        },
+        {
+          "code": "ams",
+          "label": "To UMKC",
+          "stopName": "ART MUSEUMS (45TH & MAIN ST)",
+          "gtfsStopId": "1628",
+          "directionId": 1,
+          "location": {
+            "lat": 39.045816,
+            "lon": -94.586732
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-way-253822513",
+          "name": "Midtown Market",
+          "category": "grocery",
+          "address": "3967 Main Street, Kansas City, MO, 64111",
+          "distanceMiles": 0.62,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-626295611",
+          "name": "Faststop",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.75,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-1707858749",
+          "name": "It's a Beautiful Day",
+          "category": "farmers_market",
+          "address": "3916 Broadway Boulevard",
+          "distanceMiles": 0.76,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-312531976",
+          "name": "Marsh's Sun Fresh Market",
+          "category": "grocery",
+          "address": "4001 Mill Street, Kansas City, MO, 64111",
+          "distanceMiles": 0.76,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-5640257822",
+          "name": "Whole Foods Market",
+          "category": "grocery",
+          "address": "301 East 51st Street, Kansas City, MO, 64112",
+          "distanceMiles": 0.79,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-12374469708",
+          "name": "Shell",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.89,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-11447368349",
+          "name": "Community Food Pantry",
+          "category": "pantry",
+          "address": null,
+          "distanceMiles": 0.91,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-10573846734",
+          "name": "Troost Mart",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.94,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-node-11447368350",
+          "name": "Mediterranean Market",
+          "category": "food_retailer",
+          "address": null,
+          "distanceMiles": 0.96,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "curated-bishop-sullivan-center",
+          "name": "Bishop Sullivan Center",
+          "category": "pantry",
+          "address": "3936 Troost Ave, Kansas City, MO 64110",
+          "distanceMiles": 0.98,
+          "source": "StreetCart docs + public address geocode"
+        }
+      ],
+      "categoryCounts": {
+        "grocery": 3,
+        "food_retailer": 4,
+        "farmers_market": 1,
+        "pantry": 2
+      }
+    },
+    {
+      "id": "plaza-stops",
+      "label": "Plaza Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/pznpzs",
+      "centroid": {
+        "lat": 39.0419375,
+        "lon": -94.58652599999999
+      },
+      "order": 16,
+      "directions": [
+        {
+          "code": "pzn",
+          "label": "To River Market",
+          "stopName": "PLAZA (CLEAVER II & MAIN ST)",
+          "gtfsStopId": "1817",
+          "directionId": 0,
+          "location": {
+            "lat": 39.041825,
+            "lon": -94.586457
+          }
+        },
+        {
+          "code": "pzs",
+          "label": "To UMKC",
+          "stopName": "PLAZA (CLEAVER/BROOKSIDE)",
+          "gtfsStopId": "1629",
+          "directionId": 1,
+          "location": {
+            "lat": 39.04205,
+            "lon": -94.586595
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-node-5640257822",
+          "name": "Whole Foods Market",
+          "category": "grocery",
+          "address": "301 East 51st Street, Kansas City, MO, 64112",
+          "distanceMiles": 0.54,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-253822513",
+          "name": "Midtown Market",
+          "category": "grocery",
+          "address": "3967 Main Street, Kansas City, MO, 64111",
+          "distanceMiles": 0.87,
+          "source": "OpenStreetMap"
+        },
+        {
+          "id": "osm-way-312531976",
+          "name": "Marsh's Sun Fresh Market",
+          "category": "grocery",
+          "address": "4001 Mill Street, Kansas City, MO, 64111",
+          "distanceMiles": 0.99,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "grocery": 3
+      }
+    },
+    {
+      "id": "umkc-stops",
+      "label": "UMKC Stops",
+      "arrivalsUrl": "https://arrivals.kcstreetcar.org/umn",
+      "centroid": {
+        "lat": 39.035204,
+        "lon": -94.584197
+      },
+      "order": 17,
+      "directions": [
+        {
+          "code": "umn",
+          "label": "To River Market",
+          "stopName": "UMKC (51ST & BROOKSIDE BLVD)",
+          "gtfsStopId": "1630",
+          "directionId": 0,
+          "location": {
+            "lat": 39.035204,
+            "lon": -94.584197
+          }
+        }
+      ],
+      "nearbyFood": [
+        {
+          "id": "osm-node-5640257822",
+          "name": "Whole Foods Market",
+          "category": "grocery",
+          "address": "301 East 51st Street, Kansas City, MO, 64112",
+          "distanceMiles": 0.06,
+          "source": "OpenStreetMap"
+        }
+      ],
+      "categoryCounts": {
+        "grocery": 1
+      }
+    }
+  ]
+}

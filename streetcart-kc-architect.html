@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StreetCart KC: The Architect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --base: #f8f9ff;
+      --white: #ffffff;
+      --low-tint: #eef4ff;
+      --primary: #006196;
+      --rail: #0693e3;
+      --text: #001d36;
+      --hero-start: #006196;
+      --hero-end: #007abc;
+      --chiefs: #e31837;
+      --royals: #004687;
+      --sporting: #93b1a7;
+      --current: #d4001f;
+      --success-bg: #e5f7ef;
+      --success-text: #0f6b43;
+      --title-size: clamp(2rem, 5.2vw, 4.8rem);
+      --h2-size: clamp(1.4rem, 3vw, 2.5rem);
+      --h3-size: clamp(0.98rem, 1.8vw, 1.2rem);
+      --stat-size: clamp(1.6rem, 3vw, 2.5rem);
+      --body-size: clamp(0.8rem, 1.15vw, 1rem);
+      --small-size: clamp(0.68rem, 0.95vw, 0.84rem);
+      --label-size: clamp(0.62rem, 0.85vw, 0.75rem);
+      --slide-padding: clamp(1rem, 3.8vw, 3.4rem);
+      --content-gap: clamp(0.75rem, 1.8vw, 1.6rem);
+      --element-gap: clamp(0.45rem, 1vw, 0.9rem);
+      --radius: 2rem;
+      --shadow: 0 20px 60px rgba(0, 53, 87, 0.08);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; overflow-x: hidden; }
+    html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+    body { font-family: "Inter", sans-serif; background: var(--base); color: var(--text); }
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: var(--slide-padding);
+      background: var(--base);
+    }
+    .slide-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: var(--content-gap);
+      max-height: 100%;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+    .hero { background: linear-gradient(135deg, var(--hero-start), var(--hero-end)); color: var(--white); }
+    .soft { background: var(--low-tint); }
+    .rail-top::before, .rail-spine::before {
+      content: "";
+      position: absolute;
+      background: var(--rail);
+      border-radius: 999px;
+    }
+    .rail-top::before {
+      top: calc(var(--slide-padding) * 0.45);
+      left: var(--slide-padding);
+      right: var(--slide-padding);
+      height: 0.5rem;
+    }
+    .rail-spine { position: relative; padding-left: 1.4rem; }
+    .rail-spine::before {
+      left: 0;
+      top: 0.2rem;
+      bottom: 0.2rem;
+      width: 0.45rem;
+    }
+    h1, h2, h3, .display {
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      line-height: 0.95;
+    }
+    h1 { font-size: var(--title-size); max-width: 12ch; }
+    h2 { font-size: var(--h2-size); max-width: 12ch; }
+    h3 { font-size: var(--h3-size); }
+    p, li { font-size: var(--body-size); line-height: 1.45; }
+    .eyebrow, .label {
+      font-size: var(--label-size);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .subhead { font-size: clamp(1rem, 1.55vw, 1.35rem); max-width: 40ch; opacity: 0.9; }
+    .foot {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: var(--small-size);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      opacity: 0.78;
+    }
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: clamp(1rem, 2vw, 2rem);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: var(--element-gap);
+      min-height: 0;
+    }
+    .three-col, .two-col, .kpi-grid, .scoreboard, .map-grid {
+      display: grid;
+      gap: clamp(0.8rem, 1.2vw, 1rem);
+    }
+    .three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .two-col, .scoreboard, .map-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .kpi-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .layer { position: relative; }
+    .layer .display { font-size: clamp(2rem, 3.6vw, 3.4rem); }
+    .score-card {
+      background: linear-gradient(180deg, #0d2a45, #03253b);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      display: grid;
+      gap: 0.85rem;
+      box-shadow: var(--shadow);
+    }
+    .team-line {
+      display: grid;
+      gap: 0.3rem;
+    }
+    .team-line .bar {
+      height: 0.8rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+    }
+    .team-line .bar span {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+    }
+    .map-card {
+      position: relative;
+      background:
+        radial-gradient(circle at 20% 25%, rgba(6, 147, 227, 0.28), transparent 18%),
+        radial-gradient(circle at 72% 62%, rgba(227, 24, 55, 0.18), transparent 16%),
+        linear-gradient(180deg, #f7fbff, #e9f2ff);
+      overflow: hidden;
+    }
+    .map-gridline {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 97, 150, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 97, 150, 0.08) 1px, transparent 1px);
+      background-size: 3rem 3rem;
+    }
+    .zip-badge, .marker {
+      position: absolute;
+      border-radius: 999px;
+      font-size: var(--label-size);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .zip-badge {
+      padding: 0.5rem 0.7rem;
+      background: rgba(0, 97, 150, 0.1);
+      color: var(--primary);
+    }
+    .marker {
+      width: 1rem;
+      height: 1rem;
+      background: var(--primary);
+      box-shadow: 0 0 0 0.35rem rgba(6, 147, 227, 0.14);
+    }
+    .kpi {
+      display: grid;
+      gap: 0.35rem;
+      align-content: space-between;
+    }
+    .kpi strong {
+      font-family: "Manrope", sans-serif;
+      font-size: var(--stat-size);
+      line-height: 0.95;
+    }
+    .trend {
+      background: linear-gradient(180deg, #ffffff, #f3f8ff);
+      border-radius: var(--radius);
+      padding: 1rem;
+      height: 100%;
+      min-height: 0;
+      display: grid;
+      gap: 0.8rem;
+    }
+    .trend svg {
+      width: 100%;
+      height: min(22vh, 180px);
+    }
+    .chip {
+      align-self: flex-start;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      font-size: var(--label-size);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.16);
+      color: var(--white);
+    }
+    .nav-dots {
+      position: fixed;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      z-index: 20;
+    }
+    .nav-dots button {
+      width: 0.8rem;
+      height: 0.8rem;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(0, 29, 54, 0.22);
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .nav-dots button.active { background: var(--primary); transform: scale(1.2); }
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 0.35rem;
+      background: var(--rail);
+      width: 0;
+      z-index: 25;
+      transition: width 0.3s ease;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+    }
+    .slide.visible .reveal { opacity: 1; transform: translateY(0); }
+    .slide.initial .reveal { opacity: 1; transform: none; transition: none; }
+    .slide.visible .reveal:nth-child(2) { transition-delay: 0.08s; }
+    .slide.visible .reveal:nth-child(3) { transition-delay: 0.16s; }
+    .slide.visible .reveal:nth-child(4) { transition-delay: 0.24s; }
+    .slide.visible .reveal:nth-child(5) { transition-delay: 0.32s; }
+    @media (max-width: 980px) {
+      .three-col, .two-col, .kpi-grid, .scoreboard, .map-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-height: 700px) {
+      :root {
+        --slide-padding: clamp(0.9rem, 3vw, 1.8rem);
+        --title-size: clamp(1.8rem, 4.8vw, 3.4rem);
+      }
+    }
+    @media (max-height: 600px) {
+      :root {
+        --slide-padding: clamp(0.7rem, 2vw, 1.2rem);
+        --body-size: clamp(0.72rem, 1vw, 0.88rem);
+      }
+      .nav-dots { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <nav class="nav-dots" aria-label="Slide navigation"></nav>
+
+  <section class="slide rail-top" id="slide-1">
+    <div class="slide-content">
+      <div class="eyebrow reveal">StreetCart KC</div>
+      <h1 class="reveal">From Rail Line to Life Line</h1>
+      <p class="subhead reveal">The Architect: Platform &amp; Live Dashboard</p>
+      <div class="three-col reveal">
+        <article class="card layer rail-spine">
+          <div class="label">Data ingest</div>
+          <div class="display">8</div>
+          <p>311, pantries, food-atlas, closures, transit, demographics, supply-alerts, harvest.</p>
+        </article>
+        <article class="card layer rail-spine">
+          <div class="label">Dispatch</div>
+          <div class="display">1</div>
+          <p>Volunteer matching, routing, scoring, and brackets in one decision layer.</p>
+        </article>
+        <article class="card layer rail-spine">
+          <div class="label">Display</div>
+          <div class="display">3</div>
+          <p>Kiosk 1080x1920, web dashboard, and mobile all render from the same operational truth.</p>
+        </article>
+      </div>
+      <div class="foot reveal">
+        <span>Team Codex KC</span>
+        <span>March 28, 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide soft" id="slide-2">
+    <div class="slide-content">
+      <div class="eyebrow reveal">Dashboard: scoreboard + map</div>
+      <div class="scoreboard reveal">
+        <article class="score-card">
+          <div class="label">Tournament scoreboard</div>
+          <div class="team-line"><span>Chiefs 412</span><div class="bar"><span style="width:82%; background:var(--chiefs)"></span></div></div>
+          <div class="team-line"><span>Royals 387</span><div class="bar"><span style="width:77%; background:var(--royals)"></span></div></div>
+          <div class="team-line"><span>Sporting 294</span><div class="bar"><span style="width:59%; background:var(--sporting)"></span></div></div>
+          <div class="team-line"><span>Current 215</span><div class="bar"><span style="width:44%; background:var(--current)"></span></div></div>
+        </article>
+        <article class="card map-card">
+          <div class="map-gridline" aria-hidden="true"></div>
+          <div class="zip-badge" style="top:18%; left:16%;">64127</div>
+          <div class="zip-badge" style="top:38%; left:28%;">64128</div>
+          <div class="zip-badge" style="top:56%; left:36%;">64130</div>
+          <div class="zip-badge" style="top:70%; left:44%;">64132</div>
+          <div class="zip-badge" style="top:28%; right:20%;">66101</div>
+          <div class="zip-badge" style="top:52%; right:14%;">66105</div>
+          <div class="marker" style="top:22%; left:54%;"></div>
+          <div class="marker" style="top:49%; left:62%;"></div>
+          <div class="marker" style="top:67%; left:22%;"></div>
+          <div class="marker" style="top:34%; left:74%;"></div>
+          <div style="position:absolute; left:1rem; bottom:1rem; right:1rem;" class="card">
+            <div class="label">Overlay</div>
+            <p>ZIP heat map with food desert overlay, store closure markers, and pantry network with cold storage flagged.</p>
+          </div>
+        </article>
+      </div>
+      <div class="foot reveal">
+        <span>All 8 API endpoints rendered in one operational view</span>
+        <span>Operations read as one picture</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-3">
+    <div class="slide-content">
+      <div class="eyebrow reveal">Dashboard: funder view</div>
+      <div class="kpi-grid reveal">
+        <article class="card kpi"><span class="label">Households</span><strong>3.8K</strong></article>
+        <article class="card kpi"><span class="label">Deliveries</span><strong>5.9K</strong></article>
+        <article class="card kpi"><span class="label">Pounds</span><strong>184K</strong></article>
+        <article class="card kpi"><span class="label">Equity %</span><strong>72%</strong></article>
+        <article class="card kpi"><span class="label">Cost/box</span><strong>$29</strong></article>
+        <article class="card kpi"><span class="label">Vol retention</span><strong>43%</strong></article>
+      </div>
+      <div class="two-col reveal">
+        <article class="card">
+          <h3>Budget tracker</h3>
+          <p>Spend vs plan remains transparent across ops, tech, outreach, wrap, and evaluation.</p>
+          <div class="team-line"><span>Ops 68%</span><div class="bar"><span style="width:68%; background:var(--primary)"></span></div></div>
+          <div class="team-line"><span>Tech 61%</span><div class="bar"><span style="width:61%; background:var(--rail)"></span></div></div>
+          <div class="team-line"><span>Marketing 72%</span><div class="bar"><span style="width:72%; background:#4ea3d3"></span></div></div>
+        </article>
+        <article class="trend">
+          <div class="label">Cost-per-delivery trend over 60 days</div>
+          <svg viewBox="0 0 400 180" role="img" aria-label="Cost per delivery trend line declining over sixty days">
+            <path d="M0 150 C60 132 90 126 130 118 S220 92 270 80 S340 54 400 38" fill="none" stroke="#0693e3" stroke-width="8" stroke-linecap="round" />
+            <path d="M0 150 C60 132 90 126 130 118 S220 92 270 80 S340 54 400 38 L400 180 L0 180 Z" fill="rgba(6,147,227,0.12)" />
+          </svg>
+          <p>This is what the city sees. Data, not hope.</p>
+        </article>
+      </div>
+      <div class="foot reveal">
+        <span>Funding case is visible every day</span>
+        <span>Renewal becomes an evidence review</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide hero" id="slide-4">
+    <div class="slide-content">
+      <div class="eyebrow reveal">Curveball resilience</div>
+      <h2 class="reveal">The System Absorbs Shocks</h2>
+      <div class="two-col reveal">
+        <article class="card" style="background:rgba(255,255,255,0.12); color:#fff; box-shadow:none;">
+          <div class="chip">sa-003: community_vote</div>
+          <p>Dashboard surfaces the critical alert. Team launches Voto y Verdura. Bilingual outreach routes through El Centro and Crosslines.</p>
+        </article>
+        <article class="card" style="background:rgba(255,255,255,0.12); color:#fff; box-shadow:none;">
+          <div class="chip">sa-004: perishable_donation</div>
+          <p>System queries pantry cold-storage capacity, routes 1,000 lbs to 4 partners, and triggers a bonus-point volunteer call. Executed for $190.</p>
+        </article>
+      </div>
+      <p class="subhead reveal">Centralized models break. Decentralized systems flex.</p>
+      <div class="foot reveal">
+        <span>Alerts become actions</span>
+        <span>Actions become documented proof</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide hero" id="slide-5">
+    <div class="slide-content">
+      <div class="eyebrow reveal">Close</div>
+      <h2 class="reveal">From Rail Line to Life Line</h2>
+      <p class="subhead reveal">Eight endpoints. One dashboard. Three surfaces. One truth. The data is the renewal case.</p>
+      <div class="three-col reveal">
+        <article class="card" style="background:rgba(255,255,255,0.12); color:#fff; box-shadow:none;"><h3>8 endpoints</h3><p>Operational inputs stay live.</p></article>
+        <article class="card" style="background:rgba(255,255,255,0.12); color:#fff; box-shadow:none;"><h3>3 surfaces</h3><p>Kiosk, web, mobile stay aligned.</p></article>
+        <article class="card" style="background:rgba(255,255,255,0.12); color:#fff; box-shadow:none;"><h3>1 renewal case</h3><p>The city sees the proof loop.</p></article>
+      </div>
+      <div class="foot reveal">
+        <span>Team Codex KC</span>
+        <span>StreetCartKC.com</span>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    class SlidePresentation {
+      constructor() {
+        this.slides = [...document.querySelectorAll(".slide")];
+        this.progress = document.querySelector(".progress");
+        this.nav = document.querySelector(".nav-dots");
+        this.index = 0;
+        this.slides[0]?.classList.add("visible", "initial");
+        this.renderDots();
+        this.observeSlides();
+        this.bindEvents();
+        this.updateUI(0);
+      }
+      renderDots() {
+        this.slides.forEach((slide, index) => {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.setAttribute("aria-label", `Go to slide ${index + 1}`);
+          dot.addEventListener("click", () => this.goTo(index));
+          this.nav.appendChild(dot);
+        });
+      }
+      observeSlides() {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const index = this.slides.indexOf(entry.target);
+              entry.target.classList.add("visible");
+              this.updateUI(index);
+            }
+          });
+        }, { threshold: 0.6 });
+        this.slides.forEach((slide) => observer.observe(slide));
+      }
+      bindEvents() {
+        window.addEventListener("keydown", (event) => {
+          if (event.key === "ArrowDown" || event.key === "ArrowRight" || event.key === " ") {
+            event.preventDefault();
+            this.goTo(Math.min(this.index + 1, this.slides.length - 1));
+          }
+          if (event.key === "ArrowUp" || event.key === "ArrowLeft") {
+            event.preventDefault();
+            this.goTo(Math.max(this.index - 1, 0));
+          }
+        });
+      }
+      goTo(index) {
+        this.slides[index].scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      updateUI(index) {
+        this.index = index;
+        this.progress.style.width = `${((index + 1) / this.slides.length) * 100}%`;
+        [...this.nav.children].forEach((dot, dotIndex) => {
+          dot.classList.toggle("active", dotIndex === index);
+        });
+      }
+    }
+    new SlidePresentation();
+  </script>
+</body>
+</html>

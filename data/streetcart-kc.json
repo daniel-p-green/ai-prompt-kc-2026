@@ -1,0 +1,886 @@
+{
+  "meta": {
+    "title": "StreetCart KC",
+    "subtitle": "Streetcar-led food access pilot for Kansas City",
+    "team": "Team Codex KC",
+    "tagline": "Feed your block. Rep your team."
+  },
+  "brand": {
+    "colors": {
+      "blue": "#0082D6",
+      "navy": "#015890",
+      "route": "#0A6FB7",
+      "gold": "#F4CE3C",
+      "charcoal": "#392F2B",
+      "gray": "#F4F4F4",
+      "white": "#FFFFFF"
+    }
+  },
+  "dashboard": {
+    "title": "StreetCart KC Mission Control",
+    "subtitle": "Post-curveball architect dashboard for kiosks, judges, and city operators.",
+    "scoreboardWindow": "Regular season bracket • Week 5",
+    "kioskCta": "StreetCartKC.com | Text JOIN",
+    "refreshCadence": "15-30 minute kiosk refresh during active windows",
+    "contractValue": 500000,
+    "corridorMiles": 5.7,
+    "stops": 30,
+    "weekdayRiders": 10000,
+    "kiosks": 25
+  },
+  "thesis": "StreetCart KC converts Kansas City's fare-free streetcar corridor into a gamified food access backbone, using sports-team volunteer tournaments to move grocery boxes from transit hubs into the city's worst food deserts for $20-35 per delivered box.",
+  "problemProof": [
+    {
+      "label": "Residents hit by store closures",
+      "value": "46,400",
+      "detail": "Four grocery closures in 2024-2025 landed inside USDA food-desert ZIPs."
+    },
+    {
+      "label": "Federal supply shortfall",
+      "value": "3M lbs",
+      "detail": "Harvesters reports a 3 million-pound quarterly gap after the TEFAP cut."
+    },
+    {
+      "label": "Produce rescue window",
+      "value": "1,000 lbs",
+      "detail": "Emergency tomatoes and peppers must be routed through cold-chain partners inside 48 hours."
+    }
+  ],
+  "priorityZips": [
+    {
+      "zip": "66101",
+      "priority": "Critical",
+      "povertyRate": 44.6,
+      "foodInsecurityRate": 24.1,
+      "noVehiclePct": 48,
+      "weeklyLbs": 15000,
+      "reason": "Highest poverty, Spanish-first outreach, and the community-vote requirement."
+    },
+    {
+      "zip": "64127",
+      "priority": "Critical",
+      "povertyRate": 41.3,
+      "foodInsecurityRate": 21.4,
+      "noVehiclePct": 45,
+      "weeklyLbs": 8500,
+      "reason": "Save-A-Lot closure plus strong bilingual pantry access through Guadalupe and Della Lamb."
+    },
+    {
+      "zip": "66105",
+      "priority": "Critical",
+      "povertyRate": 39.8,
+      "foodInsecurityRate": 22.6,
+      "noVehiclePct": 51,
+      "weeklyLbs": 9000,
+      "reason": "Cross-Lines cold storage plus the second community-vote ZIP."
+    },
+    {
+      "zip": "64130",
+      "priority": "Critical",
+      "povertyRate": 38.2,
+      "foodInsecurityRate": 18.2,
+      "noVehiclePct": 38,
+      "weeklyLbs": 12000,
+      "reason": "Price Chopper closure and the strongest east-side route volume."
+    },
+    {
+      "zip": "64128",
+      "priority": "High",
+      "povertyRate": 35.7,
+      "foodInsecurityRate": 16.8,
+      "noVehiclePct": 42,
+      "weeklyLbs": 5000,
+      "reason": "Dollar General Market closure with thin fresh-food replacement options."
+    },
+    {
+      "zip": "64132",
+      "priority": "High",
+      "povertyRate": 33.1,
+      "foodInsecurityRate": 17.1,
+      "noVehiclePct": 39,
+      "weeklyLbs": 6500,
+      "reason": "Food-desert tract with room for recurring feeder routes from Union Station and Plaza."
+    }
+  ],
+  "zipDemographics": [
+    {
+      "zip": "66101",
+      "population": 24500,
+      "povertyRate": 44.6,
+      "hispanicPct": 62.8,
+      "blackPct": 14.2,
+      "noVehiclePct": 48,
+      "snapPct": 56,
+      "foodInsecurityRate": 24.1,
+      "childPovertyPct": 62.4,
+      "priority": "Critical"
+    },
+    {
+      "zip": "64127",
+      "population": 14200,
+      "povertyRate": 41.3,
+      "hispanicPct": 28.6,
+      "blackPct": 48.2,
+      "noVehiclePct": 45,
+      "snapPct": 52,
+      "foodInsecurityRate": 21.4,
+      "childPovertyPct": 56.8,
+      "priority": "Critical"
+    },
+    {
+      "zip": "66105",
+      "population": 18200,
+      "povertyRate": 39.8,
+      "hispanicPct": 71.4,
+      "blackPct": 8.6,
+      "noVehiclePct": 51,
+      "snapPct": 51,
+      "foodInsecurityRate": 22.6,
+      "childPovertyPct": 58.9,
+      "priority": "Critical"
+    },
+    {
+      "zip": "64130",
+      "population": 18700,
+      "povertyRate": 38.2,
+      "hispanicPct": 12.4,
+      "blackPct": 72.1,
+      "noVehiclePct": 38,
+      "snapPct": 48,
+      "foodInsecurityRate": 18.2,
+      "childPovertyPct": 52.1,
+      "priority": "Critical"
+    },
+    {
+      "zip": "64128",
+      "population": 11800,
+      "povertyRate": 35.7,
+      "hispanicPct": 8.9,
+      "blackPct": 68.4,
+      "noVehiclePct": 42,
+      "snapPct": 44,
+      "foodInsecurityRate": 16.8,
+      "childPovertyPct": 48.3,
+      "priority": "High"
+    },
+    {
+      "zip": "64132",
+      "population": 16400,
+      "povertyRate": 33.1,
+      "hispanicPct": 10.2,
+      "blackPct": 58.7,
+      "noVehiclePct": 39,
+      "snapPct": 38,
+      "foodInsecurityRate": 17.1,
+      "childPovertyPct": 44.8,
+      "priority": "High"
+    },
+    {
+      "zip": "64109",
+      "population": 15600,
+      "povertyRate": 29.8,
+      "hispanicPct": 15.2,
+      "blackPct": 42.6,
+      "noVehiclePct": 32,
+      "snapPct": 36,
+      "foodInsecurityRate": 14.1,
+      "childPovertyPct": 39.7,
+      "priority": "Medium"
+    },
+    {
+      "zip": "64134",
+      "population": 19800,
+      "povertyRate": 26.4,
+      "hispanicPct": 18.9,
+      "blackPct": 52.3,
+      "noVehiclePct": 28,
+      "snapPct": 31,
+      "foodInsecurityRate": 13.5,
+      "childPovertyPct": 35.2,
+      "priority": "Medium"
+    },
+    {
+      "zip": "64108",
+      "population": 12300,
+      "povertyRate": 32.1,
+      "hispanicPct": 48.2,
+      "blackPct": 18.4,
+      "noVehiclePct": 35,
+      "snapPct": 38,
+      "foodInsecurityRate": 15.3,
+      "childPovertyPct": 42.1,
+      "priority": "Medium"
+    },
+    {
+      "zip": "64110",
+      "population": 22400,
+      "povertyRate": 22.1,
+      "hispanicPct": 7.8,
+      "blackPct": 35.4,
+      "noVehiclePct": 22,
+      "snapPct": 28,
+      "foodInsecurityRate": 11.2,
+      "childPovertyPct": 28.6,
+      "priority": "Lower"
+    },
+    {
+      "zip": "64111",
+      "population": 19100,
+      "povertyRate": 18.9,
+      "hispanicPct": 12.1,
+      "blackPct": 22.8,
+      "noVehiclePct": 18,
+      "snapPct": 22,
+      "foodInsecurityRate": 9.8,
+      "childPovertyPct": 22.4,
+      "priority": "Lower"
+    },
+    {
+      "zip": "64106",
+      "population": 8900,
+      "povertyRate": 28.4,
+      "hispanicPct": 22.6,
+      "blackPct": 32.1,
+      "noVehiclePct": 30,
+      "snapPct": 34,
+      "foodInsecurityRate": 13.8,
+      "childPovertyPct": 38.9,
+      "priority": "Medium"
+    }
+  ],
+  "storeClosures": [
+    {
+      "name": "Save-A-Lot, Prospect Ave",
+      "zip": "64127",
+      "closed": "Aug 2024",
+      "type": "Discount grocery",
+      "impactedPopulation": 12400,
+      "nearestAlternative": "Aldi, 2.8 miles"
+    },
+    {
+      "name": "Price Chopper, Blue Pkwy",
+      "zip": "64130",
+      "closed": "Nov 2024",
+      "type": "Full service",
+      "impactedPopulation": 18700,
+      "nearestAlternative": "Walmart, 3.4 miles"
+    },
+    {
+      "name": "Aldi, Independence Ave",
+      "zip": "64124",
+      "closed": "Feb 2025",
+      "type": "Discount grocery",
+      "impactedPopulation": 9200,
+      "nearestAlternative": "Sun Fresh, 1.9 miles"
+    },
+    {
+      "name": "Dollar General Market, Van Brunt",
+      "zip": "64128",
+      "closed": "Jun 2025",
+      "type": "Limited grocery",
+      "impactedPopulation": 6100,
+      "nearestAlternative": "Family Dollar, 0.8 mi (no fresh)"
+    }
+  ],
+  "supplyAlerts": [
+    {
+      "title": "TEFAP federal cut 40%",
+      "severity": "High",
+      "detail": "Missouri allocation cut effective March 1. Harvesters reports a 3M-pound shortfall this quarter.",
+      "impactedZips": ["64130", "64127", "64128", "64109", "64132", "66101", "66105"]
+    },
+    {
+      "title": "311 food calls up 24-28%",
+      "severity": "Medium",
+      "detail": "Demand is up 24% in 64130 and 28% in 66101 over the last six months.",
+      "impactedZips": ["64130", "66101"]
+    },
+    {
+      "title": "Community vote required",
+      "severity": "Critical",
+      "detail": "City council requires resident support in Zones 2-3. One vote zone is 80% Spanish-speaking and the deadline is in 14 days.",
+      "impactedZips": ["66101", "66105"]
+    },
+    {
+      "title": "Emergency produce donation",
+      "severity": "Urgent",
+      "detail": "1,000 lbs of tomatoes and peppers spoil inside 48 hours and must be routed to 64130, 64127, and 66101.",
+      "impactedZips": ["64130", "64127", "66101"]
+    }
+  ],
+  "harvestRoutes": [
+    {
+      "zip": "64130",
+      "priority": "Critical",
+      "weeklyLbs": 12000,
+      "agencies": ["Harvesters", "Bishop Sullivan Center"],
+      "schedule": "Tue / Thu"
+    },
+    {
+      "zip": "64127",
+      "priority": "Critical",
+      "weeklyLbs": 8500,
+      "agencies": ["Guadalupe Centers", "Della Lamb"],
+      "schedule": "Tue / Thu"
+    },
+    {
+      "zip": "66101",
+      "priority": "Critical",
+      "weeklyLbs": 15000,
+      "agencies": ["Cross-Lines", "El Centro"],
+      "schedule": "Wed / Fri"
+    },
+    {
+      "zip": "66105",
+      "priority": "High",
+      "weeklyLbs": 9000,
+      "agencies": ["Cross-Lines"],
+      "schedule": "Wed / Fri"
+    },
+    {
+      "zip": "64132",
+      "priority": "High",
+      "weeklyLbs": 6500,
+      "agencies": ["Community Assistance Council"],
+      "schedule": "Flexible"
+    },
+    {
+      "zip": "64128",
+      "priority": "High",
+      "weeklyLbs": 5000,
+      "agencies": ["Reconciliation Services"],
+      "schedule": "Flexible"
+    },
+    {
+      "zip": "64108",
+      "priority": "Medium",
+      "weeklyLbs": 4000,
+      "agencies": ["Guadalupe Centers"],
+      "schedule": "Flexible"
+    },
+    {
+      "zip": "64134",
+      "priority": "Medium",
+      "weeklyLbs": 3500,
+      "agencies": ["Community Assistance Council"],
+      "schedule": "Flexible"
+    }
+  ],
+  "pantryNetwork": [
+    {
+      "name": "Harvesters",
+      "zip": "64129",
+      "languages": ["EN", "ES"],
+      "coldStorage": "Industrial",
+      "idRequired": "No",
+      "monthlyCapacity": "2,500,000 lbs",
+      "type": "Food bank"
+    },
+    {
+      "name": "Bishop Sullivan Center",
+      "zip": "64110",
+      "languages": ["EN", "ES"],
+      "coldStorage": "No",
+      "idRequired": "No",
+      "monthlyCapacity": "800 households",
+      "type": "Pantry"
+    },
+    {
+      "name": "Guadalupe Centers",
+      "zip": "64108",
+      "languages": ["ES", "EN"],
+      "coldStorage": "Small fridge",
+      "idRequired": "No",
+      "monthlyCapacity": "600 households",
+      "type": "Pantry"
+    },
+    {
+      "name": "Reconciliation Services",
+      "zip": "64109",
+      "languages": ["EN"],
+      "coldStorage": "No",
+      "idRequired": "Yes",
+      "monthlyCapacity": "450 households",
+      "type": "Pantry"
+    },
+    {
+      "name": "Community Assistance Council",
+      "zip": "64134",
+      "languages": ["EN"],
+      "coldStorage": "Walk-in",
+      "idRequired": "Yes",
+      "monthlyCapacity": "700 households",
+      "type": "Pantry"
+    },
+    {
+      "name": "Salvation Army KC",
+      "zip": "64111",
+      "languages": ["EN", "ES"],
+      "coldStorage": "No",
+      "idRequired": "No",
+      "monthlyCapacity": "500 households",
+      "type": "Pantry"
+    },
+    {
+      "name": "Della Lamb",
+      "zip": "64106",
+      "languages": ["EN", "ES", "Somali", "Swahili"],
+      "coldStorage": "Small fridge",
+      "idRequired": "No",
+      "monthlyCapacity": "350 households",
+      "type": "Refugee services"
+    },
+    {
+      "name": "Sheffield Place",
+      "zip": "64126",
+      "languages": ["EN"],
+      "coldStorage": "No",
+      "idRequired": "No",
+      "monthlyCapacity": "Seasonal",
+      "type": "Shelter"
+    },
+    {
+      "name": "After the Harvest KC",
+      "zip": "Various",
+      "languages": ["EN", "ES"],
+      "coldStorage": "Partner required",
+      "idRequired": "No",
+      "monthlyCapacity": "150,000 lbs",
+      "type": "Mobile distribution"
+    },
+    {
+      "name": "Cross-Lines",
+      "zip": "66105",
+      "languages": ["EN", "ES"],
+      "coldStorage": "Walk-in",
+      "idRequired": "Yes",
+      "monthlyCapacity": "900 households",
+      "type": "Pantry"
+    },
+    {
+      "name": "KC Community Gardens",
+      "zip": "64132",
+      "languages": ["EN"],
+      "coldStorage": "No",
+      "idRequired": "No",
+      "monthlyCapacity": "Seasonal",
+      "type": "Garden"
+    },
+    {
+      "name": "El Centro Academy",
+      "zip": "66101",
+      "languages": ["ES", "EN"],
+      "coldStorage": "No",
+      "idRequired": "No",
+      "monthlyCapacity": "120 families",
+      "type": "School pantry"
+    }
+  ],
+  "transitStops": [
+    {
+      "route": "31 - 31st Street",
+      "zip": "64109",
+      "nearPantry": "Reconciliation Services",
+      "walkMin": 3,
+      "frequency": "30 min"
+    },
+    {
+      "route": "39 - Prospect",
+      "zip": "64110",
+      "nearPantry": "Bishop Sullivan Center",
+      "walkMin": 2,
+      "frequency": "15 min"
+    },
+    {
+      "route": "12 - 12th Street",
+      "zip": "64126",
+      "nearPantry": "Sheffield Place",
+      "walkMin": 5,
+      "frequency": "30 min"
+    },
+    {
+      "route": "24 - Independence",
+      "zip": "64106",
+      "nearPantry": "Della Lamb",
+      "walkMin": 4,
+      "frequency": "20 min"
+    },
+    {
+      "route": "71 - Blue Ridge",
+      "zip": "64134",
+      "nearPantry": "Community Assistance Council",
+      "walkMin": 8,
+      "frequency": "30 min"
+    },
+    {
+      "route": "35 - 35th Street",
+      "zip": "64108",
+      "nearPantry": "Guadalupe Centers",
+      "walkMin": 6,
+      "frequency": "30 min"
+    },
+    {
+      "route": "51 - KCK/Minnesota",
+      "zip": "66101",
+      "nearPantry": "El Centro Academy",
+      "walkMin": 2,
+      "frequency": "20 min"
+    },
+    {
+      "route": "101 - Troost MAX",
+      "zip": "64111",
+      "nearPantry": "Salvation Army KC",
+      "walkMin": 3,
+      "frequency": "10 min"
+    }
+  ],
+  "hubs": [
+    {
+      "name": "River Market Hub",
+      "type": "Streetcar spine",
+      "schedule": "Tue / Thu · 8:00 AM - 11:00 AM",
+      "partners": ["Harvesters", "After the Harvest KC"],
+      "serves": ["64127", "64130"],
+      "purpose": "Morning sort, produce triage, and north-end volunteer staging.",
+      "mode": "Pickup + volunteer dispatch"
+    },
+    {
+      "name": "Union Station Hub",
+      "type": "Streetcar spine",
+      "schedule": "Tue / Thu · 4:00 PM - 6:00 PM",
+      "partners": ["Bishop Sullivan Center", "Harvesters"],
+      "serves": ["64130", "64132"],
+      "purpose": "Visible civic handoff point with commuter foot traffic and media value.",
+      "mode": "Pickup + scoreboard visibility"
+    },
+    {
+      "name": "Westport Hub",
+      "type": "Streetcar spine",
+      "schedule": "Wed / Fri · 11:00 AM - 2:00 PM",
+      "partners": ["Guadalupe Centers", "KC Community Gardens"],
+      "serves": ["64127", "64128", "64132"],
+      "purpose": "West-side staging point feeding east-side routes without pretending the streetcar reaches every block.",
+      "mode": "Pickup + feeder handoff"
+    },
+    {
+      "name": "Cross-Lines Connector Hub",
+      "type": "Partner bridge",
+      "schedule": "Wed / Fri · 11:00 AM - 2:00 PM",
+      "partners": ["Cross-Lines", "El Centro"],
+      "serves": ["66101", "66105"],
+      "purpose": "KCK bridge hub tied to the resident vote and the cold-storage constraint.",
+      "mode": "Pickup + selective delivery"
+    }
+  ],
+  "budget": [
+    {
+      "category": "Pilot operations (60 days)",
+      "amount": 150000,
+      "percent": 30,
+      "detail": "Staff, food top-ups, cold-chain supplies, vans, insurance, gas cards, and contingency."
+    },
+    {
+      "category": "Tech build",
+      "amount": 120000,
+      "percent": 24,
+      "detail": "Dispatch and gamification platform, kiosk integration, routing, dashboard, and QA."
+    },
+    {
+      "category": "Marketing + branding",
+      "amount": 100000,
+      "percent": 20,
+      "detail": "Campaign creative, co-branding, launch events, PR, and bilingual outreach."
+    },
+    {
+      "category": "Streetcar wrap + renewal",
+      "amount": 80000,
+      "percent": 16,
+      "detail": "Winning-team wrap, maintenance, and a seed runway into Season 2."
+    },
+    {
+      "category": "Evaluation",
+      "amount": 50000,
+      "percent": 10,
+      "detail": "Third-party evaluator, survey design, and the final report."
+    }
+  ],
+  "budgetTracker": {
+    "spent": 183000,
+    "forecast": 492000,
+    "costPerBoxCurrent": "$28",
+    "costPerBoxTarget": "<$35",
+    "equityShareTarget": ">70%"
+  },
+  "kpis": [
+    {
+      "label": "Unique households served",
+      "value": "3,000-5,000",
+      "detail": "Households reached across the six highest-priority ZIPs during the 60-day pilot."
+    },
+    {
+      "label": "Total deliveries completed",
+      "value": "5,000-7,500",
+      "detail": "Verified boxes moved through hubs, routes, and selective delivery assists."
+    },
+    {
+      "label": "Pounds distributed",
+      "value": "150K-250K",
+      "detail": "Combined donated and purchased food moved through partner-led operations."
+    },
+    {
+      "label": "Priority ZIP share",
+      "value": ">70%",
+      "detail": "Delivery volume held in 64127, 64128, 64130, 64132, 66101, and 66105."
+    }
+  ],
+  "renewalCase": [
+    "3,000-5,000 households served with more than 70% of volume in the six worst ZIPs",
+    "Fully loaded delivered-box cost held below $35 with a 3:1 to 5:1 donated-food leverage ratio",
+    "Volunteer retention above 40% for repeat drivers and route claimers",
+    "Community vote cleared in 66101 and 66105 inside 14 days"
+  ],
+  "teams": [
+    {
+      "name": "Chiefs Kingdom",
+      "points": 1248,
+      "verified": 412,
+      "deliveries": 412,
+      "households": 306,
+      "pounds": 12840,
+      "status": "Leads Week 5",
+      "color": "#E31837"
+    },
+    {
+      "name": "Royals Respond",
+      "points": 1176,
+      "verified": 387,
+      "deliveries": 387,
+      "households": 289,
+      "pounds": 11760,
+      "status": "Closing gap",
+      "color": "#004687"
+    },
+    {
+      "name": "Sporting KC",
+      "points": 1032,
+      "verified": 338,
+      "deliveries": 338,
+      "households": 249,
+      "pounds": 10140,
+      "status": "Needs a strong Friday",
+      "color": "#93B1A7"
+    },
+    {
+      "name": "KC Current",
+      "points": 984,
+      "verified": 322,
+      "deliveries": 322,
+      "households": 237,
+      "pounds": 9660,
+      "status": "Wildcard surge",
+      "color": "#D4001F"
+    },
+    {
+      "name": "KCK Unidos",
+      "points": 912,
+      "verified": 298,
+      "deliveries": 298,
+      "households": 228,
+      "pounds": 8940,
+      "status": "Owns the vote-zone routes",
+      "color": "#2D6A4F"
+    }
+  ],
+  "liveFeed": {
+    "tickMs": 12000,
+    "minuteStep": 6,
+    "initialEntries": [
+      {
+        "id": "feed-1",
+        "team": "Chiefs Kingdom",
+        "zip": "64130",
+        "hub": "Union Station Hub",
+        "action": "Delivered 24 produce boxes",
+        "households": 16,
+        "pounds": 640,
+        "points": 72,
+        "deliveries": 24,
+        "minutesAgo": 4
+      },
+      {
+        "id": "feed-2",
+        "team": "KCK Unidos",
+        "zip": "66101",
+        "hub": "Cross-Lines Connector Hub",
+        "action": "Collected 88 resident support cards",
+        "households": 22,
+        "pounds": 0,
+        "points": 54,
+        "deliveries": 18,
+        "minutesAgo": 9
+      },
+      {
+        "id": "feed-3",
+        "team": "Royals Respond",
+        "zip": "64127",
+        "hub": "River Market Hub",
+        "action": "Cleared the Save-A-Lot replacement route",
+        "households": 14,
+        "pounds": 420,
+        "points": 48,
+        "deliveries": 16,
+        "minutesAgo": 15
+      },
+      {
+        "id": "feed-4",
+        "team": "Sporting KC",
+        "zip": "64132",
+        "hub": "Westport Hub",
+        "action": "Finished a same-day cold-chain run",
+        "households": 12,
+        "pounds": 360,
+        "points": 42,
+        "deliveries": 14,
+        "minutesAgo": 21
+      }
+    ],
+    "queuedEvents": [
+      {
+        "id": "queued-1",
+        "team": "KC Current",
+        "zip": "66105",
+        "hub": "Cross-Lines Connector Hub",
+        "action": "Moved the produce scrimmage reserve to Cross-Lines",
+        "households": 18,
+        "pounds": 400,
+        "points": 60,
+        "deliveries": 20
+      },
+      {
+        "id": "queued-2",
+        "team": "Chiefs Kingdom",
+        "zip": "64130",
+        "hub": "Union Station Hub",
+        "action": "Finished an after-work east-side route block",
+        "households": 17,
+        "pounds": 510,
+        "points": 51,
+        "deliveries": 17
+      },
+      {
+        "id": "queued-3",
+        "team": "KCK Unidos",
+        "zip": "66101",
+        "hub": "Cross-Lines Connector Hub",
+        "action": "Closed the bilingual vote-and-vegetables shift",
+        "households": 15,
+        "pounds": 300,
+        "points": 57,
+        "deliveries": 19
+      },
+      {
+        "id": "queued-4",
+        "team": "Royals Respond",
+        "zip": "64127",
+        "hub": "River Market Hub",
+        "action": "Finished a Prospect replacement route",
+        "households": 13,
+        "pounds": 390,
+        "points": 45,
+        "deliveries": 15
+      }
+    ]
+  },
+  "residentExample": {
+    "name": "Familia Ramirez",
+    "zip": "66101",
+    "language": "Español",
+    "instructionTitle": "Su proxima recogida de StreetCart KC",
+    "instructionBody": "Miercoles · 11:00 AM a 2:00 PM · Cross-Lines Connector Hub. Lleve una bolsa reutilizable. No se requiere identificacion. El Centro tendra apoyo en espanol en el sitio.",
+    "fallback": "Si no puede llegar, responda AYUDA para solicitar entrega prioritaria."
+  },
+  "aiProcess": [
+    "Eight challenge endpoints were reduced to one operating fact base: alerts, demographics, harvest routes, closures, pantries, transit, scoreboards, and budget.",
+    "Curveballs were absorbed into the same model instead of being bolted on as side memos or appendix slides.",
+    "Oracle, Muse, and Architect now all read from one data spine, which keeps the deck, dashboard, and static site consistent under deadline pressure."
+  ],
+  "curveballModule": {
+    "title": "Two curveballs. Same operating spine.",
+    "body": "StreetCart KC handles the vote requirement and the 48-hour produce surge without changing the streetcar-backed, partner-led model.",
+    "communityVote": {
+      "title": "Voto y Verdura in 66101 + 66105",
+      "window": "14 days",
+      "summary": "Spanish-first, trust-based outreach runs through El Centro Academy, Cross-Lines, tiendas, laundromats, and produce pop-ups instead of downtown civic channels.",
+      "zips": ["66101", "66105"],
+      "anchors": [
+        "El Centro Academy pickup line",
+        "Cross-Lines distribution windows",
+        "Minnesota Avenue bus stop pop-ups",
+        "Tienda and laundromat produce tables"
+      ],
+      "tactics": [
+        "Days 1-3: collect support at trusted anchor sites",
+        "Days 4-10: run produce giveaways with support forms in every bag",
+        "Days 11-13: send bilingual two-person canvass teams into the densest blocks"
+      ],
+      "designRules": [
+        "Spanish-first materials with English second",
+        "Phone support and in-person collection, not app dependency",
+        "Dedicated KCK bracket identity so the vote ZIPs are not forced into Missouri team lanes"
+      ],
+      "hotlineLabel": "Bilingual hotline active during outreach windows",
+      "bracketTeam": "KCK Unidos"
+    },
+    "produceSurge": {
+      "title": "1,000 lbs in a 48-hour perishables window",
+      "window": "48 hours",
+      "summary": "Cold storage, not demand, is the binding constraint, so produce is routed to four partner sites that can hold or move perishables immediately.",
+      "totalLbs": 1000,
+      "allocations": [
+        {
+          "destination": "Cross-Lines",
+          "lbs": 400,
+          "reason": "Walk-in cooler plus direct service into both vote ZIPs",
+          "coldChain": "Walk-in cooler"
+        },
+        {
+          "destination": "Guadalupe Centers",
+          "lbs": 200,
+          "reason": "Spanish-first pantry with next-day distribution fit",
+          "coldChain": "Small fridge"
+        },
+        {
+          "destination": "Della Lamb",
+          "lbs": 150,
+          "reason": "Can absorb Northeast KC demand with short-hold refrigeration",
+          "coldChain": "Small fridge"
+        },
+        {
+          "destination": "Harvesters",
+          "lbs": 250,
+          "reason": "Industrial reserve for 64127 and 64130 route clearing",
+          "coldChain": "Industrial"
+        }
+      ],
+      "dispatchSteps": [
+        "Day 0: pick up, weigh, bag, and drop to cold-chain partners",
+        "Day 1: run same-day pop-up and partner distributions where cooler space exists",
+        "Day 2: clear the remaining inventory through scheduled partner routes"
+      ],
+      "volunteerCall": "Emergency food run. First volunteers to show up bank bonus bracket points before the regular season starts.",
+      "cost": "~$190",
+      "costDetail": "Fuel, ice, bags, and light driver reimbursement only."
+    },
+    "budgetImpact": {
+      "voteSupport": "$8K internal reallocation",
+      "produceMove": "~$190 emergency move",
+      "detail": "The top-line $500K budget does not change. The curveball is absorbed inside outreach, food top-up, stipends, and contingency."
+    },
+    "architectureProof": "A decentralized partner network responds inside hours because the model relies on staging hubs, trusted agencies, and volunteers, not a single expensive building."
+  },
+  "sourceNotes": [
+    "Challenge APIs: 311 calls, pantries, food atlas, store closures, transit, demographics, supply alerts, and harvest routes",
+    "KC Streetcar corridor facts: 5.7 miles, fare-free, roughly 30 stops, 10,000+ weekday riders, and 25+ digital kiosks",
+    "Benchmarks: $20-35 fully loaded delivered-box cost with a 3:1 to 5:1 donated-food leverage ratio"
+  ]
+}

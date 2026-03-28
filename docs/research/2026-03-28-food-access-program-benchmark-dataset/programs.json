@@ -1,0 +1,272 @@
+[
+  {
+    "organizationOrProgramName": "Harvesters — The Community Food Network",
+    "serviceAreaOrLocation": "Kansas City regional area (27-county area in NW Missouri and NE Kansas)",
+    "serviceType": "Regional Food Bank and Mobile Distribution",
+    "recentDemandChange": "Demand doubled overnight during SNAP suspension; food insecurity at a 10-year high (1 in 7 individuals).",
+    "supplyStatusOrChallenges": "Lost 3 million lbs of food in 2025 due to $500 million national USDA commodity cut; 41,000 cases of staples canceled.",
+    "keyFundingOrSupportStreams": "Private charity; Hunt Family Foundation; Cable Dahmer Automotive Group; $500,000 from recent donors; government commodity programs.",
+    "operationalStrategy": "Central hub supplying 600–900+ nonprofit agencies; provides 1 meal for every 9 provided by SNAP; hosts voter registration at sites.",
+    "sourceRefs": ["1-9"]
+  },
+  {
+    "organizationOrProgramName": "Project DASH (DoorDash)",
+    "serviceAreaOrLocation": "National (including Kansas City, Johnson County, KS, and North Texas)",
+    "serviceType": "Last-mile food delivery for food banks and nonprofits",
+    "recentDemandChange": "Powered over 8 million deliveries (135 million+ meals) since 2018; 800,000+ deliveries in specific regions.",
+    "supplyStatusOrChallenges": "Addresses transportation barriers for seniors/homebound; existing federal/state funding is difficult to access for last-mile logistics.",
+    "keyFundingOrSupportStreams": "$1 million in Project DASH Impact Grants (2025); at-cost or subsidized delivery services for partners.",
+    "operationalStrategy": "Leverages DoorDash Drive logistics platform to deliver food bank boxes to homebound or transit-constrained residents.",
+    "sourceRefs": ["1", "10-13"]
+  },
+  {
+    "organizationOrProgramName": "Fresh MARTA Market",
+    "serviceAreaOrLocation": "Atlanta, GA (MARTA rail stations including West End)",
+    "serviceType": "Transit-based seasonal produce markets",
+    "recentDemandChange": "Increased from 2,500/3,500 visitors in 2015 to 13,000+ in 2016; reached more residents than existing grocers.",
+    "supplyStatusOrChallenges": "Focus on food deserts; limited by seasonality and restricted operating hours; surplus donated to food banks.",
+    "keyFundingOrSupportStreams": "$500,000 USDA grant; SNAP vouchers; Georgia Fresh for Less (double SNAP) scheme; MARTA partnership.",
+    "operationalStrategy": "Managed by Organix Matters; pop-up stands inside high-traffic rail stations; weekly markets May–December.",
+    "sourceRefs": ["1", "2", "14-16"]
+  },
+  {
+    "organizationOrProgramName": "Healthy Corners (DC Central Kitchen)",
+    "serviceAreaOrLocation": "Washington, DC (Wards 5, 7, and 8)",
+    "serviceType": "Wholesale distribution and retail capacity building",
+    "recentDemandChange": "Produce sales rose 172% after SNAP incentives; 1 million+ units sold since start of pandemic; collard sales doubled after training.",
+    "supplyStatusOrChallenges": "2024 cuts to local SNAP supplements; small stores historically unable to meet wholesaler minimums or refrigeration costs.",
+    "keyFundingOrSupportStreams": "USDA GusNIP grants ($500,000 to $890,000); DC Health; Patrick J. McGovern Foundation; Longer Tables Fund.",
+    "operationalStrategy": "Mission-driven wholesaler providing free refrigeration/training to small retailers; SNAP Match incentives (spend $5, get $5).",
+    "sourceRefs": ["17"]
+  },
+  {
+    "organizationOrProgramName": "Sun Fresh Market",
+    "serviceAreaOrLocation": "31st Street and Prospect Avenue, Kansas City, MO (64127)",
+    "serviceType": "Grocery Store",
+    "recentDemandChange": "Closed August 2025; impacted 12,400 people; increased demand for local community gardens.",
+    "supplyStatusOrChallenges": "Closed due to $5 million loss, infrastructure issues (sewer smell), and security/crime concerns.",
+    "keyFundingOrSupportStreams": "$29 million total taxpayer funding (bonds/loans); $17 million city investment; $750,000 cash subsidy (May 2025).",
+    "operationalStrategy": "Brick-and-mortar retail; city-owned shopping center previously operated by nonprofit Community Builders.",
+    "sourceRefs": ["8", "18", "19"]
+  },
+  {
+    "organizationOrProgramName": "Twin Cities Mobile Market (TCMM)",
+    "serviceAreaOrLocation": "Twin Cities metropolitan area, MN",
+    "serviceType": "Full-service mobile food market (retrofitted bus)",
+    "recentDemandChange": "85% of surveyed customers experienced food insecurity; operates 5 days a week at 19 locations.",
+    "supplyStatusOrChallenges": "High vehicle maintenance and capital costs for retrofitted buses.",
+    "keyFundingOrSupportStreams": "NINR funding; Market Bucks (SNAP incentives); Wilder Foundation; IndieGoGo campaign ($12,000+).",
+    "operationalStrategy": "Retrofitted buses visit subsidized housing sites; prices 13–38% lower than regional supermarkets via bulk wholesale partnerships.",
+    "sourceRefs": ["1", "20", "21"]
+  },
+  {
+    "organizationOrProgramName": "Kanbe's Markets",
+    "serviceAreaOrLocation": "Kansas City metropolitan area",
+    "serviceType": "Corner store produce kiosks",
+    "recentDemandChange": "Not in source",
+    "supplyStatusOrChallenges": "Addresses distributor gap for 1.2 million people living more than 0.5 miles from fresh food; wholesalers often refuse small orders.",
+    "keyFundingOrSupportStreams": "Consignment basis with 50 community partners.",
+    "operationalStrategy": "Places coolers and baskets of fresh produce in 100+ independent corner stores in low-food-access tracts.",
+    "sourceRefs": ["1", "18", "22"]
+  },
+  {
+    "organizationOrProgramName": "Community Action Council of Howard County (CAC)",
+    "serviceAreaOrLocation": "Howard County, MD (Columbia, Laurel, Elkridge, Savage)",
+    "serviceType": "Food Bank and Guaranteed Basic Income (GBI) Pilot",
+    "recentDemandChange": "Identified 292 potential GBI participants; pilot currently serves 20 families.",
+    "supplyStatusOrChallenges": "Families struggling despite employment; 300,000+ people nationally lack access in transport areas.",
+    "keyFundingOrSupportStreams": "$750,000 nonprofit grant in County FY2025 Budget; GBI provides $1,000/month for 12 months.",
+    "operationalStrategy": "Unrestricted financial support combined with wrap-around services; targeted at 150-300% of Federal Poverty Limits.",
+    "sourceRefs": ["23"]
+  },
+  {
+    "organizationOrProgramName": "Food Rescue US",
+    "serviceAreaOrLocation": "National (44 locations across 23 States)",
+    "serviceType": "Tech-enabled food rescue and delivery",
+    "recentDemandChange": "Record 131,968 rescues in 2024; nearly 32 million meals delivered.",
+    "supplyStatusOrChallenges": "Government cuts to food assistance increasing need for free distribution.",
+    "keyFundingOrSupportStreams": "99.1% of donations go to program services; model turns $1 into 16 meals.",
+    "operationalStrategy": "Tech-enabled model connecting surplus food from donors to hunger relief agencies via volunteers.",
+    "sourceRefs": ["24"]
+  },
+  {
+    "organizationOrProgramName": "Metro Lutheran Ministry (Northland Food Pantry)",
+    "serviceAreaOrLocation": "Kansas City (Northland)",
+    "serviceType": "Food pantry",
+    "recentDemandChange": "10% increase per month; record month and biggest distribution day ever recorded.",
+    "supplyStatusOrChallenges": "Commodities decreased from 6 pallets to 3; no longer receiving animal proteins.",
+    "keyFundingOrSupportStreams": "TEFAP (The Emergency Food Assistance Program) and Section 32 (bonus TEFAP).",
+    "operationalStrategy": "Fixed pantry location managing exponential growth in community need.",
+    "sourceRefs": ["3"]
+  },
+  {
+    "organizationOrProgramName": "Redemptorist Social Services Center",
+    "serviceAreaOrLocation": "Kansas City",
+    "serviceType": "Food pantry",
+    "recentDemandChange": "Daily client count increased from 10–15 to approximately 40 people.",
+    "supplyStatusOrChallenges": "Struggling to keep food on shelves due to surge of clients during government shutdown.",
+    "keyFundingOrSupportStreams": "Donations and community food drives.",
+    "operationalStrategy": "Pantry coordination and community food drives.",
+    "sourceRefs": ["3"]
+  },
+  {
+    "organizationOrProgramName": "Jewish Family Services (JFS)",
+    "serviceAreaOrLocation": "Kansas City (Brookside/63rd Street)",
+    "serviceType": "Food pantry and emergency kits",
+    "recentDemandChange": "Distributed 2,300 lbs of food to 300+ individuals in first week of SNAP disruption.",
+    "supplyStatusOrChallenges": "Shelves stripped due to demand surge and federal commodity cuts.",
+    "keyFundingOrSupportStreams": "Not in source",
+    "operationalStrategy": "Car line distribution and emergency food kit assembly.",
+    "sourceRefs": ["3"]
+  },
+  {
+    "organizationOrProgramName": "Hamer Free Food Program",
+    "serviceAreaOrLocation": "31st and Prospect neighborhood, Kansas City",
+    "serviceType": "Monthly food box distribution",
+    "recentDemandChange": "50 household slots filled in a matter of hours.",
+    "supplyStatusOrChallenges": "Currently in pilot phase.",
+    "keyFundingOrSupportStreams": "Partnership between KC Black Urban Growers, urban farmers, and KC Defender.",
+    "operationalStrategy": "Stopgap community solution following Sun Fresh closure.",
+    "sourceRefs": ["18", "25"]
+  },
+  {
+    "organizationOrProgramName": "Urban Green Dreams",
+    "serviceAreaOrLocation": "Kansas City neighborhood gardens",
+    "serviceType": "Community Garden / Produce Distribution",
+    "recentDemandChange": "Uptick in neighbors needing services; goal to give away 2,000 lbs of food in 2025.",
+    "supplyStatusOrChallenges": "Distributing produce as a bandage for grocery closures.",
+    "keyFundingOrSupportStreams": "Nonprofit organization.",
+    "operationalStrategy": "Managing community gardens (e.g., Ruby Jeans) and distributing fresh produce for free to elderly/low-income neighbors.",
+    "sourceRefs": ["18"]
+  },
+  {
+    "organizationOrProgramName": "The Merc Co+op",
+    "serviceAreaOrLocation": "Downtown Kansas City, KS",
+    "serviceType": "Grocery Store",
+    "recentDemandChange": "Area returning to food desert status at end of 2025.",
+    "supplyStatusOrChallenges": "Closing due to poor financial performance and lack of nearby residential density/foot traffic.",
+    "keyFundingOrSupportStreams": "$7 million investment from Unified Government of Wyandotte County and KCK.",
+    "operationalStrategy": "Cooperative grocery model based on Lawrence, KS parent store.",
+    "sourceRefs": ["18"]
+  },
+  {
+    "organizationOrProgramName": "City Harvest Mobile Markets",
+    "serviceAreaOrLocation": "New York City (Five Boroughs)",
+    "serviceType": "Mobile produce markets",
+    "recentDemandChange": "Served nearly 344,000 New Yorkers last year.",
+    "supplyStatusOrChallenges": "Market hours adjusted due to weather conditions.",
+    "keyFundingOrSupportStreams": "Donations; community partnerships.",
+    "operationalStrategy": "Outdoor farmers' market-style distributions; includes cooking demonstrations and nutrition education.",
+    "sourceRefs": ["26"]
+  },
+  {
+    "organizationOrProgramName": "Baltimore Urban Food Distribution (BUD) App",
+    "serviceAreaOrLocation": "East Baltimore, MD",
+    "serviceType": "Digital platform for collective purchasing",
+    "recentDemandChange": "Not in source",
+    "supplyStatusOrChallenges": "Distribution gap between small stores and large wholesalers; fresh produce suppliers lack free delivery options.",
+    "keyFundingOrSupportStreams": "National Heart, Lung, and Blood Institute (NIH award R34HL145368).",
+    "operationalStrategy": "Multilevel systems intervention (BuddyUp purchasing and BuddyLift shared delivery) to reduce sourcing costs.",
+    "sourceRefs": ["27"]
+  },
+  {
+    "organizationOrProgramName": "New Jersey Food System Enhancements Program (FSEP)",
+    "serviceAreaOrLocation": "New Jersey",
+    "serviceType": "Infrastructure and market channel grants",
+    "recentDemandChange": "Not in source",
+    "supplyStatusOrChallenges": "Not in source",
+    "keyFundingOrSupportStreams": "NJ Office of the Food Security Advocate (OFSA); $625,000 total pool.",
+    "operationalStrategy": "Grant funding (up to $150,000) for community-rooted food infrastructure and local procurement expansion.",
+    "sourceRefs": ["28"]
+  },
+  {
+    "organizationOrProgramName": "Baltimarket",
+    "serviceAreaOrLocation": "Baltimore, MD",
+    "serviceType": "Virtual Supermarket",
+    "recentDemandChange": "Not in source",
+    "supplyStatusOrChallenges": "Targeting food deserts (areas more than 1/4 mile from supermarkets).",
+    "keyFundingOrSupportStreams": "Grant and municipal government funds.",
+    "operationalStrategy": "Online grocery ordering and delivery to library branches and senior housing in low-vehicle areas.",
+    "sourceRefs": ["29", "30"]
+  },
+  {
+    "organizationOrProgramName": "After the Harvest KC",
+    "serviceAreaOrLocation": "Kansas City (64127, 64130, 66101, 66105)",
+    "serviceType": "Mobile Distribution",
+    "recentDemandChange": "Not in source",
+    "supplyStatusOrChallenges": "Must partner with sites providing cold storage.",
+    "keyFundingOrSupportStreams": "Not in source",
+    "operationalStrategy": "Varying schedule and routes; relies on cold storage site partnerships.",
+    "sourceRefs": ["8"]
+  },
+  {
+    "organizationOrProgramName": "Bishop Sullivan Center",
+    "serviceAreaOrLocation": "Kansas City (64110)",
+    "serviceType": "Food Pantry",
+    "recentDemandChange": "Not in source",
+    "supplyStatusOrChallenges": "No cold storage available.",
+    "keyFundingOrSupportStreams": "Not in source",
+    "operationalStrategy": "Open Mon, Wed, Fri 9a-12p; bilingual (EN, ES); no ID required.",
+    "sourceRefs": ["8"]
+  },
+  {
+    "organizationOrProgramName": "Guadalupe Centers",
+    "serviceAreaOrLocation": "Kansas City (64108)",
+    "serviceType": "Food Pantry",
+    "recentDemandChange": "Not in source",
+    "supplyStatusOrChallenges": "Fridge storage available.",
+    "keyFundingOrSupportStreams": "Not in source",
+    "operationalStrategy": "Open Tue, Thu 10a-2p; Spanish/English; no ID required.",
+    "sourceRefs": ["8"]
+  },
+  {
+    "organizationOrProgramName": "Community Assistance Council",
+    "serviceAreaOrLocation": "Kansas City (64134)",
+    "serviceType": "Food Pantry",
+    "recentDemandChange": "Not in source",
+    "supplyStatusOrChallenges": "Walk-in cold storage available.",
+    "keyFundingOrSupportStreams": "Not in source",
+    "operationalStrategy": "Open Mon-Thu 9a-3p; ID required.",
+    "sourceRefs": ["8"]
+  },
+  {
+    "organizationOrProgramName": "Crosslines Community Outreach",
+    "serviceAreaOrLocation": "Kansas City (66105)",
+    "serviceType": "Food Pantry",
+    "recentDemandChange": "Not in source",
+    "supplyStatusOrChallenges": "Walk-in cold storage available.",
+    "keyFundingOrSupportStreams": "Not in source",
+    "operationalStrategy": "Open Mon-Fri 9a-3p; ID required.",
+    "sourceRefs": ["8"]
+  },
+  {
+    "organizationOrProgramName": "Wolt",
+    "serviceAreaOrLocation": "Helsinki, Finland",
+    "serviceType": "Food delivery and rewards program",
+    "recentDemandChange": "Increased booking frequency among rewards program users.",
+    "supplyStatusOrChallenges": "Highly competitive digital environment; retention requires strategic incentives.",
+    "keyFundingOrSupportStreams": "Loyalty points, free delivery, and gamification.",
+    "operationalStrategy": "Comprehensive rewards program with points, badges, and monetary incentives to differentiate from competitors.",
+    "sourceRefs": ["31"]
+  },
+  {
+    "organizationOrProgramName": "Foodora",
+    "serviceAreaOrLocation": "Helsinki, Finland",
+    "serviceType": "Food delivery platform",
+    "recentDemandChange": "Not in source",
+    "supplyStatusOrChallenges": "Intense competition in Helsinki urban market.",
+    "keyFundingOrSupportStreams": "Loyalty programs and targeted advertising.",
+    "operationalStrategy": "Analyzing user data to tailor incentives and foster brand loyalty.",
+    "sourceRefs": ["31"]
+  },
+  {
+    "organizationOrProgramName": "Uber",
+    "serviceAreaOrLocation": "Global / Helsinki, Finland",
+    "serviceType": "Ride-sharing and courier service",
+    "recentDemandChange": "Not in source",
+    "supplyStatusOrChallenges": "Needs to maintain high digital literacy user base.",
+    "keyFundingOrSupportStreams": "Loyalty schemes and personalized acquisition offers.",
+    "operationalStrategy": "Embedding rewards across customer journey; uses discount vouchers to cultivate dedicated user base.",
+    "sourceRefs": ["31"]
+  }
+]

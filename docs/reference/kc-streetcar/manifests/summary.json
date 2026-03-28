@@ -1,0 +1,20 @@
+{
+  "fetched_at": "2026-03-28",
+  "snapshot_counts": {
+    "page_snapshots": 207,
+    "post_snapshots": 410,
+    "total_snapshots": 617,
+    "downloaded_files": 337,
+    "arrival_endpoints": 18
+  },
+  "notable_files": {
+    "route_map_pdf": "downloads/2978_KCSA_PylonMap_RUN-122025.pdf",
+    "wrap_media_kit_pdf": "downloads/KCStreetcarWrap-MediaKit-Digital-2026.pdf",
+    "wrap_guidelines_pdf": "downloads/Streetcar-Wrap-Guidelines-2025.pdf",
+    "wrap_categories_printable_pdf": "downloads/KC-Streetcar-Wrap-Categories-Design-Guidelines-2023_Finals.pdf",
+    "arrival_endpoints_csv": "arrivals/arrival-display-endpoints.csv",
+    "page_manifest": "manifests/snapshot-pages.json",
+    "post_manifest": "manifests/post-snapshots.json",
+    "all_urls_manifest": "manifests/all-urls.txt"
+  }
+}

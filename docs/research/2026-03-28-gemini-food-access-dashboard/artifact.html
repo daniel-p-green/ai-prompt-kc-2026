@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KC Food Access Solution Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .tab-active {
+            border-bottom-width: 4px;
+            border-color: #047857;
+            color: #047857;
+            font-weight: 600;
+        }
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Chosen Palette: Warm Neutrals with Emerald/Teal Accents (bg-stone-50, text-stone-800, emerald-700 for highlights) -->
+    
+    <!-- Application Structure Plan: A dashboard-style layout featuring a fixed top navigation for easy jumping between sections. The flow starts with context, moves into an interactive macro-view of the data (charts), then provides a detailed interactive grid of the 10 comparable cities (allowing filtering by transferability). It concludes with syntheses (patterns/anti-patterns) and actionable 60-day recommendations. This structure guides the user from raw research data down to the specific KC policy recommendation smoothly. -->
+
+    <!-- Visualization & Content Choices: 
+         1. Doughnut Chart -> Goal: Inform on Transferability -> Justification: Shows the proportion of researched solutions that are viable for KC in 60 days -> Method: Chart.js (Canvas).
+         2. Bar Chart -> Goal: Compare Intervention Models -> Justification: Breaks down the types of programs researched -> Method: Chart.js (Canvas).
+         3. Interactive Table -> Goal: Organize 10 City Data Points -> Justification: Allows user to filter by High/Med/Low transferability -> Method: HTML/Tailwind + Vanilla JS.
+         4. Tabbed Synthesis -> Goal: Organize Patterns/Anti-patterns -> Justification: Keeps layout clean while offering deep insights -> Method: HTML/JS Toggle. 
+         CONFIRMING NO SVG/Mermaid. -->
+
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <nav class="sticky top-0 z-50 bg-white border-b border-stone-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-emerald-800">&#127806; KC Food Access Insights</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#context" class="text-stone-600 hover:text-emerald-700">Context</a>
+                    <a href="#landscape" class="text-stone-600 hover:text-emerald-700">Model Landscape</a>
+                    <a href="#comparables" class="text-stone-600 hover:text-emerald-700">City Programs</a>
+                    <a href="#patterns" class="text-stone-600 hover:text-emerald-700">Patterns & Traps</a>
+                    <a href="#pilots" class="text-stone-600 hover:text-emerald-700">60-Day Pilots</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+
+        <section id="context" class="bg-white p-8 rounded-xl shadow-sm border border-stone-200">
+            <h1 class="text-3xl font-bold text-stone-900 mb-4">Kansas City Food Access Solution Research</h1>
+            <p class="text-lg text-stone-600 mb-6">
+                <strong>The Challenge:</strong> Kansas City faces rising food insecurity, grocery store closures, pantry strain, and transportation barriers. The goal is to match supply, logistics, access, and adoption in a scalable way.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-stone-100 p-4 rounded-lg border-l-4 border-emerald-600">
+                    <h3 class="font-bold text-stone-800">&#128205; Goal</h3>
+                    <p class="text-sm mt-2">Identify U.S. city-scale programs that address food access. Prioritize operational, measurable solutions realistic for a <strong>60-day pilot</strong>.</p>
+                </div>
+                <div class="bg-stone-100 p-4 rounded-lg border-l-4 border-amber-500">
+                    <h3 class="font-bold text-stone-800">&#9888;&#65039; Key Constraints</h3>
+                    <p class="text-sm mt-2">Must be deployable in 60 days. Cannot rely on slow infrastructure builds (e.g., new grocery stores). Must show proof of impact quickly.</p>
+                </div>
+                <div class="bg-stone-100 p-4 rounded-lg border-l-4 border-blue-600">
+                    <h3 class="font-bold text-stone-800">&#128269; Focus Areas</h3>
+                    <p class="text-sm mt-2">Distribution coordination, pantry discovery, resident alerts, hub scheduling, and volunteer logistics.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="landscape">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-stone-900">The National Landscape</h2>
+                <p class="text-stone-600 mt-2">An overview of the intervention models researched and their viability for a rapid 60-day deployment in Kansas City. This section aggregates data from the 10 comparative city programs below.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <h3 class="text-lg font-bold text-center mb-4 text-stone-700">Transferability to KC (60-Day Pilot)</h3>
+                    <div class="chart-container">
+                        <canvas id="transferabilityChart"></canvas>
+                    </div>
+                    <p class="text-sm text-center text-stone-500 mt-4">Based on 10 researched programs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <h3 class="text-lg font-bold text-center mb-4 text-stone-700">Intervention Models Analyzed</h3>
+                    <div class="chart-container">
+                        <canvas id="modelsChart"></canvas>
+                    </div>
+                    <p class="text-sm text-center text-stone-500 mt-4">Categorization of researched city interventions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparables">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-stone-900">Comparable City Programs</h2>
+                    <p class="text-stone-600 mt-2">Detailed breakdown of 10 programs across the U.S. Use the buttons below to filter by their viability for a 60-day launch in Kansas City.</p>
+                </div>
+                <div class="mt-4 md:mt-0 flex space-x-2">
+                    <button id="filter-all" class="px-4 py-2 bg-stone-800 text-white rounded-md text-sm font-medium transition-colors hover:bg-stone-700">All</button>
+                    <button id="filter-high" class="px-4 py-2 bg-white border border-stone-300 text-stone-700 rounded-md text-sm font-medium transition-colors hover:bg-emerald-50">High Transferability</button>
+                    <button id="filter-med" class="px-4 py-2 bg-white border border-stone-300 text-stone-700 rounded-md text-sm font-medium transition-colors hover:bg-amber-50">Medium</button>
+                    <button id="filter-low" class="px-4 py-2 bg-white border border-stone-300 text-stone-700 rounded-md text-sm font-medium transition-colors hover:bg-red-50">Low</button>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-stone-200">
+                <table class="min-w-full divide-y divide-stone-200">
+                    <thead class="bg-stone-50">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">City / Program</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Model & Lead</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Mechanic & User</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Evidence & Risks</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Transferability (60 Days)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="program-table-body" class="bg-white divide-y divide-stone-200">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="patterns">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-stone-900">Strategic Synthesis</h2>
+                <p class="text-stone-600 mt-2">Based on the research above, here are the core patterns that succeed in short timeframes, and the traps that cause municipal food initiatives to stall.</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-stone-200 overflow-hidden">
+                <div class="flex border-b border-stone-200">
+                    <button id="tab-patterns" class="flex-1 py-4 text-center text-sm font-medium tab-active transition-colors">Top 5 Reusable Patterns</button>
+                    <button id="tab-antipatterns" class="flex-1 py-4 text-center text-sm font-medium text-stone-500 hover:text-stone-700 transition-colors">Top 5 Anti-Patterns / Traps</button>
+                </div>
+                
+                <div id="content-patterns" class="p-6 grid grid-cols-1 gap-4">
+                </div>
+
+                <div id="content-antipatterns" class="p-6 grid grid-cols-1 gap-4 hidden">
+                </div>
+            </div>
+        </section>
+
+        <section id="pilots">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-stone-900">Kansas City 60-Day Pilot Concepts</h2>
+                <p class="text-stone-600 mt-2">Three actionable, realistic concepts derived from the "High Transferability" models above. Each can be executed within a 60-day timeline.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="pilot-cards-container">
+            </div>
+        </section>
+
+        <section id="recommendation" class="bg-emerald-900 text-white p-8 rounded-xl shadow-lg border border-emerald-800 relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-sm font-bold tracking-widest uppercase text-emerald-300 mb-2">Primary Recommendation</h2>
+                <h3 class="text-3xl font-bold mb-4">SMS Pantry Reservation + Discovery Engine</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2 text-emerald-100">Why it's the winner for KC:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="mr-2">&#10003;</span>
+                                <span><strong>Speed:</strong> Can be deployed using white-labeled SaaS (like Plentiful) or simple Twilio logic in under 30 days.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2">&#10003;</span>
+                                <span><strong>Solves Strain:</strong> Eliminates physical lines at pantries, smoothing the operational curve for overwhelmed staff.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2">&#10003;</span>
+                                <span><strong>Low Barrier:</strong> SMS requires no smartphone data plan, app download, or high tech literacy.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2">&#10003;</span>
+                                <span><strong>Measurable:</strong> 60-day impact is easily proven by "number of reservations processed" and "reduction in wait times."</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-emerald-800 p-5 rounded-lg border border-emerald-700">
+                        <h4 class="text-lg font-semibold mb-2 text-emerald-100">Execution Plan (60 Days):</h4>
+                        <ol class="list-decimal pl-5 space-y-2 text-sm">
+                            <li><strong>Days 1-10:</strong> Secure buy-in from 3-5 high-volume KC pantries.</li>
+                            <li><strong>Days 11-25:</strong> Configure white-label SMS reservation platform. Map pantry schedules.</li>
+                            <li><strong>Days 26-40:</strong> Train pantry staff/volunteers on the intake tablet/dashboard.</li>
+                            <li><strong>Days 41-60:</strong> Launch localized marketing (flyers at pantries, transit stops) & run the pilot. Track diverted line-hours.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute -bottom-16 -right-16 text-emerald-800 opacity-50 text-9xl font-serif">
+                &#10077;
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-900 text-stone-400 py-8 text-center text-sm">
+        <p>Prepared for the National Prompt Championship Challenge &bull; Kansas City Food Access</p>
+    </footer>
+
+    <script>
+        const programsData = [
+            {
+                city: "New York City, NY",
+                model: "Pantry Reservation App",
+                lead: "Plentiful (Food Bank NYC / City Harvest)",
+                user: "Pantry Clients",
+                mechanic: "SMS/App reservations for pickup times. Maps local pantries.",
+                evidence: "Millions of reservations; drastically reduced physical lines.",
+                risks: "Requires pantry buy-in to manage software; some digital divide.",
+                transferability: "High",
+                why: "Directly solves pantry strain and line-waiting. SaaS is easily white-labeled or replicated via Twilio.",
+                link: "https://www.plentifulapp.com/"
+            },
+            {
+                city: "Pittsburgh, PA",
+                model: "Volunteer Logistics / Rescue",
+                lead: "412 Food Rescue",
+                user: "Donors, Volunteers, Nonprofits",
+                mechanic: "App dispatch matching surplus food to volunteer drivers ('Uber for food rescue').",
+                evidence: "20M+ lbs rescued; highly engaged volunteer base.",
+                risks: "Cold chain limits; reliance on volunteer availability.",
+                transferability: "High",
+                why: "Existing apps exist (e.g., Food Rescue Hero). Solves logistics without buying a truck fleet.",
+                link: "https://412foodrescue.org/"
+            },
+            {
+                city: "Chicago, IL",
+                model: "Centralized Discovery Platform",
+                lead: "Greater Chicago Food Depository",
+                user: "Residents seeking food",
+                mechanic: "Real-time, easily searchable interactive map of pantries with live hours.",
+                evidence: "High web traffic; reduced misdirected residents.",
+                risks: "Data decay if pantries don't update their hours.",
+                transferability: "High",
+                why: "A well-designed web layer aggregating existing data is a fast tech lift.",
+                link: "https://www.chicagosfoodbank.org/find-food/"
+            },
+            {
+                city: "San Francisco, CA",
+                model: "Transit/School Pop-up Markets",
+                lead: "SF-Marin Food Bank",
+                user: "Families, Transit riders",
+                mechanic: "Weekly farmer's market style distributions at transit hubs/schools.",
+                evidence: "Serves 30k+ households weekly; high dignity model.",
+                risks: "Logistically intensive; weather dependent.",
+                transferability: "Medium",
+                why: "Requires physical setup and KCATA coordination, which might stretch a 60-day window.",
+                link: "https://www.sfmfoodbank.org/programs/pop-up-pantries/"
+            },
+            {
+                city: "Detroit, MI",
+                model: "Upcycling / Central Hub",
+                lead: "Make Food Not Waste",
+                user: "Residents, Local Pantries",
+                mechanic: "Centralized kitchen takes rescued food and turns it into prepared meals.",
+                evidence: "Thousands of meals produced weekly; low waste.",
+                risks: "High overhead (kitchen health codes, chefs).",
+                transferability: "Medium",
+                why: "In 60 days, partnering with an *existing* commercial kitchen is possible, but building one is not.",
+                link: "https://makefoodnotwaste.org/"
+            },
+            {
+                city: "Seattle, WA",
+                model: "Healthy Corner Store / Rx",
+                lead: "Fresh Bucks (City of Seattle)",
+                user: "SNAP recipients",
+                mechanic: "Digital vouchers for fresh produce at local participating retailers.",
+                evidence: "High redemption rates; local economic boost.",
+                risks: "POS integration friction; billing complexities.",
+                transferability: "Medium",
+                why: "Setting up municipal financial vouchers and POS integrations usually exceeds 60 days.",
+                link: "https://www.seattlefreshbucks.org/"
+            },
+            {
+                city: "Baltimore, MD",
+                model: "Mobile Markets",
+                lead: "Maryland Food Bank",
+                user: "Food Desert Residents",
+                mechanic: "Retrofitting buses/trucks to act as mobile grocery aisles.",
+                evidence: "Reaches deep into under-resourced zip codes.",
+                risks: "Vehicle maintenance; fuel costs; CDL driver shortages.",
+                transferability: "Low",
+                why: "Procuring, retrofitting, and licensing vehicles is too expensive and slow for a 60-day pilot.",
+                link: "https://mdfoodbank.org/our-work/programs/pantry-on-the-go/"
+            },
+            {
+                city: "Washington, D.C.",
+                model: "Public-Private Grocery",
+                lead: "Good Food Markets",
+                user: "Neighborhood residents",
+                mechanic: "Subsidized brick-and-mortar grocery stores in targeted wards.",
+                evidence: "Provides consistent access and jobs.",
+                risks: "Extremely high capital expenditure; narrow margins.",
+                transferability: "Low",
+                why: "Real estate acquisition, build-out, and stocking takes 1-3 years. Explicit anti-pattern for this prompt.",
+                link: "https://www.goodfoodmarkets.com/"
+            },
+            {
+                city: "Los Angeles, CA",
+                model: "Data/API Aggregation",
+                lead: "Food Oasis LA (Hack for LA)",
+                user: "Caseworkers, Residents",
+                mechanic: "Open-source data scraping and verification of pantry hours via volunteers.",
+                evidence: "Keeps data fresher than manual static directories.",
+                risks: "Scraping breaks; relies heavily on volunteer coders.",
+                transferability: "High",
+                why: "Can spin up a KC instance of open-source data tools quickly to solve discovery.",
+                link: "https://foodoasis.la/"
+            },
+            {
+                city: "Boston, MA",
+                model: "Last-Mile Delivery Partnership",
+                lead: "United Way / DoorDash Project DASH",
+                user: "Homebound residents",
+                mechanic: "Using gig-economy drivers to deliver food bank boxes directly to homes.",
+                evidence: "Millions of deliveries nationally.",
+                risks: "Subsidy dependence (DoorDash grants eventually run out).",
+                transferability: "High",
+                why: "B2B partnerships with existing logistics networks can be signed and activated in weeks.",
+                link: "https://about.doordash.com/en-us/impact/project-dash"
+            }
+        ];
+
+        const patterns = [
+            { title: "White-label Scheduling Apps", desc: "Using software like Plentiful or Twilio-based SMS to manage pickup times. Solves physical lines and respects client dignity." },
+            { title: "App-based Volunteer Dispatch", desc: "Crowdsourcing logistics through 'rideshare for food' models (like Food Rescue Hero). Avoids buying fleets." },
+            { title: "Data Aggregation via API", desc: "Instead of building new directories, combining existing 211 data with web-scraping to create accurate, real-time maps." },
+            { title: "Last-Mile B2B Partnerships", desc: "Leveraging DoorDash (Project DASH) or Amazon delivery networks for homebound residents rather than building a nonprofit delivery fleet." },
+            { title: "Hyper-Local Pop-ups", desc: "Using existing infrastructure (schools, KCATA transit hubs) for weekly drops rather than leasing new real estate." }
+        ];
+
+        const antipatterns = [
+            { title: "Building Brick-and-Mortar Grocery", desc: "Takes years of capital raising, zoning, and construction. Fails the 60-day test entirely." },
+            { title: "App-Only Solutions", desc: "Requiring a smartphone app download excludes the elderly and those without data plans. SMS/Voice fallbacks are critical." },
+            { title: "Buying Refrigerated Truck Fleets", desc: "High CapEx, requires CDL drivers, massive insurance overhead. Maintenance often sinks the program." },
+            { title: "Complex Intake Forms at Distribution", desc: "Asking for detailed demographic data while residents stand in line creates bottlenecks and friction." },
+            { title: "Static Data Directories", desc: "Printing PDFs or making simple websites of pantry hours that go out-of-date in 2 weeks, leading to frustrated residents." }
+        ];
+
+        const pilotConcepts = [
+            {
+                title: "1. SMS Pantry Reservation System",
+                desc: "Implement a Twilio-based text-to-reserve system at 3 major KC pantries.",
+                details: "Residents text 'FOOD' to a local number, select a pantry, and get a 15-minute pickup window. Eliminates lines, gives pantries predictable flow. Can be built or white-labeled in 30 days.",
+                speed: "Very Fast",
+                impact: "High"
+            },
+            {
+                title: "2. KC Volunteer Dispatch App",
+                desc: "Launch a localized instance of a food rescue app to move surplus from groceries to pantries.",
+                details: "Partner with an existing platform (like Food Rescue Hero) to deploy a KC-branded app. Recruits citizens to do 30-minute 'rescues' using their own cars, solving the logistics gap.",
+                speed: "Fast",
+                impact: "Medium"
+            },
+            {
+                title: "3. Transit Hub Micro-Markets",
+                desc: "Deploy weekly rapid produce distributions at 2 major KCATA transit centers.",
+                details: "Partner with Harvesters and KCATA. Set up folding tables during evening commute hours. Pre-bagged produce only to ensure line speed. Solves the 'transportation to the pantry' barrier.",
+                speed: "Moderate",
+                impact: "High"
+            }
+        ];
+
+        function getTransferabilityColor(level) {
+            if (level === 'High') return 'bg-emerald-100 text-emerald-800';
+            if (level === 'Medium') return 'bg-amber-100 text-amber-800';
+            return 'bg-red-100 text-red-800';
+        }
+
+        function renderTable(filter = 'All') {
+            const tbody = document.getElementById('program-table-body');
+            tbody.innerHTML = '';
+            
+            const filteredPrograms = filter === 'All' 
+                ? programsData 
+                : programsData.filter(p => p.transferability === filter);
+
+            filteredPrograms.forEach(p => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm font-bold text-stone-900">${p.city}</div>
+                        <a href="${p.link}" target="_blank" class="text-xs text-blue-600 hover:underline">Source Link &rarr;</a>
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="text-sm font-semibold text-stone-900">${p.model}</div>
+                        <div class="text-xs text-stone-500">Lead: ${p.lead}</div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="text-sm text-stone-900">${p.mechanic}</div>
+                        <div class="text-xs text-stone-500 mt-1"><strong>User:</strong> ${p.user}</div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="text-sm text-stone-900"><span class="text-emerald-600 font-bold">&#10003;</span> ${p.evidence}</div>
+                        <div class="text-xs text-stone-600 mt-1"><span class="text-red-600 font-bold">&#9888;</span> ${p.risks}</div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${getTransferabilityColor(p.transferability)}">
+                            ${p.transferability}
+                        </span>
+                        <div class="text-xs text-stone-500 mt-2">${p.why}</div>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function renderSynthesis() {
+            const patContainer = document.getElementById('content-patterns');
+            patterns.forEach(p => {
+                patContainer.innerHTML += `
+                    <div class="flex items-start p-4 bg-emerald-50 rounded-lg border border-emerald-100">
+                        <div class="flex-shrink-0 mt-1 text-emerald-600 text-xl">&#10003;</div>
+                        <div class="ml-3">
+                            <h4 class="text-sm font-bold text-emerald-900">${p.title}</h4>
+                            <p class="text-sm text-emerald-800 mt-1">${p.desc}</p>
+                        </div>
+                    </div>
+                `;
+            });
+
+            const antiContainer = document.getElementById('content-antipatterns');
+            antipatterns.forEach(a => {
+                antiContainer.innerHTML += `
+                    <div class="flex items-start p-4 bg-red-50 rounded-lg border border-red-100">
+                        <div class="flex-shrink-0 mt-1 text-red-600 text-xl">&#10007;</div>
+                        <div class="ml-3">
+                            <h4 class="text-sm font-bold text-red-900">${a.title}</h4>
+                            <p class="text-sm text-red-800 mt-1">${a.desc}</p>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function renderPilots() {
+            const container = document.getElementById('pilot-cards-container');
+            pilotConcepts.forEach((c, index) => {
+                const isRecommended = index === 0;
+                const borderClass = isRecommended ? 'border-emerald-500 ring-2 ring-emerald-200' : 'border-stone-200';
+                const badge = isRecommended ? `<span class="absolute top-0 right-0 bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded-bl-lg rounded-tr-lg">Top Pick</span>` : '';
+                
+                container.innerHTML += `
+                    <div class="bg-white p-6 rounded-xl shadow-sm border ${borderClass} relative hover:shadow-md transition-shadow cursor-pointer group" onclick="togglePilotDetail(${index})">
+                        ${badge}
+                        <h3 class="text-lg font-bold text-stone-900 mb-2 group-hover:text-emerald-700 transition-colors">${c.title}</h3>
+                        <p class="text-sm text-stone-600 mb-4">${c.desc}</p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="px-2 py-1 bg-stone-100 text-stone-600 text-xs rounded font-medium">Speed: ${c.speed}</span>
+                            <span class="px-2 py-1 bg-stone-100 text-stone-600 text-xs rounded font-medium">Impact: ${c.impact}</span>
+                        </div>
+                        <div id="pilot-detail-${index}" class="hidden mt-4 pt-4 border-t border-stone-100 text-sm text-stone-700">
+                            <strong>How it works:</strong> ${c.details}
+                        </div>
+                        <div class="text-xs text-emerald-600 font-semibold mt-2" id="pilot-expand-${index}">Click to expand &darr;</div>
+                    </div>
+                `;
+            });
+        }
+
+        window.togglePilotDetail = function(index) {
+            const detail = document.getElementById(`pilot-detail-${index}`);
+            const expand = document.getElementById(`pilot-expand-${index}`);
+            if (detail.classList.contains('hidden')) {
+                detail.classList.remove('hidden');
+                expand.innerHTML = 'Click to collapse &uarr;';
+            } else {
+                detail.classList.add('hidden');
+                expand.innerHTML = 'Click to expand &darr;';
+            }
+        }
+
+        function initCharts() {
+            const transferCounts = { High: 0, Medium: 0, Low: 0 };
+            const modelCounts = {};
+
+            programsData.forEach(p => {
+                transferCounts[p.transferability]++;
+                
+                let simplifiedModel = p.model;
+                if(simplifiedModel.includes('App') || simplifiedModel.includes('Software') || simplifiedModel.includes('API')) {
+                    simplifiedModel = 'Software / App';
+                } else if(simplifiedModel.includes('Logistics') || simplifiedModel.includes('Delivery')) {
+                    simplifiedModel = 'Logistics / Delivery';
+                } else if(simplifiedModel.includes('Pop-up') || simplifiedModel.includes('Mobile')) {
+                    simplifiedModel = 'Mobile / Pop-up';
+                } else {
+                    simplifiedModel = 'Brick & Mortar / Hub';
+                }
+
+                modelCounts[simplifiedModel] = (modelCounts[simplifiedModel] || 0) + 1;
+            });
+
+            const ctxTransfer = document.getElementById('transferabilityChart').getContext('2d');
+            new Chart(ctxTransfer, {
+                type: 'doughnut',
+                data: {
+                    labels: ['High (60-day ready)', 'Medium', 'Low (Too slow)'],
+                    datasets: [{
+                        data: [transferCounts.High, transferCounts.Medium, transferCounts.Low],
+                        backgroundColor: ['#10b981', '#fbbf24', '#ef4444'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
+                }
+            });
+
+            const ctxModels = document.getElementById('modelsChart').getContext('2d');
+            new Chart(ctxModels, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(modelCounts),
+                    datasets: [{
+                        label: '# of Programs Researched',
+                        data: Object.values(modelCounts),
+                        backgroundColor: '#047857',
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, ticks: { stepSize: 1 } },
+                        x: { 
+                            ticks: {
+                                callback: function(value) {
+                                    let label = this.getLabelForValue(value);
+                                    if (label.length > 16) {
+                                        return label.match(/.{1,16}(\s|$)/g) || [label];
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+
+        function setupInteractions() {
+            const btns = ['filter-all', 'filter-high', 'filter-med', 'filter-low'];
+            const mapping = { 'filter-all': 'All', 'filter-high': 'High', 'filter-med': 'Medium', 'filter-low': 'Low' };
+            
+            btns.forEach(id => {
+                document.getElementById(id).addEventListener('click', (e) => {
+                    btns.forEach(b => {
+                        document.getElementById(b).classList.remove('ring-2', 'ring-offset-2', 'ring-stone-400');
+                    });
+                    e.target.classList.add('ring-2', 'ring-offset-2', 'ring-stone-400');
+                    renderTable(mapping[id]);
+                });
+            });
+
+            const tabPat = document.getElementById('tab-patterns');
+            const tabAnti = document.getElementById('tab-antipatterns');
+            const conPat = document.getElementById('content-patterns');
+            const conAnti = document.getElementById('content-antipatterns');
+
+            tabPat.addEventListener('click', () => {
+                tabPat.classList.add('tab-active');
+                tabPat.classList.remove('text-stone-500');
+                tabAnti.classList.remove('tab-active');
+                tabAnti.classList.add('text-stone-500');
+                conPat.classList.remove('hidden');
+                conAnti.classList.add('hidden');
+            });
+
+            tabAnti.addEventListener('click', () => {
+                tabAnti.classList.add('tab-active');
+                tabAnti.classList.remove('text-stone-500');
+                tabPat.classList.remove('tab-active');
+                tabPat.classList.add('text-stone-500');
+                conAnti.classList.remove('hidden');
+                conPat.classList.add('hidden');
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTable();
+            renderSynthesis();
+            renderPilots();
+            initCharts();
+            setupInteractions();
+        });
+    </script>
+</body>
+</html>
